@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backend1-4</title>
+    <link rel="stylesheet" href="css/backend.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+      
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="icons/Screenshot__16_-removebg-preview.png" width="150px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <div id="appMountPoint" aria-hidden="false">
+        <div class="basicLayout nonmemberTitle dark" lang="en-GH" dir="ltr">
+            <div class="css-16k8cq6 e1yb99j90"></div>
+                    <section class="nmtitle-section section-hero" id="section-hero" data-uia="section-hero">
+                        <div class="hero-container" data-uia="hero-container">
+                            <div class="info-container css-0">
+                                <div class="details-container">
+                                    <div class="title-info" data-uia="title-info">
+                                        <h1 class="title-title" data-uia="title-info-title">Strong Girl Nam-soon</h1>
+                                        <div class="title-info-metadata-wrapper" data-uia="title-info-metadata-wrapper"><span class="title-info-metadata-item item-year" data-uia="item-year">2023</span><span role="presentation" class="info-spacer"> | </span><span class="title-info-metadata-item item-maturity" data-uia="item-maturity"><span class="maturity-rating"><span class="screen-reader-text">Maturity Rating:</span><span class="maturity-number">18+ </span></span></span><span role="presentation" class="info-spacer"> | </span><span class="title-info-metadata-item item-runtime" data-uia="item-runtime"><span class="duration"><span class="test_dur_str">1 Season</span></span></span><span role="presentation" class="info-spacer"> | </span><a class="title-info-metadata-item item-genre" href="https://www.netflix.com/gh/browse/genre/81746416" data-uia="item-genre">Comedy</a></div><div class="title-info-synopsis-talent" data-uia="title-info-synopsis-talent"><div class="title-info-synopsis" data-uia="title-info-synopsis">Gifted with superhuman strength, a young woman returns to Korea to find her birth family —&nbsp;only to be entangled in a drug case that could test her power.</div><div class="title-info-talent"><div class="title-data-info-item item-starring"><span class="title-data-info-item-label">Starring:</span><span class="title-data-info-item-list" data-uia="info-starring">Lee You-mi, Kim Jung-eun, Kim Hae-sook</span></div><div class="title-data-info-item item-creators"><span class="title-data-info-item-label">Creators:</span><span class="title-data-info-item-list" data-uia="info-creators">Baek Mi-kyoung, Kim Jung-sik, Yi Kyoung-shic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-container css-0">
+            <div class="hero-image hero-image-desktop" style="display:none;background-image:url(&quot;https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQMarILGUvMY0DtzFuevrBDAeOn2trY682S2PhHHfPlxU9OIXQJ-McRIafF6hTWb1te1rAsHqEZqubd5AXaq7R3C74dC43A33k-j.jpg?r=dc2&quot;)"></div>
+            <div class="hero-image hero-image-mobile" style="display:none;background-image:url(&quot;https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABURMZ7Fs4QPdKAyCWSqJKWwF8Bn2ev71yZ0ihfR19yE-6zvGE8hMxy8l4zUSUIba7rOeDYeLtNsUr02LcSYTp_A3v2r_hUp75G5a.jpg?r=a5b&quot;)"></div>
+            
+           
+        </div>
+    </div>
+            </section>
+            
+            <section class="nmtitle-section section-additional-videos" id="section-additional-videos" data-uia="section-additional-videos">
+                <div class="section-header" data-uia="section-header">
+                    <h2 class="section-header-text section-item" data-uia="section-header-text">Videos</h2>
+                    <h2 class="section-subheader-text section-item" data-uia="section-subheader-text">Strong Girl Nam-soon</h2>
+                </div>
+                <div class="nm-content-horizontal-row" aria-hidden="false">
+                    <ul class="nm-content-horizontal-row-item-container">
+                        <li class="nm-content-horizontal-row-item" data-uia="collections-row-item">
+                            <div class="additional-video-wrapper" data-uia="additional-video-wrapper">
+                                <button class="additional-video">
+                                    <span class="additional-video-image-wrapper" style="background-image:url(https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY5FPPkk4lM1CmhQIWhskOav0Nxl2nRk_bmMMalc2pgN3SjPwpxjP1Fdge-QvupOpc1fCTzvdXwK4-hH5a034Ou-n9fLisJ5a5JjQedVzfF9ZBi_ongpC-frrw.jpg?r=f6b)"><img src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY5FPPkk4lM1CmhQIWhskOav0Nxl2nRk_bmMMalc2pgN3SjPwpxjP1Fdge-QvupOpc1fCTzvdXwK4-hH5a034Ou-n9fLisJ5a5JjQedVzfF9ZBi_ongpC-frrw.jpg?r=f6b" alt="" role="presentation" class="additional-video-image-preloader" loading="lazy">
+                                        <svg viewBox="0 0 50 50" class="additional-video-play-icon" data-uia="additional-video-play-icon">
+                                            <g fill="none" fill-rule="nonzero">
+                                                <path fill="#fff" d="M25 50C11.2 50 0 38.8 0 25S11.2 0 25 0s25 11.2 25 25-11.2 25-25 25z" class="base"></path>
+                                                <path fill="#000" d="M35.3 25l-15.6-8.6v17.2z" class="triangle"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="additional-video-title" data-uia="additional-video-title">Teaser: Strong Girl Nam-soon</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nm-content-horizontal-row-item" data-uia="collections-row-item">
+                            <div class="additional-video-wrapper" data-uia="additional-video-wrapper">
+                                <button class="additional-video">
+                                    <span class="additional-video-image-wrapper" style="background-image:url(https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABXllWLG0ydNrc33h16gz_qrOFoEGqYLJta_Q11IQNpO6VML0wxWPN4lZpAO0-ajbtQ3zHL94_egM9zwKSVMa7DStN1IL7KLkUoTWZId0nxdIc12wDnakp_E_Jg.jpg?r=46b)">
+                                        <img src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABXllWLG0ydNrc33h16gz_qrOFoEGqYLJta_Q11IQNpO6VML0wxWPN4lZpAO0-ajbtQ3zHL94_egM9zwKSVMa7DStN1IL7KLkUoTWZId0nxdIc12wDnakp_E_Jg.jpg?r=46b" alt="" role="presentation" class="additional-video-image-preloader" loading="lazy">
+                                        <svg viewBox="0 0 50 50" class="additional-video-play-icon" data-uia="additional-video-play-icon">
+                                            <g fill="none" fill-rule="nonzero">
+                                                <path fill="#fff" d="M25 50C11.2 50 0 38.8 0 25S11.2 0 25 0s25 11.2 25 25-11.2 25-25 25z" class="base"></path>
+                                                <path fill="#000" d="M35.3 25l-15.6-8.6v17.2z" class="triangle"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="additional-video-title" data-uia="additional-video-title">Trailer: Strong Girl Nam-soon</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                   </div></section>
+                            
+                             <section class="nmtitle-section" id="section-seasons-and-episodes" data-uia="section-seasons-and-episodes"><div class="section-header" data-uia="section-header"><h2 class="section-header-text section-item" data-uia="section-header-text">Episodes</h2><h2 class="section-subheader-text section-item" data-uia="section-subheader-text">Strong Girl Nam-soon</h2></div><div id="season-selector-container"><div class="select-label" data-uia="season-static-label">Limited Series</div></div><div id="seasons-and-episodes-list-container"><div class="season season-active" data-uia="season-active"><div class="season-metadata"><div class="season-release-year" data-uia="season-release-year">Release year: 2023</div><p class="season-synopsis" data-uia="season-synopsis">Gifted with superhuman strength, a young woman returns to Korea to find her birth family —&nbsp;only to be entangled in a drug case that could test her power.</p></div><ol class="episodes-container"><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Birth of the Strong Girl. Episode 1 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZlPBjIuWMQSVFwv3dVOFoSVb2YZ-f8-Oy3hfwt5rMUFy6a3ZeC4dXwSSNHBTaghDANSaneV2AAU5je2xG4D5B0hD3gtBrQLCEo4okI5pGmlNAmTcMzVzpsy.jpg?r=7e5" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">1. Birth of the Strong Girl</h3><span class="episode-runtime" data-uia="episode-runtime">62m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Desperate for a reunion, Hwang Geum-ju seemingly finds her long-lost daughter. After discovering the truth, Gang Nam-soon prepares for her trip to Korea.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Gangnam, Here I Come. Episode 2 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZYFo9zPbZ4iXT5Zr5rfYlr2HcREcdlX5v-aGPgDw8K1ddWw1a8SwYEf_ajZQ9llFzG6U-Y7HIzvQkYTyg8NUnjXVUcWzMdy8hK92lWZ5jtPuDKE71sEtWhZ.jpg?r=8fe" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">2. Gangnam, Here I Come</h3><span class="episode-runtime" data-uia="episode-runtime">64m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Nam-soon begins her search for her parents in Korea but experiences some roadblocks. Geum-ju suspects something's off with her newfound daughter.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Three Generations. Episode 3 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABapxAbWBxGxkero4p6ueXScvfjodZymyd1pqOsccU9zBM9jQkZ6L3zjbVKo5h-59f2N6m2SE4eQf8QC_7CXxhREvtuMR0Me762SKMuwbSrH3NWeuZjxHZkgs.jpg?r=cb2" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">3. Three Generations</h3><span class="episode-runtime" data-uia="episode-runtime">63m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">The incident at the Han River puts a spotlight on Nam-soon. As Kang Hee-sik spends more time with Nam-soon, he connects the dots about her family.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Reunion. Episode 4 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWdD-T-tVHM4GeOvG33ZqTIELSQNyUcXBrhQl6e6XKqYPBuYyhUz_HFrhLIUjYN5j7nwhLKUzFOdlXSHCzBjjPh0_jD344iDcjInZNlQOGQ2JogIYEAXhrKb.jpg?r=fa3" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">4. Reunion</h3><span class="episode-runtime" data-uia="episode-runtime">65m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">After a dramatic reunion, Nam-soon becomes closer to her family. As Hee-sik continues to investigate a drug case, Nam-soon lends her assistance.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Vigilante of Seoul. Episode 5 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcyVnecrF0JSosjLnB2qGXhXZx_3yd-AnjTpa88Soike4CYriOubWlNDOJLYmhQYSH770RWWEglcHVK86PB_lCvPZ-3PRIf50vj8MFAp0BqDTIwG5dQOS2vo.jpg?r=8aa" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">5. Vigilante of Seoul</h3><span class="episode-runtime" data-uia="episode-runtime">65m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">As Nam-soon assists Hee-sik in his drug investigation, she has a run-in with the ominous Ryu Si-o. Ri Hwa-ja plots her revenge against Nam-soon.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Mystery X. Episode 6 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdkOkS8AaLtTTbNC5yhCV9Oq8BFBZfQLZF-Y89NlLi7Pf-lgD3sKYTSShbd0Uv4F3zcVACQCSmV-kVqJKMzREdLR0giiIEP-LUCt2U22XOCKiU2wXxmbhIHZ.jpg?r=d84" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">6. Mystery X</h3><span class="episode-runtime" data-uia="episode-runtime">65m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Hee-sik witnesses the jarring effects of the drug when it strikes his team leader. Nam-soon's search for evidence garners attention from foes.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Moonbow. Episode 7 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbo5xLtUQyU7kTtkr-7L8RYgqNjXnjmqIaq5yk1g94GAit2aoHSXt6nAezd_V6Errt5TNJVLt4Os99ibxbiiMJwaIvQEuthvtLmLp7oO73C3d7LJlmmX2ak6.jpg?r=e0e" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">7. Moonbow</h3><span class="episode-runtime" data-uia="episode-runtime">65m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Geum-ju pays a strategic visit to Si-o, who has his own motives. During a birthday dinner, Nam-soon's family questions her growing kinship with Hee-sik.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Light and Shadow of Gangnam. Episode 8 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdsFo94Mrscs55RoUu_jxhWUdsEswmxRhPYJho1cwfa0v27l4miWQ66N3eqK8A6ow20MzbpscTw2Dh5AKvi0M1_JLxALk4YWUG4PCAZunisuNClCBO1kj-KN.jpg?r=bcf" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">8. Light and Shadow of Gangnam</h3><span class="episode-runtime" data-uia="episode-runtime">65m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Hee-sik begins to worry about Nam-soon after Si-o promotes her into his inner circle. Geum-ju probes deeper into a suspicious businessman.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch The Root of Vice. Episode 9 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQSuwnDNdBuBL1ZZgTBowj-vwqKQEQEOdAOnUFwCGwcUc9KNIBJOmNWSDKeg6McRxLcYLjWkrfYVaEJRZt7AV04FU2pdlGmgsow.jpg?r=fed" loading="lazy"></figure>
+                                <div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">9. The Root of Vice</h3><span class="episode-runtime" data-uia="episode-runtime">62m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Nam-soon pulls off a bold heist, putting Si-o on high alert. During a tense meeting, Geum-ju challenges Si-o — who in return begins plotting his revenge.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch The Stand-ins. Episode 10 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABd8wGmkLeFCkrIiIquuvAdsRAU_bt-WcZluXyWYSzdKZx8k_XXEH8Ja2Losf4v1PTY1Kw58N5SwSjgjkbz5FrY97nNcZEy1KKFo.jpg?r=f8f" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">10. The Stand-ins</h3><span class="episode-runtime" data-uia="episode-runtime">63m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Geum-ju falls victim to Si-o's attack, but proves she's one step ahead of him. As Nam-soon finally tracks down the drugs, her brother succumbs to them.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Breaking Point. Episode 11 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABa0Cyh9AahytBT9rKIMMb2z7Z5HHGuM_g1JaeltuZ4WCKMovLhUkItL8AzRjiVBlclC4ggsTTuz1SbUXEs0MLZ3SJ-y7a0gjkRw.jpg?r=74c" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">11. Breaking Point</h3><span class="episode-runtime" data-uia="episode-runtime">65m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">The drug infiltrates Nam-soon's family — prompting a search of the source and an antidote. A mourning Hee-sik furiously goes after Si-o's inner circle.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Diamond Cuts Diamond. Episode 12 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeN5y_chEs6QV_RkGmTkvqkXE05JG6-xmKML83_8baz8joA1969ZRDsD1wHYYR5ijJoYzP3ixnQM1XT_3StSLnFV8Gnv1pghAJ8.jpg?r=bd6" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">12. Diamond Cuts Diamond</h3><span class="episode-runtime" data-uia="episode-runtime">62m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Si-o learns of Geum-ju's ruse and decides to expand his target. As the drug case becomes more intense, Hee-sik asks Nam-soon to move in with him.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Save the Sea Hares. Episode 13 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWzrxmXZQCs-_24d4nH51F1wIsFnT6Tmu52IqKktOKbbdVuFMB1yrWot7u4t_MffygLuF8_VVcoQbV0W4bykbaVS61680zcVRlzFu82bTM8-2mpGrfjSLD3B.jpg?r=3e1" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">13. Save the Sea Hares</h3><span class="episode-runtime" data-uia="episode-runtime">64m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">To find out Nam-soon's identity, Si-o narrows down his search and goes after her family. Hee-sik faces harsh discipline after news of the drug goes wide.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Forewarned Bloodbath. Episode 14 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWPejZpNPwasAnDmRIop9qU-5oJD5p38lh3WJLoUqG4x_o8Donbu94zgI2xu2w-8QUAI7gqdASeGTBnkXSySQuXpQXaslXAxA5FgUSfs258MkB7HQKVkB8Wo.jpg?r=68d" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">14. Forewarned Bloodbath</h3><span class="episode-runtime" data-uia="episode-runtime">66m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Si-o vows revenge after discovering the truth about Nam-soon. While Hee-sik continues his investigation, Nam-soon and her family go on a trip to Busan.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Strong Girl Nam-soon. Episode 15 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABR-vLxcDo1oDLu760PFf8J9dlIcWigHjP0Qcbgb_ZWSS6_LTaKtLcARYXi5CBECcJ2eOoPO_84n40VoGY4eEHO92uUyWWIfqVK9e-rLI3qYsyTlHu_IEifxY.jpg?r=3be" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">15. Strong Girl Nam-soon</h3><span class="episode-runtime" data-uia="episode-runtime">63m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">Mourning the loss of Hwa-ja, Nam-soon directly challenges Si-o. But he refuses to lose,&nbsp;forcing her to endure incredible pain to save her adopted mother.</p></li><li class="episode" data-uia="episode"><figure class="episode-thumbnail" data-uia="episode-thumbnail"><span class="episode-thumbnail-gradient"></span><img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch In the Name of Love and Justice. Episode 16 of Season 1." src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbWxFQ-ywlr8bQLGOi0HWmEycd09SrHrsSrjf6LhXYgyl4aUD2AV--_aCsMODct3_740nS98lMUN_cjBOk43hlnm1AYmCdcVgWERXuTb6OVS2zRaIIxjHd9F.jpg?r=976" loading="lazy"></figure><div class="episode-metadata"><h3 class="episode-title" data-uia="episode-title">16. In the Name of Love and Justice</h3><span class="episode-runtime" data-uia="episode-runtime">65m</span></div><p class="epsiode-synopsis" data-uia="episode-synopsis">With Nam-soon on the brink of death — Hee-sik rushes to find an antidote. Nam-soon faces Si-o once again, but witnesses a surprising turn.</p></li></ol></div></div></section><section class="nmtitle-section" id="section-more-details" data-uia="section-more-details"><div class="section-header" data-uia="section-header"><h2 class="section-header-text section-item" data-uia="section-header-text">More Details</h2></div><div class="more-details-container"><div class="more-details-cell cell-download" data-uia="more-details-cell-download"><div class="more-details-label">Watch offline</div><div class="more-details-item-container"><span class="more-details-item item-download" data-uia="more-details-item-download">Download and watch everywhere you go.</span></div></div><div class="more-details-cell cell-genres" data-uia="more-details-cell-genres"><div class="more-details-label">Genres</div><div class="more-details-item-container"><span class="more-details-item item-genres" data-uia="more-details-item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/11714">TV Dramas</a>, </span><span class="more-details-item item-genres" data-uia="more-details-item-genres"><a class="more-details-item item-genres">Korean</a>, </span><span class="more-details-item item-genres" data-uia="more-details-item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/10375">TV Comedies</a>, </span><span class="more-details-item item-genres" data-uia="more-details-item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/26146">Crime TV Shows</a></span></div></div><div class="more-details-cell cell-mood-tag" data-uia="more-details-cell-mood-tag"><div class="more-details-label">This show is...</div><div class="more-details-item-container"><span class="more-details-item item-mood-tag" data-uia="more-details-item-mood-tag">Quirky</span></div></div></div><div class="more-details-container-cast"><div class="more-details-cell cell-cast" data-uia="more-details-cell-cast"><div class="more-details-label">Cast</div><div class="more-details-item-container"><span class="more-details-item item-cast" data-uia="more-details-item-cast">Lee You-mi</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Kim Jung-eun</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Kim Hae-sook</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Ong Seong-wu</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Byeon Woo-seok</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="nmtitle-section" id="section-more-titles" data-uia="section-more-titles" data-nosnippet="true">
+                        <div class="section-header" data-uia="section-header">
+                            <h2 class="section-header-text section-item" data-uia="section-header-text">More Like This</h2>
+                        </div>
+                        <div class="link-container">
+                            <a class="title-link" href="/gh/title/80198001" data-uia="title-link">
+                                <img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbKJeCncb7w8xdKtmV_TKcWl_k0Fvch_qfp6ZNyLo8fMDxgKRzvxk-Eq3TMAMKalyCjr2bt_lfB4SzMoYicImOgYxJdsTA2cf1Ud.jpg?r=ee0" alt="Strong Girl Bong-soon" loading="lazy"></a><a class="title-link" href="/gh/title/81669777" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABW8Dznpe6tawHv4Nt2yGjPpHshRVtClefZpcXpcPL6RG2dIsXU1PndL8YtZx2gGqwRvEpMPFj07IIB8SQnF6KLf636snOiFAcyKsPYTvD-eqbZRMOoyNWEpf2mC9UxzOCJgBBw.jpg?r=75b" alt="Behind Your Touch" loading="lazy"></a><a class="title-link" href="/gh/title/81323551" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZPiKrWT0R_DpVAJN4inpDpcskKM9S6RCfM3nnqSLM4r4Hq33rGY2TWzqu0w1-0AP9VM3gVWTvjPov52K1Iu2TCCefM7XfeIamWtYTIl4oEGe2O4_JhDo1e8AEXrYZykDfDadA.jpg?r=a80" alt="The Uncanny Counter" loading="lazy"></a><a class="title-link" href="/gh/title/81701128" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZtrPSmT4tvlcW-A8YxvOvxPkPcjdZM3PIq1xg4nHHz5yEUIK6m9W-hkoNvvwKKrnPvX8Mz9DtaKoO0SINoPuPidBcQELFMiVcLf5Oe9yQ31E48ZNGjPm9-9m0nyiQJMTLevPg.jpg?r=fdf" alt="Castaway Diva" loading="lazy"></a><a class="title-link" href="/gh/title/81518991" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbnby54svePv1NYgRipeEhV4XadgZK4JLcQ_ZXFpnNM2YNJ9LgqJpz86CuHKi54XP62J0FzQilNbHz2FIk4OF7gsY-AYfMERy1ByheVer6iMp_n4nq1GLrR1IEnvSO4P2X34hA.jpg?r=141" alt="Extraordinary Attorney Woo" loading="lazy"></a><a class="title-link" href="/gh/title/81669779" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbO0EiT2cXKC2zV3oDDby-y0u2rjRgKkFfzklRlYyE4o9xkNcs4sZL5G_Y2SLQyg7eDl7xNihWb_c9C4i3TpPGOX69bqClCRWJY4Bbo_pcWT3aPjo62yCCDOff7VJQn63Kxd9Q.jpg?r=cac" alt="Destined with You" loading="lazy"></a><a class="title-link" href="/gh/title/81509440" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYFPSHEP1rHYzUs2rnvLxezi_0NX63SHU3MYgyxNRea-ashWBGm9JXTEfL5oEYcTiIMSMxMXnrO9KiZXhwMzxDLEEVvqadf28dl0MoA1TFgg2GMUFQidwQRGKICq-NYhFDaR5Q.jpg?r=095" alt="Business Proposal" loading="lazy"></a><a class="title-link" href="/gh/title/81716080" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQDNpzTdHavcBsHDK5j2oHYcs55-NWkxm3kAwXzDPclQdiE7REv0oYVdUhXvhE-9PG19WoZyjk6y9U8dBnkqlXLMcWFG98Pt8eL4gqHVIgMm9c7p227l3w8-ZkfhKcAfRKZU5A.jpg?r=44c" alt="My Demon" loading="lazy"></a><a class="title-link" href="/gh/title/81671440" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYZOh8dH8Osk8czOYVllx-eBNAlvF0mY6hAwi3a5f5Tne6CWBnD0NKDpWbH7mbPTfkCkRJlZenGEmDFiMzv3lPY9lQxpb14Uv35_4__0XfVQs3UWPFWklui2iXQvsQws9umr6g.jpg?r=b69" alt="King the Land" loading="lazy"></a><a class="title-link" href="/gh/title/81503460" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbYiI-3QEnnqPZYbBbvzNX47qa9OoMrdxZhB72-bI8vy4tWm7wpqi55iM8lPb3N-aDEVeaxzk1BAebhVIKlwqAW58HdDHqP4mQ_-DZU7L6AlO77GJeogI8mFEnRdZ2qgwKK2wQ.jpg?r=2d5" alt="Tomorrow" loading="lazy"></a><a class="title-link" href="/gh/title/81472752" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeJPNIe7kURaDKAF_UGH53b99ylf-rWGpS9epVPk40jkZj4XlbPeOowz6N46pzRVyulkjWnBIjFmBb4MXnEBRyHy-CFNyUH_N85Dyc9l6VTEPFbEzLbbbLsHl9uY4ErqHNOTcQ.jpg?r=1b4" alt="20th Century Girl" loading="lazy"></a><a class="title-link" href="/gh/title/81488912" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="https://occ-0-6326-34.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWYIxoJa1Vnpk7tFXtq5GmUXeY85UenVOFe2WkUxrHq22UcI1Bmiebl3OKtTGbWY4oSxdDdEZmvzYprSJ6vkHM21910pAAhde-CF.jpg?r=95b" alt="Doom at Your Service" loading="lazy"></a></div>
+                                
+                                </section>
+                                <section class="nmtitle-section" id="section-tudum-promo" data-uia="section-tudum-promo">
+                                    <div class="tudum-promo-container">
+                                        <div class="tudum-promo-cell" data-uia="tudum-promo-cell">
+                                            <div class="tudum-promo-text">Go behind the scenes of Netflix TV shows and movies, see what's coming soon and watch bonus videos on <a href="https://netflix.com/tudum">Tudum.com</a>.</div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="site-footer-wrapper centered"><div class="footer-divider"></div><div class="site-footer"><p class="footer-top"><a class="footer-top-a" href="https://help.netflix.com/contactus">Questions? Contact us.</a></p><ul class="footer-links structural"><li class="footer-link-item" placeholder="footer_responsive_link_faq_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/support/412" target="_self" placeholder="footer_responsive_link_faq"><span id="" data-uia="data-uia-footer-label">FAQ</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_help_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com" target="_self" placeholder="footer_responsive_link_help"><span id="" data-uia="data-uia-footer-label">Help Center</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_account_item"><a class="footer-link" data-uia="footer-link" href="/youraccount" target="_self" placeholder="footer_responsive_link_account"><span id="" data-uia="data-uia-footer-label">Account</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_media_center_item"><a class="footer-link" data-uia="footer-link" href="https://media.netflix.com/" target="_self" placeholder="footer_responsive_link_media_center"><span id="" data-uia="data-uia-footer-label">Media Center</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_relations_item"><a class="footer-link" data-uia="footer-link" href="http://ir.netflix.com/" target="_self" placeholder="footer_responsive_link_relations"><span id="" data-uia="data-uia-footer-label">Investor Relations</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_jobs_item"><a class="footer-link" data-uia="footer-link" href="https://jobs.netflix.com/jobs" target="_self" placeholder="footer_responsive_link_jobs"><span id="" data-uia="data-uia-footer-label">Jobs</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_waysToWatch_item"><a class="footer-link" data-uia="footer-link" href="/watch" target="_self" placeholder="footer_responsive_link_waysToWatch"><span id="" data-uia="data-uia-footer-label">Ways to Watch</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_terms_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/termsofuse" target="_self" placeholder="footer_responsive_link_terms"><span id="" data-uia="data-uia-footer-label">Terms of Use</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_privacy_separate_link_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/privacy" target="_self" placeholder="footer_responsive_link_privacy_separate_link"><span id="" data-uia="data-uia-footer-label">Privacy</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_cookies_separate_link_item"><a class="footer-link" data-uia="footer-link" href="#" target="_self" placeholder="footer_responsive_link_cookies_separate_link"><span id="" data-uia="data-uia-footer-label">Cookie Preferences</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_corporate_information_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/corpinfo" target="_self" placeholder="footer_responsive_link_corporate_information"><span id="" data-uia="data-uia-footer-label">Corporate Information</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_contact_us_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/contactus" target="_self" placeholder="footer_responsive_link_contact_us"><span id="" data-uia="data-uia-footer-label">Contact Us</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_speed_test_item"><a class="footer-link" data-uia="footer-link" href="https://fast.com" target="_self" placeholder="footer_responsive_link_speed_test"><span id="" data-uia="data-uia-footer-label">Speed Test</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_legal_notices_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/notices" target="_self" placeholder="footer_responsive_link_legal_notices"><span id="" data-uia="data-uia-footer-label">Legal Notices</span></a></li><li class="footer-link-item originals-link" placeholder="footer_responsive_link_only_on_netflix_item"><a class="footer-link" data-uia="footer-link" href="https://www.netflix.com/gh/browse/genre/839338" target="_self" placeholder="footer_responsive_link_only_on_netflix"><span id="" data-uia="data-uia-footer-label">Only on Netflix</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="footer-country"> Ghana</p>
+                    </div>
+                </div>
+            </div>
+        
+</body>
+</html>

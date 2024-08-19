@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: white;">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+            background-attachment: fixed;
+        }
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="../images/Screenshot (18).png" width="100px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="../home.html">HOME</a></li>
+                <li><a href="../about us.html">ABOUT</a></li>
+                <li><a href="../contact.html">CONTACT</a></li>
+                <li><a href="../login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+  
+  
+
+      <style>
+        .koka{
+            text-align: start;
+            width: 85%;
+            padding-left: 60px;
+            font-size: 20px;
+        }
+
+        .list{
+            text-align: start;
+            width: 85%;
+            padding-left: 20px;
+            font-size: 20px; 
+        }
+      </style>
+      <div>
+        <div>
+            <div class="koka">
+              <h1> Privacy Policy</h1>
+                  <br>
+                  <p><span style="font-weight: 400;">We take the utmost care and apply the highest security standards to protect your personal data from unauthorized access. The processing of personal data on our website </span><a href="../home.html"><span style="font-weight: 400;">https://www.MOVIEgaiN.com</span></a><span style="font-weight: 400;"> and in the MOVIEgaiN apps (for the sake of simplicity, reference will only be made to the “website” apart from exceptional cases) is carried out in accordance with the provisions of the <strong>General Data Protection Regulation (GDPR)</strong>.</span><span style="font-weight: 400;"><br><br></span></p>
+
+
+                  <p><span style="font-weight: 400;"><span style="background-color: #ffffff;">In recognizing the diverse legal landscapes of the regions we serve, MOVIEgaiN wishes to highlight that our privacy practices are aligned with the applicable laws of these regions. This dedication ensures that additional region-specific terms may only apply to individuals in those locales, conforming strictly to the requirements of applicable laws. For our users residing in the United States, particularly in the states of California, Virginia, Colorado, Connecticut, among others, we draw your attention to the forthcoming sections titled </span><strong><span style="background-color: #ffffff;">California Privacy Rights</span></strong><span style="background-color: #ffffff;">, and </span><strong><span style="background-color: #ffffff;">Virginia/Colorado/Connecticut and certain other U.S. State Privacy Rights</span></strong><span style="background-color: #ffffff;">. These sections are dedicated to outlining specific disclosures related to our collection, usage, and disclosure of your information, alongside elucidating the additional rights afforded to you under applicable U.S. laws.</span></span></p>
+                  <p>&nbsp;</p>
+
+
+                  <h3><span style="font-weight: 400;">1. Responsible party</span></h3>
+                  <p><span style="font-weight: 400;">Responsible party in the sense of the GDPR:</span><span style="font-weight: 400;"><br><br></span></p>
+                 
+
+
+                  <p><span style="font-weight: 400;">If you have any questions regarding the collection, processing or use of your personal data, or if you wish to provide information, correct, block or delete data, please contact: </span><a href="../contact.html"><span style="font-weight: 400;">privacy@MOVIEgaiN.com</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+                  <h3><span style="font-weight: 400;">2. Data processing on our website</span></h3>
+                  <p><span style="font-weight: 400;">When you visit our website, our web server temporarily stores each access in a log file. The following data is collected and stored until it is deleted automatically:</span></p>
+                  <p>&nbsp;</p>
+                  
+
+
+
+
+
+                  <ul class="list">
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">IP address of the requesting computer</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">MOVIEgaiN ID</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Date and time of access</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Name and URL of the accessed file</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Notification of whether the retrieval was successful</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Identification data of the browser and operating system used.</span></li>
+                    </ul>
+                    <p>&nbsp;</p>
+
+
+
+
+
+                    <p><span style="font-weight: 400;">This data is processed for the purposes of enabling the use of the website (establishing a connection), system security, technical administration, network infrastructure and the optimization of the online offer. This data cannot be attributed to specific persons, and will not be merged with other data sources without consent. The data will also be deleted after a statistical evaluation.</span></p>
+                    <p><span style="font-weight: 400;">The legal basis for the data processing is art. 6 (1) (f) GDPR.</span></p>
+                    <p>&nbsp;</p>
+                    <h3><span style="font-weight: 400;">3. Collection, processing and use of personal data</span></h3>
+                    <p><span style="font-weight: 400;">During data processing, your interests that require protection are always taken into account in accordance with the legal provisions. Personal data (such as your name or email address) is only collected if you provide it to us voluntarily. This may be the case, for example:</span></p>
+                    <p>&nbsp;</p>
+
+
+
+
+                    <ul class="list">
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">when you make a contact request</span></li>
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">when you register for a JustWatch account (MOVIEgaiN Pro)</span></li>
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">when you leave feedback via our forms</span></li>
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">when you take part in a survey</span></li>
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">or when you tell us your zip code so we can help you find a cinema near you.</span></li>
+                        </ul>
+                        <p>&nbsp;</p>
+
+
+                        <p><span style="font-weight: 400;">We use the data you provide without your specific consent exclusively to process your request and delete it when the process is complete and legal regulations do not prevent deletion.</span></p>
+                        <p><span style="font-weight: 400;">The legal basis for the data processing is art. 6 (1) (f) GDPR.</span></p>
+                        <h4 ><span style="font-weight: 400;">3.1 Zendesk</span></h4>
+                        <p><span style="font-weight: 400;">We use the “Zendesk” customer relationship management (CRM) service on this website. The service provider is Zendesk Inc, 989 Market Street #300, San Francisco, CA 94102, USA.</span></p>
+                        <p><span style="font-weight: 400;">We use Zendesk for feedback automation. The use of Zendesk is optional. If you do not agree to Zendesk collecting your data, we offer alternative ways to contact us to submit feedback via email. To use Zendesk, you must provide at least one valid email address. The service can also be used pseudonymously. No information will be passed on to third parties.</span><span style="font-weight: 400;"><br><br></span></p>
+
+
+
+                        <p><span style="font-weight: 400;">In addition, cookies that process your IP address are created using Zendesk. These cookies are technically necessary to ensure the technical functionality of the website and to protect the website from bot attacks.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">If the data in the contact forms is used to provide contractual services to data subjects, the legal basis for the processing is art. 6 (1) (b) GDPR. Furthermore, Art. 6 (1) (a) GDPR serves as the legal basis if you have consented to the data processing.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The data processing that takes place via the cookies is based on Art. 6 (1) (f) GDPR. Our legitimate interest is that we need to ensure the functionality and security of our website. The personal data will be retained for as long as necessary to fulfill the purpose of the processing. The data will be deleted as soon as it is no longer necessary to achieve the purpose.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">In the context of processing via Zendesk, data may be transferred to the USA. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards.</span></p>
+      <p><span style="font-weight: 400;">For more information, please see Zendesk's privacy policy: </span><a href="https://www.zendesk.com/company/privacy-and-data-protection/"><span style="font-weight: 400;">https://www.zendesk.com/company/privacy-and-data-protection/</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <h4><span style="font-weight: 400;">3.2 RevenueCat</span></h4>
+      <p><span style="font-weight: 400;">For the transmission and verification of in-app purchases (conclusion of a MOVIEgaiN Pro subscription), we use RevenueCat, a service provided by RevenueCat, Inc., 633 Tarava St. Suite 101, San Francisco, CA 94116, USA (“RevenueCat”).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">As part of processing via RevenueCat, data may be transferred to the USA. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards. The SCC: </span><a href="https://www.revenuecat.com/dpa"><span style="font-weight: 400;">https://www.revenuecat.com/dpa</span></a><span style="font-weight: 400;">.&nbsp;</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+
+      <p><span style="font-weight: 400;">The legal basis for the processing is art. 6 (1) (b) GDPR and art. 6 (1) (f) GDPR.</span></p>
+      <p><span style="font-weight: 400;">If you do not want RevenueCat to process your data, please do not make in-app purchases. You can also subscribe to JustWatch Pro on our website. For more information, please see </span><a href="https://www.revenuecat.com/terms/"><span style="font-weight: 400;">RevenueCat’s Terms</span></a><span style="font-weight: 400;"> and </span><a href="https://www.revenuecat.com/privacy/"><span style="font-weight: 400;">Privacy Policy</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+      <h4><span style="font-weight: 400;">3.3 Stripe</span></h4>
+      <p><span style="font-weight: 400;">When concluding a JustWatch Pro subscription, the payment process is handled by the payment service provider Stripe Inc. 510,Townsend St., San Francisco, CA 94103, "Stripe". This is in line with our legitimate interest in offering an efficient and secure payment method (art. 6 (1) (f) GDPR). In this context, we share data with Stripe to the extent necessary for the performance of the contract (art. 6 (1) (b) GDPR). This involves transaction data. This data includes, for example, the payment method (i.e. credit card, debit card or account number), bank code, currency, amount and date of payment. During a transaction, your name, email address, billing or shipping address, and sometimes your transaction history may be transmitted. This data is necessary for authentication. In addition, Stripe may also collect technical data (such as IP address), name, address, phone number and your country for fraud prevention, financial reporting and to fully provide its own services.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The processing of the data provided under this section is not required by law or contract. We cannot process a payment via Stripe without the submission of your personal data. Your data will be stored by us until the payment processing is completed. This includes the period necessary for processing refunds, claims management and fraud prevention.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Stripe has a dual role in data processing activities as a Controller and Processor. As a Controller, Stripe uses your data to comply with regulatory obligations. This is in accordance with Stripe's legitimate interest (pursuant to art. 6 (1) (f) GDPR) and serves the performance of the contract (pursuant to art. 6 (1) (b) GDPR). We have no influence on this process. Stripe acts as a Processor in order to be able to complete transactions within the payment networks. Within the scope of the processing relationship, Stripe acts exclusively according to our instructions and has been contractually obligated within the meaning of art. 28 GDPR to comply with the provisions of data protection law.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">As part of processing via Stripe, data may be transferred to the USA. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards. Stripe has implemented compliance measures for international data transfers. These apply to all global activities where Stripe processes personal data of individuals in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs). For more information, please see </span><a href="https://stripe.com/de-us/privacy"><span style="font-weight: 400;">Stripe's privacy policy</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <h4><span style="font-weight: 400;">3.4 Braze</span></h4>
+      <p><span style="font-weight: 400;">We use “Braze” for our push messages. The service provider is Braze, Inc, 318 West 39th Street, 5th Floor New York, NY 10018. Braze processes user data such as push tokens, interaction data and IP addresses to control the sending of push messages and analyze user interactions.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">In the course of processing by Braze, data may be transferred to the USA. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">The legal basis for this processing and the transfer of your personal data to Braze in the USA is your consent in accordance with art. 6 (1) (a) and art. 49 (1) (a) GDPR. You may withdraw your consent at any time, by changing your privacy settings on our website via the following </span><a href="../index.html"><span style="font-weight: 400;">link</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">For more information about data processing by Braze, please see </span><a href="https://www.braze.com/company/legal/privacy"><span style="font-weight: 400;">Braze’s privacy policy</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+
+
+      <h3><span style="font-weight: 400;">4. Use of functional cookies</span></h3>
+      <p><span style="font-weight: 400;">We use so-called cookies to make your visit to our website comfortable and to enable the use of certain functions. Cookies are small text files that are used as identifiers. We transfer them to the hard drive of your computer via your web browser and can read them during your current visit (so-called session cookies). Please note that certain cookies are already stored as soon as you enter our website. Our cookies are protected against being read by third parties by means of your browser’s security standards. You have the option of preventing cookies from being stored on your computer via the appropriate settings in your browser. However, this may limit the functionality of our website or prevent you from accessing it.</span></p>
+      <p><span style="font-weight: 400;">The legal basis for the data processing is art. 6 (1) (f) GDPR.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h3><span style="font-weight: 400;">5. Interest-based advertising</span></h3>
+      <p><span style="font-weight: 400;">We would like to suggest the movies that best suit your personal taste and show you where you can watch them. What we do, provided you have given us your consent: to personalize your experience, we collect, process and store your interactions with our website. This allows us to send you tailored or interest-based advertisements that are optimized for your profile. These ads may be displayed on JustWatch as well as on other websites you visit or apps you use (using retargeting technology). They may also be delivered in emails. If you do not give your consent, we will still show you ads on our website, but they will not be personalized.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">In general, all your data is collected in anonymized or pseudonymized form, but we may also collect personal data for explicitly defined use cases. Subject to your consent, we process certain data with the help of third parties and share your data with our business partners. More details on this can be found below. When you use our mobile app, we may collect your GPS location, subject to your additional consent. We may look at how often you use the app and where you downloaded it.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">If you have given your consent to the use of a third-party provider, the legal basis for the data processing is art. 6 (1) (a) GDPR. Otherwise, your data will be processed on the basis of our legitimate interests (i.e. interest in efficient, economical and recipient-friendly services) and the legal basis for the data processing is art. 6 (1) (f) GDPR.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">What we don’t do: we never collect sensitive information such as financial data. We never sell user-level information (e.g., “What movie titles did a particular user click on?”) unless it is in aggregate form (e.g. “What titles are popular with users?”).</span><span style="font-weight: 400;"><br><br></span></p>
+      <h3><span style="font-weight: 400;">6. Affiliate links</span></h3>
+      <p><span style="font-weight: 400;">On our website, we include so-called affiliate links or other references (which may include, for example, search masks or widgets) to offers and services from third-party providers. If you click on the affiliate links or subsequently take advantage of the offers, we may receive a commission or other benefits from these third parties.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">To be able to track whether you have taken advantage of the offers of an affiliate link that we have included, it is necessary for the respective third-party provider to learn that you have clicked on an affiliate link on our website. The assignment of the affiliate link is for commission accounting purposes only and will be deleted as soon as it is no longer necessary.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">In order to assign affiliate links, these can be supplemented by certain values that comprise a component of the link or that can be stored elsewhere, e.g. in a cookie. These values may include, in particular, the source website (referrer), the time, an online identifier of the operator of the website where the affiliate link was located, an online identifier of the respective offer, the type of link used, the type of offer and an online identifier of the user.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">If you have given us your consent to use a third-party provider, the legal basis for the data processing is art. 6 (1) (a) GDPR. However, the use of a third-party provider may also form part of our (pre)contractual services, in which case the legal basis for the data processing is Art. 6 (1) (b) GDPR. Otherwise, your data will be processed on the basis of our legitimate interests (i.e. interest in efficient, economical and recipient-friendly services) and the legal basis for the data processing is Art. 6 (1) (f) GDPR.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <h3><span style="font-weight: 400;">7. Snowplow</span></h3>
+      <p><span style="font-weight: 400;">We use the web tracking solution from SnowPlow Analytics Limited, Floor 6, 17 Bevis Marks, London EC3A 7LN, United Kingdom (“SnowPlow”) on our website. We use the data collected using SnowPlow for statistical purposes only. We place a cookie in your browser and use a tracking pixel to recognize a returning user as such. The SnowPlow cookie contains a date and a non-reversible random combination number (“hash”) as well as the number of the current session.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">By using SnowPlow, we do not receive any personal data from you, but only statistical information about the use of our website. So, for example, we find out which movies or series are particularly popular, at which times our website is used particularly intensively, via which websites you have reached us, where you have come online from and which browser and operating systems you use. We use this information to continuously optimize the content and our site from a technical, design and editorial point of view and to make it more convenient for you.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">This data collection and processing take place at all times without personal references. In particular, we do not store complete IP addresses. This does not therefore fall within the scope of application of the GDPR.</span></p>
+      <p><span style="font-weight: 400;">You can find more information in </span><a href="https://snowplow.io/privacy-policy/"><span style="font-weight: 400;">SnowPlow’s privacy policy</span></a><span style="font-weight: 400;">. You can delete the relevant cookie at any time via your browser.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h3><span style="font-weight: 400;">8. Sentry</span></h3>
+      <p><span style="font-weight: 400;">This website uses the service Sentry, 1501 Mariposa St #408, San Francisco, CA 94107, USA, (“Sentry”) to improve the technical stability of the website by monitoring system stability and identifying code errors. Sentry is used solely for these purposes and does not evaluate data for advertising purposes. User data, such as details of the device or time of error, are collected anonymously, are not used in a personalized manner and are subsequently deleted. Consequently, this does not fall within the scope of application of the GDPR. For more information about Sentry, please refer to the </span><a href="https://sentry.co.com/privacy-policy/"><span style="font-weight: 400;">Sentry privacy policy</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h3><span style="font-weight: 400;">9. Google</span></h3>
+      <h5><span style="font-weight: 400;">9.1 Google Tag Manager</span></h5>
+      <p><span style="font-weight: 400;">We use Google Tag Manager (“Tag Manager”) from Google Inc. 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA and Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland (“Google”).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Tag Manager collects data on the website and forwards it to the connected analysis tools. The tools store and evaluate this data. Tag Manager does not store any data itself; it has no access to do so. Tag Manager only collects data on how individual tags are used. We collect data via Tag Manager about how you use our website and pass this on to the analysis tools integrated via Tag Manager. Some of this data is personal data, e.g. IP addresses.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">A connection to Google’s servers is only established when you have consented to the use of Tag Manager. Until then, no cookies are set up by Tag Manager on your device. The information collected by the cookies may be sent to a Google server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards. </span><a href="https://business.safety.google/adsprocessorterms/"><span style="font-weight: 400;">Google’s data protection terms and conditions</span></a><span style="font-weight: 400;">, which comply with the SCCs, apply here.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+
+      <p><span style="font-weight: 400;">The legal basis for this processing and the transfer of your personal data to Google in the USA is your consent pursuant to art. 6 (1) (a) and art. 49 (1) (a) GDPR. You may withdraw your consent at any time, by changing your privacy settings on our website via the following </span><a href="../index.html"><span style="font-weight: 400;">link</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">You can block the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. You can also prevent the transfer of data generated by the cookie and related to your use of the website (including your IP address) to Google, as well as the processing of this data by Google, by downloading and installing the browser plugin available at the following link. You also have the option of selecting the types of Google ads or disabling interest-based ads on Google via the ads settings.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">For more information on the terms of use and privacy policy, please visit </span><a href="https://policies.google.com/technologies/ads?hl=en"><span style="font-weight: 400;">https://policies.google.com/technologies/ads?hl=en</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">9.2 Google Analytics</span></h4>
+      <p><span style="font-weight: 400;">We use Google Analytics, an advertising analysis service of Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA and Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland (“Google”).</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+
+      <p><span style="font-weight: 400;">Google Analytics uses cookies, which are text files placed on your computer, to help the website analyze how users use the site (e.g., to measure reach). The information generated by the cookie about your use of our website will be transmitted to and stored by Google on servers in the United States. However, because IP anonymization is enabled on this website, your IP address will be truncated beforehand by Google within a member state of the European Union or other contracting states of the Agreement on the European Economic Area. Only in exceptional cases will the full IP address be transferred to a Google server in the USA and truncated there. On our behalf, Google will use this information for the purposes of evaluating your use of the website, compiling reports on website activity and providing other services relating to website activity and Internet usage. The IP address transmitted by your browser as part of Google Analytics will not be merged with other Google data. In connection with the use of Google Analytics, location data (information on the geographical position of a device or person) may be processed in addition to metadata and communication data (e.g. device information and IP addresses). Usage data (e.g. access to websites, clicks, access times), contact data (e.g. email, telephone numbers), content data (e.g. entries in online forms) or inventory data (e.g. names, addresses) may also be processed.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">We would like to point out that on this website Google Analytics has been supplemented by the code "gat._anonymizeIp();" in order to ensure that IP addresses are collected anonymously (so-called IP masking).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">A connection to the Google Analytics servers will only be established if you have consented to the use of Google Analytics. Before that, no cookies from Google Analytics will be stored on your device. The information collected by the cookies may be sent to a Google server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with </span><a href="https://business.safety.google/adsprocessorterms/"><span style="font-weight: 400;">European data protection standards</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The legal basis for this processing and the transfer of your personal data to Google in the U.S. is your consent pursuant to art. 6 (1) (a) and art. 49 (1) (a) GDPR. You can withdraw your consent at any time, by modifying your privacy settings for our website via the following </span><a href="../index.html"><span style="font-weight: 400;">link</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. You can also prevent the collection of data generated by the cookie and related to your use of the website (including your IP address) by Google and the processing of this data by Google by downloading and installing the browser plugin available at the following</span><a href="https://tools.google.com/dlpage/gaoptout?hl=de"><span style="font-weight: 400;"> link</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">For more information on terms of use and data protection, please visit </span><a href="http://www.google.com/analytics/terms/de.html"><span style="font-weight: 400;">www.google.com/analytics/terms/de.html</span></a><span style="font-weight: 400;"> or </span><a href="http://www.google.com/intl/de/analytics/privacyoverview.html"><span style="font-weight: 400;">www.google.com/intl/de/analytics/privacyoverview.html</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">9.3 Google Ads</span></h4>
+      <p><span style="font-weight: 400;">We use Google Ads conversion tracking and remarketing to place interest-based ads on external websites. Google Ads is an online advertising program of Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland ("Google").</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+
+      <p><span style="font-weight: 400;">Google Ads makes it possible to define the visitors to our website as a target group for the display of ads. We use Google Ads to display the ads that we place only to those users who have also shown an interest in their content (e.g. interest in certain movies and series).</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">Remarketing function allows us to present users of our website with interest-based ads on other websites within the Google advertising network (in Google Search or on YouTube, so-called "Google Ads" or on other websites). Your interaction with our website is analyzed in order to do this. For this purpose, Google stores cookies on the end devices of users who visit certain Google services or websites in the Google display network. The cookies are used to uniquely identify a web browser on a particular device and not to identify a person.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">These ads are delivered by Google via so-called “ad servers”. For this purpose, we use ad server cookies, which can be used to measure certain success parameters, such as ads displayed or clicks by users. If you access our website via a Google ad, Google Ads will store a cookie on your end device. The unique cookie ID, number of ad impressions per placement (frequency), last impression (relevant for post-view conversions) and opt-out information are usually stored as analysis values for this cookie.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">These cookies enable Google to recognize your Internet browser. We ourselves do not collect and process any personal data in the aforementioned advertising measures. We are only provided with statistical evaluations by Google. Based on these evaluations, we can see which of the advertising measures used are particularly effective. We do not receive any further data from the use of the advertising media; in particular, we cannot identify you on the basis of this information.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">A connection to Google's servers is only established once you have consented to the use of Google Ads. Before that, no cookies are stored by Google Ads on your device. The information collected by the cookies may be sent to a Google server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards. </span><a href="https://policies.google.com/technologies/ads?hl=en"><span style="font-weight: 400;">Google's privacy policy</span></a><span style="font-weight: 400;">, which complies with the SCCs, applies here.</span><span style="font-weight: 400;"><br><br></span></p>
+      
+      <p><span style="font-weight: 400;">You can refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. You can also prevent the collection of data generated by the cookie and related to your use of the website (including your IP address) by Google and the processing of this data by Google by downloading and installing the browser plugin available at the following </span><a href="https://tools.google.com/dlpage/gaoptout?hl=de"><span style="font-weight: 400;">link</span></a><span style="font-weight: 400;">. You also have the option to select the types of Google ads or disable interest-based ads on Google via the </span><a href="https://adssettings.google.com/authenticated?hl=en"><span style="font-weight: 400;">ads setting</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">For more information on the terms of use and privacy policy, please visit </span><a href="https://policies.google.com/technologies/ads?hl=en"><span style="font-weight: 400;">https://policies.google.com/technologies/ads?hl=en</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">9.4 Google Firebase</span></h4>
+      <p><span style="font-weight: 400;">Our website uses “Firebase”, an analysis and monitoring tool from Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland (“Google”).</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">Firebase supports our login process by processing so-called “instance IDs”, which include a time stamp. These IDs are assigned to a specific user and allow the linking of different events or processes. This data does not allow us to draw any conclusions about the specific user. We do not carry out any personalization. We process this aggregated data in order to analyze and optimize user behavior, for example by evaluating crash reports. We further use Firebase Remote Config on our website and in the JustWatch mobile app. The service allows us to configure app settings so that we can change the app you have installed on your device without you having to install a new version from the Google Play Store or Apple App Store, for example. For this purpose, your device information, your language settings and your country settings are processed. You can find more information about Firebase Remote Config </span><a href="https://firebase.google.com/docs/remote-config/"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.&nbsp;</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">In order to continuously improve MOVIEgaiN, we conduct tests - for example, to find out more about an optimal design or the greatest possible clarity of JustWatch. For such testing purposes, we also collect statistical data and use the Firebase A/B Testing web analysis system (</span><a href="https://firebase.google.com/docs/ab-testing/"><span style="font-weight: 400;">https://firebase.google.com/docs/ab-testing/</span></a><span style="font-weight: 400;">) for this purpose. Firebase does not collect any personal data. The information about your use of this website is transmitted anonymously to a Firebase server and stored there.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">As part of processing via Firebase, data may be transferred to the USA. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards. Google has implemented compliance measures for international data transfers. These apply to all global activities where Stripe processes personal data of individuals in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs).</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. You can also prevent the collection of data generated by the cookie and related to your use of the website (including your IP address) by Google and the processing of this data by Google by downloading and installing the browser plugin available at the following link (</span><a href="https://tools.google.com/dlpage/gaoptout?hl=de"><span style="font-weight: 400;">https://tools.google.com/dlpage/gaoptout?hl=de</span></a><span style="font-weight: 400;">). You can find more information about the processing of your data by Google </span><a href="https://policies.google.com/technologies/ads?hl=en"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">. You have the right to object to the processing of your personal data pursuant to art. 21 GDPR, insofar as there are grounds for doing so that arise from your particular situation. If you wish to exercise your right to object, you can send us an email at: </span><a href="mailto:privacy@justwatch.com"><span style="font-weight: 400;">privacy@justwatch.com</span></a><span style="font-weight: 400;">.&nbsp;</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <h4><span style="font-weight: 400;">9.5 Google Floodlight</span></h4>
+      <p><span style="font-weight: 400;">Our website uses “Floodlight”, an analysis and monitoring tool from Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland (“Google”).</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">We use Floodlight to measure the effectiveness of our advertising campaigns, to limit the frequency with which you are shown a certain ad and to only display ads that are relevant to you and your interests. In particular, information about the ads you have clicked on, as well as your previous usage behavior on third party websites, is collected and stored. Google uses a cookie ID to record which ads are displayed in which browser and can thus prevent them from being displayed more than once. In addition, Google can use cookie IDs to record so-called conversions that are related to ad requests. The cookies do not contain any personal information such as email addresses, names or street addresses.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">In addition, Floodlight allows us to understand whether you have taken certain actions after viewing or clicking on one of our display/video ads on another platform (conversion tracking). Google uses this cookie to understand the content you have interacted with on our websites in order to send you targeted advertising later.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">A connection to Google's servers is only established once you have consented to the use of Floodlight. Before that, no cookies are stored by Floodlight on your device. The information collected by the cookies may be sent to a Google server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. To protect your personal data, we have concluded so-called standard contractual clauses (“SCCs”). SCCs are data protection regulations issued by the European Commission, the conclusion of which imposes legal obligations on the data importer and the implementation of which guarantees compliance with European data protection standards. </span><a href="https://policies.google.com/technologies/ads?hl=en"><span style="font-weight: 400;">Google's privacy policy</span></a><span style="font-weight: 400;">, which complies with the SCCs, applies here.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. You can also prevent the collection of data generated by the cookie and related to your use of the website (including your IP address) by Google and the processing of this data by Google by downloading and installing the browser plugin available at the following </span><a href="https://tools.google.com/dlpage/gaoptout?hl=de"><span style="font-weight: 400;">link</span></a><span style="font-weight: 400;">. You also have the option to select the types of Google ads or disable interest-based ads on Google via the </span><a href="https://adssettings.google.com/authenticated?hl=en"><span style="font-weight: 400;">ads setting</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">For more information on the terms of use and privacy policy, please visit </span><a href="https://policies.google.com/technologies/ads?hl=en"><span style="font-weight: 400;">https://policies.google.com/technologies/ads?hl=en</span></a></p>
+      <p>&nbsp;</p>
+
+
+
+      <h3><span style="font-weight: 400;">10. Dailymotion</span></h3>
+      <p><span style="font-weight: 400;">JustWatch uses Dailymotion, an entertainment service of Dailymotion SA, 140 Boulevard Malesherbes, 75017 Paris, France. Dailymotion is an entertainment service that offers a social media website to users, content makers, and companies to upload, publish, and share videos covering news, politics, animals, cinema, comedy, cooking, culture, music, sports, and travel.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">Purposes for the processing of personal data are the personalisation, functionality, analytics, optimization and advertisement. Technologies and services used to collect the data are Cookies, Pixels and Web beacons that are placed in the browser.</span></p>
+      <p>&nbsp;</p>
+
+
+
+
+      <p><span style="font-weight: 400;">The (personal) data that is collected by or through the use of this service is the usage data, content viewed, ads viewed, browser information, operating system information, device information, number of page views, profile information, IP address, referrer URL, frequency and duration of activities, clicked advertisements.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">The data will be deleted as soon as they are no longer needed for the processing purposes.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">Although Dailymotion is located in the European Union and the primary location where the collected data is being processed is the European Union, we would like to point out that it cannot be ruled out that the information collected by the cookies will be sent to a server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">More information can be found in the </span><a href="https://www.dailymotion.com/legal/privacy"><span style="font-weight: 400;">Privacy Policy</span></a><span style="font-weight: 400;"> and the </span><a href="https://www.dailymotion.com/legal/cookiemanagement"><span style="font-weight: 400;">Cookie Policy</span></a><span style="font-weight: 400;"> of Dailymotion.&nbsp;</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <h3><span style="font-weight: 400;">11. Social Media</span></h3>
+      <h4><span style="font-weight: 400;">11.1 Facebook</span></h4>
+      <p><span style="font-weight: 400;">We have a so-called fan page on the “Facebook” social network and process user data in this context. We also use Facebook pixels on our website. The service provider is Facebook Inc, 1601 Willow Road, Menlo Park, California 94025; Facebook Ireland Ltd, 4 Grand Canal Square, Dublin 2, Ireland.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">We use our fan page to provide information about MOVIEgaiN and to communicate with users active there via the network. Furthermore, data may be processed through the use of Facebook for market research and advertising purposes. This is carried out, for example, on the basis of tracking, where interest- or behavior-based profiling or cookies may be used, among other things. However, remarketing and reach measurement are also used, for which purpose access statistics - which recognize returning visitors - are created, for example.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">In this context, the following types of data may be processed: inventory data and contact data (e.g. name, address, email, telephone number), content data (e.g. entries in online forms, use of the message function), usage data (e.g. access to websites, clicks, access times), metadata and communication data (e.g. device information, IP addresses).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">With the help of the Facebook pixel (or comparable functions, for the transmission of event data or contact information by means of interfaces in apps), it is possible for Facebook to define the visitors to our online offer into a target group for the display of ads ("Facebook ads"). We use the Facebook pixel to display the Facebook ads that we place only to those users on Facebook and within the services of partners cooperating with Facebook (“</span><a href="https://tools.google.com/dlpage/gaoptout?hl=de"><span style="font-weight: 400;">Audience Network</span></a><span style="font-weight: 400;">”) who have also shown an interest in their content (e.g. interest in certain movies and series) and transmit this information to Facebook (“Custom Audiences”). The Facebook pixel also helps us to make sure that our Facebook ads correspond to your potential interest and are not a nuisance. In addition, the Facebook pixel allows us to track the effectiveness of the Facebook ads for statistical and market research purposes, because we can see whether users were redirected after clicking on a Facebook ad (“conversion measurement”).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">In this context, the following types of data may be processed: content data (e.g. entries in online forms, use of the messaging function), usage data (e.g. website access, clicks, access times), metadata and communication data (e.g. device information, IP addresses), and event data (Facebook). Event data includes, for example, visits to websites, interactions with content, installations of apps and purchases of movies. Event data is processed to create target groups for content and advertising information (Custom Audiences). Event data does not include specific content (such as comments written), login information, or contact information (e.g. names, email addresses, and phone numbers). Event data is deleted by Facebook after a maximum of two years.</span></p>
+      <p>&nbsp;</p>
+
+
+
+      <p><span style="font-weight: 400;">With regard to data processing on our Facebook fan page and through the Facebook pixel, MOVIEgaiN and Facebook Ireland are joint controllers according to art. 26 GDPR. The legal basis for the processing of personal data is art. 6 (1) (a) GDPR. You can assert your data subject rights with Facebook directly as well as with us. The primary responsibility under the GDPR for the processing of data lies with Facebook and Facebook fulfills all obligations under the GDPR with regard to the processing of data. You can view the joint processing agreement </span><a href="https://www.facebook.com/legal/controller_addendum"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">. You can find Facebook's security terms </span><a href="https://www.facebook.com/legal/terms/data_security_terms"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">. When Facebook provides us with metrics, analytics, and reports (which are aggregated, i.e. without information on individual users and anonymous to us), this processing is not carried out under shared responsibility, but is based on a processing agreement, which you can view </span><a href="https://www.facebook.com/legal/terms/dataprocessing"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">We, as the operator, do not make any decisions regarding the processing of Insights data and any other information resulting from art. 13 GDPR, including legal basis, identity of the controller or storage period of cookies on user terminals.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The standard contractual clauses of the European Commission apply to the transfer of data to Facebook with the addition of the Facebook EU Data Transfer Supplement, available at </span><a href="https://www.facebook.com/legal/EU_data_transfer_addendum"><span style="font-weight: 400;">https://www.facebook.com/legal/EU_data_transfer_addendum</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Although Facebook Ireland is the data controller according to the Facebook EU Data Transfer Supplement, we would like to point out that it cannot be ruled out that the information collected by the cookies will be sent to a Facebook server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Please note that it is possible to link the data with other data (sometimes also on other devices). This risk exists in particular if you have a Facebook account and are logged in to Facebook. To avoid further data linking, we recommend that you log out of Facebook before visiting our website.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The legal basis for this processing and the transfer of your personal data to the USA is your consent pursuant to art. 6 (1) (a) and art. 49 (1) (a) GDPR. You have the option to withdraw your consent at any time </span><a href="https://www.justwatch.com/?show_cmp"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">For more information, please see Facebook Ireland’s privacy policy, available at: </span><a href="https://www.facebook.com/about/privacy"><span style="font-weight: 400;">https://www.facebook.com/about/privacy</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">11.2 Instagram</span></h4>
+      <p><span style="font-weight: 400;">We maintain an online presence on the Instagram social network and process user data in this context. The service provider is Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">We use Instagram to provide information about the company and to communicate with users active on the network. Furthermore, data may be processed through the use of Instagram for market research and advertising purposes. This is carried out, for example, on the basis of tracking, where interest- or behavior-based profiling or cookies may be used, among other things. However, remarketing and reach measurement are also used, for which purpose access statistics - which recognize returning visitors - are created, for example.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">In connection with the use of our online presence on Instagram, the following types of data may be processed: inventory data and contact data (e.g. name, address, email, telephone number), content data (e.g. entries in online forms, use of the message function), usage data (e.g. access to websites, clicks, access times), metadata and communication data (e.g. device information, IP addresses).</span></p>
+      <p><span style="font-weight: 400;">Instagram is a product of Facebook and the text relating to Facebook applies accordingly.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">11.3 Twitter Retargeting/Conversion Tracking</span></h4>
+      <p><span style="font-weight: 400;">We use Twitter retargeting/conversion tracking “Twitter Ads” on our website. The service provider is Twitter Inc, 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. Within the European Union, the responsible body for handling data subject rights is Twitter International Company, One Cumberland Place, Fenian Street, Dublin 2, D02 AX07 IRELAND (“Twitter”).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Twitter Ads enables us to collect data from users who visit our website. Cookies and code are used that connect our website to other third-party platforms such as Twitter. In the process, a non-reversible and non-personal checksum (hash value) is generated from your usage data and transmitted to Twitter for analysis and marketing purposes. In addition, a so-called “Twitter pixel” may be used to track the actions of users after they have viewed or clicked on a Twitter advertisement.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">In this context, the following types of data may be processed: content data (e.g. entries in online forms, use of the messaging function), usage data (e.g. access to web pages, clicks, access times), metadata and communication data (e.g. device information, IP addresses). In “cross-device personalization” Twitter also attempts to identify and link all of a user’s devices. Since the data is stored and processed by Twitter, a link to the respective user profile on twitter.com is also possible.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Although Twitter Ireland is the data controller, we would like to point out that it cannot be ruled out that the information collected by the cookies will be sent to a Facebook server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The legal basis for this processing and the transfer of your personal data to the U.S. is your consent pursuant to art. 6 (1) (a) and art. 49 (1) (a) GDPR. You have the option to withdraw your consent at any time </span><a href="https://www.justwatch.com/?show_cmp"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Detailed information about data processing on Twitter, the option to object (opt out) and the possibility of enforcing data subject rights against Twitter can be found here: </span><a href="https://twitter.com/en/privacy"><span style="font-weight: 400;">https://twitter.com/en/privacy</span></a><span style="font-weight: 400;">. In Twitter’s privacy settings, you can personalize Twitter’s data processing and thus determine, for example, whether the service should tailor advertising to you and whether it may also include other apps installed on your mobile devices in the personalization. You can also set whether Twitter can analyze your location and use it for advertising purposes. Settings: </span><a href="https://twitter.com/personalization"><span style="font-weight: 400;">https://twitter.com/personalization</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">11.4 TikTok</span></a></h4>
+      <p><span style="font-weight: 400;">We use a conversion tracking tool for advertisers, TikTok Pixel, on our website. The TikTok social media application is an international video portal. The service provider for the European region is TikTok Technology Limited, 10 Earlyfort Terrace Dublin, D02 T380, Ireland (“TikTok”).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">By using the TikTok pixel (or comparable functions, for the transmission of event data or contact information via interfaces in apps), it is possible for TikTok to define the visitors to our online offering into a target group for the display of ads. We use the TikTok pixel to display ads that we place only to users on TikTok who have also shown an interest in their content (e.g. interest in certain movies and series) and transmit this information to TikTok. We also use the TikTok pixel to ensure that our ads match your potential interest and are not a nuisance. In addition, the TikTok pixel allows us to track the effectiveness of TikTok ads for statistical and market research purposes, because we can see whether users have been redirected after clicking on a TikTok ad (“conversion measurement”).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">In this context, the following types of data may be processed: content data (e.g. entries in online forms, use of the messaging function), usage data (e.g., access to websites, clicks, access times), metadata and communication data (e.g., device information, IP addresses), and event data. Event data includes, for example, visits to websites, interactions with content, installations of apps, and purchases of movies. Event data is processed to create target groups for content and advertising information (Custom Audiences). Event data does not include specific content (such as comments written), login information, and contact information (e.g. names, email addresses, and phone numbers).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">With regard to the data processing by the TikTok Pixel, JustWatch GmbH and TikTok are joint controllers according to art. 26 GDPR. You can view the joint processing agreement </span><a href="https://ads.tiktok.com/i18n/official/policy/controller-to-controller"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Although TikTok Ireland is the data controller, we would like to point out that it cannot be ruled out that the information collected by the cookies will be sent to a TikTok server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes. The transfer of data to TikTok is subject to the </span><a href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=en"><span style="font-weight: 400;">Standard Contractual Clauses of the European Commission</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Please note that a linking of the data with other data (partly also on other devices) is possible. This risk exists in particular if you have a TikTok account and are logged in to TikTok. To avoid further data linking, we recommend that you log out of TikTok before visiting our company website.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The legal basis for this processing and the transfer of your personal data to the USA is your consent pursuant to art. 6 (1) (a) and art. 49 (1) (a) GDPR. You have the option to withdraw your consent at any time </span><a href="https://www.justwatch.com/?show_cmp"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">For more information, please see TikTok's terms of use </span><a href="https://www.tiktok.com/legal/terms-of-use?lang=en"><span style="font-weight: 400;">https://www.tiktok.com/legal/terms-of-use?lang=en</span></a><span style="font-weight: 400;"> and privacy policy </span><a href="https://www.tiktok.com/legal/privacy-policy-eea?lang=en"><span style="font-weight: 400;">https://www.tiktok.com/legal/privacy-policy-eea?lang=en</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">11.5 YouTube</span></h4>
+      <p><span style="font-weight: 400;">We integrate video content from the “YouTube” service of the provider Google and process user data in this context. The service provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, parent company: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</span></p>
+      <p><span style="font-weight: 400;">We use YouTube to show you video content, especially movie or series trailers.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The use of video content from YouTube in particular involves the processing of metadata and communication data (e.g. device information and IP addresses). However, usage data (e.g. access to websites, clicks, access times), contact data (e.g. email, telephone numbers), content data (e.g. entries in online forms) or inventory data (e.g. names, addresses) may also be processed.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">We use YouTube in extended data protection mode. According to YouTube, this mode ensures that YouTube does not store any information about the users of our website before they have consented to the processing or watch the video. The disclosure of data by YouTube, on the other hand, is not necessarily excluded by the extended data protection mode. Thus, YouTube establishes a connection to the Google DoubleClick network, regardless of whether you watch a video.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">A connection with YouTube’s servers is only established when you have consented to the use of YouTube on the embedded preview image of the service. Before that, no cookies are stored by YouTube on your device. Please note that a linking of the data with further data (partly also on other devices) is possible. </span><span style="font-weight: 400;"><br></span><span style="font-weight: 400;">This risk exists in particular if you have a YouTube account and are logged in to YouTube. To avoid further data linking, we recommend that you log out of YouTube before visiting our company website.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The information collected by the cookies is usually sent to a Google server in the United States of America (USA) and stored there. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The legal basis for data processing in the context of embedding and displaying the preview images is art. 6 (1) (f) GDPR.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The legal basis for this processing and the transfer of your personal data to the U.S. is your consent pursuant to art. 6 (1) (a) and art. 49 (1) (a) GDPR. You have the option to withdraw your consent at any time </span><a href="https://www.justwatch.com/?show_cmp"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Detailed information on data processing can be found in the privacy policy at: </span><a href="https://policies.google.com/privacy"><span style="font-weight: 400;">https://policies.google.com/privacy</span></a><span style="font-weight: 400;">. Information on the opt-out option can be found at: </span><a href="https://tools.google.com/dlpage/gaoptout?hl=en"><span style="font-weight: 400;">https://tools.google.com/dlpage/gaoptout?hl=en</span></a><span style="font-weight: 400;">. Information on the settings for the display of ads can be found at: </span><a href="https://adssettings.google.com/authenticated"><span style="font-weight: 400;">https://adssettings.google.com/authenticated</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">YouTube’s Terms of Service you can find </span><a href="https://www.youtube.com/static?template=terms"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">. By using YouTube, you also agree to comply with <a href="https://developers.google.com/youtube/terms/developer-policies#a.-api-client-terms-of-use-and-privacy-policies">YouTube's Terms of Use</a>.</span><span style="font-weight: 400;"><br><br></span></p>
+      <h4><span style="font-weight: 400;">11.6 Pinterest</span></h4>
+      <p><span style="font-weight: 400;">We operate a company page on “Pinterest”. The service provider is Pinterest Inc., 808 Brannan Street San Francisco, CA 94103-490, USA.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">We would like to point out that you use the offered Pinterest service at your own risk and that we are not aware of all the details of data processing at Pinterest at this time. This applies in particular to the use of the interactive functions (e.g. sharing, commenting).</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">We process the data you enter on Pinterest, in particular your username and the content published under your account, insofar as we include it in our services and make it available to our followers.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">If you visit our website and are logged into your Pinterest account at the same time, Pinterest can directly assign your visit to our website to your Pinterest account. If you do not want Pinterest to assign your data to your account, you must log out of Pinterest before visiting our website.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">The legal basis for the data processing is art. 6 (1) (f) GDPR.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">Data collected when using Pinterest is processed by Pinterest and thereby transferred to countries outside the European Union. In the USA, there is no equivalent to the general adequacy decision of the European Commission certifying an adequate level of data protection. By transmitting your personal data, there is a risk that US authorities will access and process it for their own purposes.</span><span style="font-weight: 400;"><br><br></span></p>
+      <p><span style="font-weight: 400;">For information on how to contact Pinterest and how Pinterest processes your data, please see the privacy policy at </span><a href="https://policy.pinterest.com/en/privacy-policy"><span style="font-weight: 400;">https://policy.pinterest.com/en/privacy-policy</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br></span></p>
+      <p><span style="font-weight: 400;">Information on how you can manage or delete information yourself can also be found at </span><a href="https://policy.pinterest.com/en/privacy-policy"><span style="font-weight: 400;">https://policy.pinterest.com/en/privacy-policy</span></a><span style="font-weight: 400;">.</span></p>
+      <p>&nbsp;</p>
+        </div>
+</body>
+</html>

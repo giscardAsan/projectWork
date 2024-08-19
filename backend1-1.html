@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackEnd</title>
+    <link rel="stylesheet" href="css/backend.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <style>
+      
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="icons/Screenshot__16_-removebg-preview.png" width="150px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="appMountPoint">
+        <div class="basicLayout nonmemberTitle dark" lang="en-GH" dir="ltr">
+            <div class="css-16k8cq6 e1yb99j90">
+        </div>
+     
+        <section class="nmtitle-section section-hero" id="section-hero" data-uia="section-hero"><div class="hero-container" data-uia="hero-container">
+            <div class="info-container css-0">
+               
+                
+                <div class="details-container">
+                    <div class="title-info" data-uia="title-info">
+                                <h1 class="title-title"><b>ANIKULAPO</b></h1>
+                                <div class="title-info-metadata-wrapper">
+                                    <span class="title-info-metadata-item item-year"> 2022 </span>
+                                    <span  class="info-spacer"> | </span>
+                                    <span class="title-info-metadata-item item-maturity">
+                                        <span class="maturity-rating">
+                                            <span class="maturity-rating"><span class="screen-reader-text">Maturity Rating:</span>
+                                            <span class="maturity-number"> 18+ </span>
+                                        </span>
+                                    </span>
+                                    <span  class="info-spacer"> | </span>
+                                    <span class="title-info-metadata-item item-runtime">
+                                        <span class="duration"> 2h 22m </span>
+                                    </span>
+                                    <span  class="info-spacer"> | </span>
+                                    <a class="title-info-metadata-item item-genre" href=""> Drama </a>
+                                </div>
+                            <div class="title-info-synopsis-talent">
+                                <div class="title-info-synopsis">Aftheter an affair with a queen leeds to his demise, an eager traveler encounters a mystical bird with  the poor to give himanother life.</div>
+
+                                <div class="title-info-talent">
+                                    <div class="title-data-info-item item-starring">
+                                        <span class="title-data-info-item-label">Starring:</span>
+                                        <span class="title-data-info-item-list">Kunle Remi, Bimbo Ademoye, Hakeem Keakazim</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container css-16y7ok3">
+                    <div class="hero-image hero-image-desktop" style="display:none;background-image:url(&quot;backEnd-images/next/AAAABe8uGCtIJHwK52Q5e9o_BPwVjoeyzE_Bjpjww5_NKYlUzhFjTBkiGdMa15mgQBkL816lWJemjYCKB2tY-PJ-FWJiPhlBcgdma3tx.jpg&quot;)"></div>
+
+                    <div class="hero-image hero-image-mobile" style="display:none;background-image:url(&quot;backEnd-images/next/AAAABe8uGCtIJHwK52Q5e9o_BPwVjoeyzE_Bjpjww5_NKYlUzhFjTBkiGdMa15mgQBkL816lWJemjYCKB2tY-PJ-FWJiPhlBcgdma3tx.jpg&quot;)"></div>
+
+                </div>
+            </div>
+            
+        </section>
+        <section class="nmtitle-section">
+            <div class="hook-hr"></div>
+            <div class="hook-text">High-African movie from director Kunle Afolayan.</div>
+            <div class="hook-hr"></div>
+        </section>
+
+        <section class="nmtitle-section section-additional-videos">
+            <div class="section-header" data-uia="section-header">
+                <h2 class="section-header-text section-item" data-uia="section-header-text">Videos</h2>
+                <h2 class="section-subheader-text section-item" data-uia="section-subheader-text">Anikulapo</h2>
+            </div>
+            <div class="nm-content-horizontal-row">
+                <ul class="nm-content-horizontal-row-item-container">
+                    <li class="nm-content-horizontal-row-item">
+                        <div class="additional-video-wrapper">
+                            <button class="additional-video">
+                                <span class="additional-video-image-wrapper" style="background-image:url(backEnd-images/next/AAAABVdjTSAxYKfO4FQQI3m-o7lD1kMYCq3NxD-dGYZDEL4kUVYa5ui4oH-6yGd1AzffW7AEgtGp0eXeEvhL6tjyWbwPU-plOf7KGRfQV4YN34-4b_to0csy0h4BMA.jpg)">
+                                    <img src="backEnd-images/next/AAAABVdjTSAxYKfO4FQQI3m-o7lD1kMYCq3NxD-dGYZDEL4kUVYa5ui4oH-6yGd1AzffW7AEgtGp0eXeEvhL6tjyWbwPU-plOf7KGRfQV4YN34-4b_to0csy0h4BMA.jpg?r=866" alt="" role="presentation" class="additional-video-image-preloader" loading="lazy">
+                                    <svg viewBox="0 0 50 50" class="additional-video-play-icon" data-uia="additional-video-play-icon">
+                                        <g fill="none" fill-rule="nonzero">
+                                            <path fill="#fff" d="M25 50C11.2 50 0 38.8 0 25S11.2 0 25 0s25 11.2 25 25-11.2 25-25 25z" class="base"></path>
+                                            <path fill="#000" d="M35.3 25l-15.6-8.6v17.2z" class="triangle"></path>
+                                        </g>
+                                    </svg>
+                                </span>
+                               
+                                <span class="additional-video-title" data-uia="additional-video-title">Trailer: Anikulapo</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="popup-video">
+            <span>&times;</span>
+            <iframe width="1080" height="400" src="https://www.youtube.com/embed/CBnIpwSOWEg"></iframe>
+        </div>
+            <style>
+                .popup-video{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 100;
+                    background: rgba(0, 0, 1, 0.774);
+                    height: 100%;
+                    width: 100%;
+                    display: none;
+                }
+        
+                .popup-video iframe{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 500px;
+                    border-radius: 5px;
+                    border: 3px solid #fff;
+                    object-fit: cover;
+                }
+        
+                .popup-video span{
+                    position: absolute;
+                    top: 5px; right: 20px;
+                    font-size: 50px;
+                    color: #fff;
+                    font-weight: bolder;
+                    z-index: 100;
+                    cursor: pointer;
+                }
+        
+                @media (max-width:768px){
+                    .popup-video iframe{
+                        width: 90%;
+                    }
+                }
+            </style>
+        
+            <script>
+                document.querySelectorAll('.additional-video-image-wrapper svg').forEach(vid => {
+                    vid.onclick = () =>{
+                        document.querySelector('.popup-video').style.display = 'block';
+                        document.querySelector('.popup-video viveo').src = vid.getAttribute('src');
+                    }
+                });
+        
+                document.querySelector('.popup-video span').onclick = () =>{
+                    document.querySelector('.popup-video').style.display = 'none';
+                };
+            </script>
+
+
+
+        <section class="nmtitle-section" id="section-more-details">
+            <div class="section-header">
+                <h2 class="section-header-text section-item">More Details</h2>
+            </div>
+            <div class="more-details-container">
+                <div class="more-details-cell cell-download">
+                    <div class="more-details-label">Watch offline</div>
+                    <div class="more-details-item-container">
+                        <span class="more-details-item item-download">Download and watch everywhere you go.</span>
+                    </div>
+                </div>
+                <div class="more-details-cell cell-genres">
+                    <div class="more-details-label">Genres</div>
+                    <div class="more-details-item-container">
+                        <span class="more-details-item item-genres">
+                            <a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/5824">Nollywood, Drama Movies,  Period Pieces,</a>
+                        </span>
+                        <span class="more-details-item item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/6548"></a></span><span class="more-details-item item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/1365">African Movies</a></span></div></div><div class="more-details-cell cell-mood-tag"><div class="more-details-label">This movie is...</div><div class="more-details-item-container"><span class="more-details-item item-mood-tag" data-uia="more-details-item-mood-tag">Understated</span><span class="more-details-item item-mood-tag" data-uia="more-details-item-mood-tag"></span><span class="more-details-item item-mood-tag" data-uia="more-details-item-mood-tag"></span></div></div><div class="more-details-cell cell-audio"><div class="more-details-label">Audio</div><div class="more-details-item-container"><span class="more-details-item item-audio" data-uia="more-details-item-audio">English, Yoruba - Audio Description,</span><span class="more-details-item item-audio" data-uia="more-details-item-audio">Yoruba [Original]</span></div></div><div class="more-details-cell cell-subtitle"><div class="more-details-label">Subtitles</div><div class="more-details-item-container"><span class="more-details-item item-subtitle">English, English</span></div></div><div class="more-details-container-cast"><div class="more-details-cell cell-cast"><div class="more-details-label">Cast</div><div class="more-details-item-container"><span class="more-details-item item-cast">Kunle Remi</span><span class="more-details-item item-cast">Bimbo Ademoye</span><span class="more-details-item item-cast">Hakeem Kae-Kazim</span><span class="more-details-item item-cast">Sola Sobowale</span></div></div></div></section>
+        
+        <section class="nmtitle-section" id="section-more-titles">
+            <div class="section-header" data-uia="section-header">
+                <h2 class="section-header-text section-item">More Like This</h2>
+            </div>
+            
+            <div class="link-container">
+                <a class="title-link" href="/gh/title/81185548">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABaG9BDblvgHuwShf1XSyKZfT2MsDMy78MG27eF-uZVdThXljOU01M5ThGq-kBqgnxEfaMt9Ss4nY0gLEKYTZiIK2UNV7UzHjq0k.jpg" alt="Army of Thieves" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81251628" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABSydUg1kD7TG6PyfUY0xlV35U7PggZo3hU5eRD0eG1TBGQC5Ywy9tRVRtYAlvJ_wJrFHkZx5dqLlIosEcG1qLCzXwAeUQgpwSEM.jpg" alt="The Man from Toronto" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/80094318" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABb-mjcQr4c3Uiy2YhQz4XnmqgHNWrUdg1NhSDR60dzEQDY6m4CF5Y2pZUC3Zm_ASJ7gq1nDuJMTodJuPwgRiyxlYs3stts7JE6E.jpg" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/80094318" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABUVNlK1gGovkKUulg5mYLdjESuyXCF5IDOlG9o0sfpMjVbfhpg_ruf3o_UzG6vW_DHQ5h1W_fK3vuGPsmJOuoOHJinNukvQmp1c.jpg" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81161828" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" alt="Me Time" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81486233" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABc-oQ52bnQ4tp1HPchNJeqKgr5zDeruvNQfBeCTBW-05XCmaylG80S-iszQBh3MOurxAP3opFLB4y43wq5cNUjAtb9n19BGnAOg.jpg" alt="Sixty Minutes" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81282091" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABVMuOeffao2SMnMITMjPrN4F9o6Iv6kCoqTidYDk7AiZQ7jOxvOh1GRA19I-BzpeWRhHoy3DpRQFYN45D5AQi4AFsERksS9fhQo.jpg" alt="Wingwomen" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81282091" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABf84V-GLeIvJCXXQ0uKdMmcHEaaRqwgSqKfMDKzQRw93Q3J-UWxLvd564aPfsJSGudLdowo12EQLOrWuPNf7Tk7PU2fTd-2mLlfN_SRq5_ElIXU_oTSmPYkmWDTIQsBl41nl.jpg" alt="Wingwomen" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/80067830" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABTpaCW3SgNIJBrjdEhArCClO4gnJ2wYHKHyZiufzv5gsuI1W-gPCbuUivjeEUqZ_sIIVpYza066oZdWHlgTMUVNgOtJXHUFAIZvJMg4LqRj80WsJmq8dIcRNFAPKQQaL1-ks.jpg" alt="Ride Along 2" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81076856" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABelrz4ziWUTYGe5P181arHm4DbFApiTnGdWewPkYdNb6a4Yc2b5a5tcEYkG42NNwM5_RwFK0r_qCslyXExTePb6on51QbN3OFYI.jpg" alt="Beverly Hills Cop: Axel F" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81674658" data-uia="title-link">
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABevU_O1vck8wGtaxtK6eG7BJMDbQub9jTt0iOmq6RL-1wH8nsu-VAOplDz2JKeL9mWrG27Cj3u2oPjGQoZfhKG41L7uq9X8tssNAZdg4XIP-90oYCeMlXOM7IOt9UlpMPbSN.jpg" alt="The Equalizer 3" loading="lazy">
+                </a>
+                <a class="title-link" href="/gh/title/81760229" >
+                    <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABVcmYPvysWqkvhKqNfk0yhubbCBWEF3zVC7kaNX13GZJUExhg10DVySZc5TzO_jo7-gJYJ7BJ7Df7UPi9nb5BqfhOXLtsM9LGRE.jpg" alt="Anyone But You" loading="lazy">
+                </a>
+            </div>
+        </section>
+    </div>
+    
+    <div class="site-footer-wrapper centered">
+        <div class="footer-divider"></div>
+        <div class="site-footer">
+            <p class="footer-top">
+                <a class="footer-top-a" href="">Questions? Contact us.</a>
+            </p>
+            <ul class="footer-links structural">
+                <li class="footer-link-item" placeholder="footer_responsive_link_faq_item">
+                    <a class="footer-link" href="" target="_self" placeholder="footer_responsive_link_faq">
+                        <span id="">FAQ</span>
+                    </a>
+                </li>
+                <li class="footer-link-item" placeholder="footer_responsive_link_help_item">
+                    <a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_help">
+                        <span id="" data-uia="data-uia-footer-label">Help Center</span>
+                    </a>
+                </li>
+                <li class="footer-link-item" placeholder="footer_responsive_link_account_item">
+                    <a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_account">
+                        <span id="">Account</span>
+                    </a>
+                </li>
+                <li class="footer-link-item" placeholder="footer_responsive_link_media_center_item">
+                    <a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_media_center">
+                        <span id="" data-uia="data-uia-footer-label">Media Center</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_relations_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_relations"><span id="" data-uia="data-uia-footer-label">Investor Relations</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_waysToWatch_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_waysToWatch"><span id="" data-uia="data-uia-footer-label">Ways to Watch</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_terms_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_terms"><span id="" data-uia="data-uia-footer-label">Terms of Use</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_privacy_separate_link_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_privacy_separate_link"><span id="" data-uia="data-uia-footer-label">Privacy</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_cookies_separate_link_item"><a class="footer-link" data-uia="footer-link" href="#" target="_self" placeholder="footer_responsive_link_cookies_separate_link"><span id="" data-uia="data-uia-footer-label">Cookie Preferences</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_corporate_information_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_corporate_information"><span id="" data-uia="data-uia-footer-label">Corporate Information</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_contact_us_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_contact_us"><span id="" data-uia="data-uia-footer-label">Contact Us</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_speed_test_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_speed_test"><span id="" data-uia="data-uia-footer-label">Speed Test</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_legal_notices_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_legal_notices"><span id="" data-uia="data-uia-footer-label">Legal Notices</span></a></li><li class="footer-link-item originals-link" placeholder="footer_responsive_link_only_on_netflix_item"><a class="footer-link" data-uia="footer-link" href="" target="_self" placeholder="footer_responsive_link_only_on_netflix"><span id="" data-uia="data-uia-footer-label">Only on MOVIEgaiN</span></a></li></ul><p class="footer-country">MOVIEgaiN Ghana</p></div></div></div></div>
+
+
+
+<style>
+button,input,optgroup,select,textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+.footer-mount {
+    padding: 0;
+    width: 100%
+}
+
+.site-footer-wrapper {
+    color: #737373;
+    font-size: 1em;
+    margin-top: 80px;
+    min-width: 190px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%
+}
+
+.pt11 .site-footer-wrapper {
+    margin-bottom: 80px
+}
+
+.pt11 .site-footer-wrapper .footer-divider {
+    display: none
+}
+
+.footer-top-a {
+    color: #737373
+}
+
+.footer-divider {
+    border-top: 1px solid #e6e6e6;
+    height: 0;
+    width: 100%
+}
+
+.site-footer {
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 90%
+}
+
+.footer-top {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.footer-links {
+    box-sizing: border-box;
+    font-size: 13px;
+    max-width: 1000px
+}
+
+.footer-link-item {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 16px;
+    min-width: 100px;
+    padding: 0 22px 0 0;
+    vertical-align: top;
+    width: 25%
+}
+
+@media only screen and (max-width: 740px) {
+    .footer-link-item {
+        width:33%
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer-link-item {
+        width:50%
+    }
+}
+
+ul.structural{
+    margin: 0;
+    padding: 0;
+}
+
+.footer-link {
+    color: #737373
+}
+
+
+.copy-text {
+    color: grey;
+    font-size: .75em;
+    line-height: 1em;
+    margin: 20px 0
+}
+
+.copy-text a {
+    color: grey
+}
+
+.copy-text a:focus,.copy-text a:hover {
+    text-decoration: underline
+}
+
+.copy-text .copy-text-block+.copy-text-block {
+    margin-top: 4px
+}
+
+.footer-country {
+    font-size: 13px;
+    margin-top: 24px
+}
+
+body,html {
+    background-color: #181818;
+    box-sizing: border-box;
+    color: #fff
+}
+
+.footer-divider {
+    border: 0
+}
+
+.nm-content-horizontal-row {
+    position: relative;
+    width: 100%
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-item-container {
+    -ms-overflow-style: none;
+    display: flex;
+    margin: 16px 0;
+    overflow-x: scroll;
+    scrollbar-width: none
+}
+
+@media (max-width: 1023px) {
+    .nm-content-horizontal-row .nm-content-horizontal-row-item-container {
+        margin:10px 0
+    }
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-item-container::-webkit-scrollbar {
+    background: transparent
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-item {
+    display: inline-table;
+    flex: 1 0 auto;
+    list-style-type: none;
+    margin: 0 12px 0 0;
+    position: relative
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-item:last-of-type {
+    margin-right: 0
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #e50914;
+    display: flex;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    top: -15px;
+    z-index: 3
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav:focus:not(:focus-visible) {
+    outline: none
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav .nf-svg-icon {
+    display: inline-block;
+    width: 30px
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav .nf-svg-icon svg {
+    width: 30px
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav .nm-content-horizontal-row-gradient {
+    background-image: linear-gradient(90deg,hsla(0,0%,9%,.01) 30%,hsla(0,0%,9%,0));
+    height: 100%;
+    position: relative;
+    right: 10px;
+    width: 100px;
+    z-index: -1
+}
+
+.ab-44142-2 .nm-content-horizontal-row .nm-content-horizontal-row-nav .nm-content-horizontal-row-gradient {
+    background-image: linear-gradient(90deg,rgba(19,13,41,.01) 30%,rgba(19,13,41,0))
+}
+
+.ab-44142-3 .nm-content-horizontal-row .nm-content-horizontal-row-nav .nm-content-horizontal-row-gradient {
+    background-image: linear-gradient(90deg,rgba(28,5,5,.01) 30%,rgba(28,5,5,0))
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav.previous {
+    left: -30px
+}
+
+[dir=rtl] .nm-content-horizontal-row .nm-content-horizontal-row-nav.previous .nm-content-horizontal-row-nav-icon {
+    transform: rotate(180deg)
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav.next {
+    right: -30px
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav.next .nm-content-horizontal-row-gradient {
+    background-image: linear-gradient(270deg,hsla(0,0%,9%,.01) 30%,hsla(0,0%,9%,0))
+}
+
+.ab-44142-2 .nm-content-horizontal-row .nm-content-horizontal-row-nav.next .nm-content-horizontal-row-gradient {
+    background-image: linear-gradient(90deg,rgba(19,13,41,.01) 30%,rgba(19,13,41,0))
+}
+
+.ab-44142-3 .nm-content-horizontal-row .nm-content-horizontal-row-nav.next .nm-content-horizontal-row-gradient {
+    background-image: linear-gradient(90deg,rgba(28,5,5,.01) 30%,rgba(28,5,5,0))
+}
+
+.nm-content-horizontal-row .nm-content-horizontal-row-nav.next .nm-content-horizontal-row-nav-icon {
+    position: relative;
+    right: -100px;
+    transform: rotate(180deg)
+}
+
+[dir=rtl] .nm-content-horizontal-row .nm-content-horizontal-row-nav.next .nm-content-horizontal-row-nav-icon {
+    transform: rotate(0)
+}
+
+@media (max-width: 1023px) {
+    .nm-content-horizontal-row .nm-content-horizontal-row-nav {
+        display:none
+    }
+}
+
+.js-focus-visible :focus:not([data-focus-visible-added]) {
+    outline: none
+}
+
+.section-hero~.nmtitle-section {
+    background-color: transparent
+}
+
+.nmtitle-section.section-hero {
+    padding-top: 0
+}
+
+.section-hero {
+    background-position: 100%;
+    line-height: 1.4;
+    margin-bottom: -32px;
+    overflow: hidden;
+    padding: 0 5vw
+}
+
+.section-hero.locally-unavailable {
+    filter: saturate(.25)
+}
+
+.section-hero .hero-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    position: relative;
+    width: 100%
+}
+
+.section-hero .info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    min-width: 500px;
+    padding: 16px 32px 64px 0;
+    position: relative;
+    width: 35%;
+    z-index: 2
+}
+
+.ab-46106-2 .section-hero .info-container {
+    padding: 16px 32px 0 0
+}
+
+.section-hero .info-container:after {
+    background: linear-gradient(90deg,#181818 10%,hsla(0,0%,9%,.98) 20%,hsla(0,0%,9%,.97) 25%,hsla(0,0%,9%,.95) 35%,hsla(0,0%,9%,.94) 40%,hsla(0,0%,9%,.92) 45%,hsla(0,0%,9%,.9) 50%,hsla(0,0%,9%,.87) 55%,hsla(0,0%,9%,.82) 60%,hsla(0,0%,9%,.75) 65%,hsla(0,0%,9%,.63) 70%,hsla(0,0%,9%,.45) 75%,hsla(0,0%,9%,.27) 80%,hsla(0,0%,9%,.15) 85%,hsla(0,0%,9%,.08) 90%,hsla(0,0%,9%,.03) 95%,hsla(0,0%,9%,0));
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: -200px;
+    top: 0;
+    z-index: -1
+}
+
+.ab-44142-2 .section-hero .info-container:after {
+    background: linear-gradient(270deg,rgba(19,13,41,0),#130d29 58.4%)
+}
+
+.ab-44142-3 .section-hero .info-container:after {
+    background: linear-gradient(270deg,rgba(28,5,5,0),#1c0505 58.4%)
+}
+
+.section-hero .hero-image-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    height: 0;
+    padding-bottom: 55%;
+    z-index: 1
+}
+
+.section-hero .hero-image {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    right: -6%;
+    width: 103%
+}
+
+.section-hero .hero-image:after {
+    background: linear-gradient(0deg,#181818 0,hsla(0,0%,9%,.987) 1.62%,hsla(0,0%,9%,.951) 3.1%,hsla(0,0%,9%,.896) 4.5%,hsla(0,0%,9%,.825) 5.8%,hsla(0,0%,9%,.741) 7.06%,hsla(0,0%,9%,.648) 8.24%,hsla(0,0%,9%,.55) 9.42%,hsla(0,0%,9%,.45) 10.58%,hsla(0,0%,9%,.352) 11.76%,hsla(0,0%,9%,.259) 12.94%,hsla(0,0%,9%,.175) 14.2%,hsla(0,0%,9%,.104) 15.5%,hsla(0,0%,9%,.049) 16.9%,hsla(0,0%,9%,.013) 18.38%,hsla(0,0%,9%,0) 20%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.ab-44142-2 .section-hero .hero-image:after {
+    background: linear-gradient(0deg,#130d29 0,rgba(19,13,41,.987) 1.62%,rgba(19,13,41,.951) 3.1%,rgba(19,13,41,.896) 4.5%,rgba(19,13,41,.825) 5.8%,rgba(19,13,41,.741) 7.06%,rgba(19,13,41,.648) 8.24%,rgba(19,13,41,.55) 9.42%,rgba(19,13,41,.45) 10.58%,rgba(19,13,41,.352) 11.76%,rgba(19,13,41,.259) 12.94%,rgba(19,13,41,.175) 14.2%,rgba(19,13,41,.104) 15.5%,rgba(19,13,41,.049) 16.9%,rgba(19,13,41,.013) 18.38%,rgba(19,13,41,0) 20%)
+}
+
+.ab-44142-3 .section-hero .hero-image:after {
+    background: linear-gradient(0deg,#1c0505 0,rgba(28,5,5,.987) 1.62%,rgba(28,5,5,.951) 3.1%,rgba(28,5,5,.896) 4.5%,rgba(28,5,5,.825) 5.8%,rgba(28,5,5,.741) 7.06%,rgba(28,5,5,.648) 8.24%,rgba(28,5,5,.55) 9.42%,rgba(28,5,5,.45) 10.58%,rgba(28,5,5,.352) 11.76%,rgba(28,5,5,.259) 12.94%,rgba(28,5,5,.175) 14.2%,rgba(28,5,5,.104) 15.5%,rgba(28,5,5,.049) 16.9%,rgba(28,5,5,.013) 18.38%,rgba(28,5,5,0) 20%)
+}
+
+.section-hero .hero-image.hero-image-desktop {
+    display: block!important
+}
+
+.section-hero .hero-image.hero-image-mobile {
+    display: none
+}
+
+.section-hero .hero-image-loader {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: -1
+}
+
+
+
+.section-hero h1.title-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px
+}
+
+.section-hero .details-container {
+    margin: 40px 0 0
+}
+
+.section-hero .details-container .title-info {
+    margin-bottom: 22px
+}
+
+@media only screen and (min-width: 599px) {
+    .ab-46106-2 .section-hero .details-container {
+        margin:40px 0 56px
+    }
+}
+
+.section-hero .title-info-metadata-wrapper {
+    margin-top: 16px
+}
+
+.section-hero .title-info-metadata-item {
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    position: relative
+}
+
+.section-hero .title-info-synopsis,.section-hero .title-info-talent {
+    padding-top: 16px
+}
+
+.section-hero .title-data-info-item-label {
+    color: #a3a3a3
+}
+
+.section-hero .value-prop-with-cta {
+    box-shadow: 8px 5px 16px 0 rgba(0,0,0,.37);
+    margin-bottom: 32px;
+    margin-top: -64px;
+    position: relative
+}
+
+.ab-44142-2 .section-hero .value-prop-with-cta {
+    background: linear-gradient(270.57deg,#2d128e 10.54%,#5e0946 96.93%)
+}
+
+.ab-44142-3 .section-hero .value-prop-with-cta {
+    background: linear-gradient(90.2deg,#7d0000 27.91%,#014b74 82.59%)
+}
+
+.ab-46106-2 .section-hero .value-prop-with-cta {
+    align-items: normal;
+    background: none;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: inherit
+}
+
+.ab-46106-2 .section-hero .value-prop-with-cta .value-prop-logo {
+    display: none
+}
+
+.ab-46106-2 .section-hero .value-prop-with-cta .value-prop-wrapper {
+    padding-left: 0
+}
+
+@media only screen and (min-width: 599px) {
+    .ab-46106-2 .section-hero .value-prop-with-cta .value-prop-wrapper {
+        align-items:normal;
+        flex-direction: column
+    }
+}
+
+.ab-46106-2 .section-hero .value-prop-with-cta .value-prop {
+    font-size: 20px;
+    font-weight: 400
+}
+
+.ab-46106-2 .section-hero .value-prop-with-cta .btn {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 16px 24px
+}
+
+.ab-46106-2 .section-hero .value-prop-with-cta .btn:not(:hover):not(:focus):not(:active):not(:disabled) {
+    background: #e0403b
+}
+
+@media only screen and (max-width: 599px) {
+    .ab-46106-2 .section-hero .value-prop-with-cta .btn {
+        margin:12px 0;
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 599px) {
+    .ab-46106-2 .section-hero .value-prop-with-cta .btn {
+        border-radius:4px;
+        margin: 12px 0 0;
+        width: 55%
+    }
+}
+
+.section-hero .title-info-content-warning {
+    border: 1px solid #a3a3a3;
+    display: inline-block;
+    margin: 16px 0 0;
+    padding: 4px 8px
+}
+
+.section-hero .title-info-content-warning .svg-icon-content-warning {
+    height: 15px;
+    position: relative;
+    top: 2px;
+    width: 15px
+}
+
+.section-hero .title-info-content-warning .svg-icon-content-warning g:first-child {
+    fill: #a3a3a3
+}
+
+.section-hero .title-info-content-warning .content-warning-link {
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-left: 3px
+}
+
+@media only screen and (max-width: 599px) {
+    .section-hero .details-container {
+        margin:24px 0 0
+    }
+
+    .section-hero .details-container .title-info {
+        margin-bottom: 16px
+    }
+
+    .section-hero .hero-container {
+        flex-direction: column-reverse
+    }
+
+    .section-hero .hero-image-container {
+        margin: 0;
+        position: relative
+    }
+
+    .section-hero .hero-image {
+        height: 100%;
+        left: -5vw;
+        width: 112%
+    }
+
+    .section-hero .hero-image.hero-image-mobile {
+        display: block!important
+    }
+
+    .section-hero .hero-image.hero-image-desktop {
+        display: none
+    }
+
+    .section-hero .info-container {
+        margin-top: -7px;
+        min-width: auto;
+        padding-top: 0;
+        width: inherit
+    }
+
+    .section-hero .info-container:after {
+        background: none
+    }
+
+    .section-hero .logo {
+        max-width: 500px;
+        width: 100%
+    }
+}
+
+.ab-46106-2 .section-hero #section-hook {
+    margin: 32px 0 0;
+    padding: 0;
+    text-align: left;
+    top: 0
+}
+
+@media only screen and (max-width: 599px) {
+    .ab-46106-2 .section-hero #section-hook {
+        margin:32px 0 20px
+    }
+}
+
+.ab-46106-2 .section-hero #section-hook .hook-hr {
+    background: linear-gradient(90deg,#d9d9d9 0,hsla(0,0%,85%,0));
+    height: 2px
+}
+
+.ab-46106-2 .section-hero #section-hook .hook-header {
+    line-height: 26px;
+    margin: 15px 0 5px
+}
+
+.ab-46106-2 .section-hero #section-hook .hook-text {
+    line-height: 24px;
+    margin: 0
+}
+
+
+
+
+#section-hook {
+    background: none;
+    text-align: center;
+    top: -5px;
+    z-index: 5
+}
+
+@media only screen and (max-width: 599px) {
+    #section-hook {
+        text-align:left
+    }
+}
+
+.hook-hr {
+    background: linear-gradient(90deg,#777 0,rgba(51,51,51,.5) 50%,#777);
+    height: 1px
+}
+
+@media only screen and (max-width: 599px) {
+    .hook-hr {
+        background:linear-gradient(90deg,rgba(51,51,51,.5) 0,#777);
+        height: 1px
+    }
+}
+
+.hook-hr:first-of-type {
+    margin-bottom: 18px
+}
+
+.hook-hr:last-of-type {
+    margin-top: 18px
+}
+
+.hook-header,.hook-text {
+    margin: 0 auto;
+    max-width: 500px
+}
+
+.hook-text {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#section-more-details .more-details-container {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: -6px
+}
+
+@media only screen and (max-width: 1919px) {
+    #section-more-details .more-details-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    #section-more-details .more-details-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #section-more-details .more-details-container {
+        align-items:space-evenly;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    #section-more-details .more-details-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        max-width: 100%
+    }
+}
+
+#section-more-details .more-details-cell {
+    margin: .5vw;
+    max-width: 20%
+}
+
+@media only screen and (max-width: 1919px) {
+    #section-more-details .more-details-cell {
+        margin:.5vw;
+        max-width: 25%
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    #section-more-details .more-details-cell {
+        margin:.5vw;
+        max-width: 33.333%
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #section-more-details .more-details-cell {
+        margin:.5vw;
+        max-width: 50%
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    #section-more-details .more-details-cell {
+        max-width:100%
+    }
+}
+
+#section-more-details .more-details-cell .item-download {
+    width: 75%
+}
+
+
+
+#section-more-details .more-details-container-cast .more-details-item-container {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: -6px
+}
+
+@media only screen and (max-width: 1919px) {
+    #section-more-details .more-details-container-cast .more-details-item-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    #section-more-details .more-details-container-cast .more-details-item-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #section-more-details .more-details-container-cast .more-details-item-container {
+        align-items:space-evenly;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    #section-more-details .more-details-container-cast .more-details-item-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: 0;
+        max-width: 100%
+    }
+}
+
+#section-more-details .more-details-container-cast .more-details-item {
+    margin: 1px 6px;
+    max-width: 100%
+}
+
+@media only screen and (max-width: 599px) {
+    #section-more-details .more-details-container-cast .more-details-item {
+        margin:0
+    }
+}
+
+@supports (display: grid) {
+    #section-more-details .more-details-container-cast .more-details-item-container {
+        display:grid;
+        grid-template-columns: 20% 20% 20% 20% 20%
+    }
+
+    @media only screen and (max-width: 1919px) {
+        #section-more-details .more-details-container-cast .more-details-item-container {
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%
+        }
+    }
+
+    @media only screen and (max-width: 1439px) {
+        #section-more-details .more-details-container-cast .more-details-item-container {
+            display:grid;
+            grid-template-columns: 33.333% 33.333% 33.333%
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        #section-more-details .more-details-container-cast .more-details-item-container {
+            display:grid;
+            grid-template-columns: 50% 50%
+        }
+    }
+
+    @media only screen and (max-width: 599px) {
+        #section-more-details .more-details-container-cast .more-details-item-container {
+            display:grid;
+            grid-template-columns: 100%
+        }
+    }
+}
+
+#section-more-details .more-details-label {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 5px
+}
+
+#section-more-details .more-details-item {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+#section-more-details .cell-tudum a {
+    color: #fff
+}
+
+#section-more-details .social-link {
+    color: #fff;
+    display: inline-block;
+    margin-right: 20px
+}
+
+#section-more-details .social-link svg {
+    height: 30px;
+    pointer-events: none;
+    width: 30px
+}
+
+@supports (display: grid) {
+    #section-more-details .more-details-container {
+        display:grid;
+        grid-template-columns: 20% 20% 20% 20% 20%
+    }
+
+    @media only screen and (max-width: 1919px) {
+        #section-more-details .more-details-container {
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%
+        }
+    }
+
+    @media only screen and (max-width: 1439px) {
+        #section-more-details .more-details-container {
+            display:grid;
+            grid-template-columns: 33.333% 33.333% 33.333%
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        #section-more-details .more-details-container {
+            display:grid;
+            grid-template-columns: 50% 50%
+        }
+    }
+
+    @media only screen and (max-width: 599px) {
+        #section-more-details .more-details-container {
+            display:grid;
+            grid-template-columns: 100%
+        }
+    }
+
+    #section-more-details .more-details-cell {
+        margin: 6px;
+        max-width: 100%
+    }
+
+    @media only screen and (max-width: 1919px) {
+        #section-more-details .more-details-cell {
+            margin:6px;
+            max-width: 100%
+        }
+    }
+
+    @media only screen and (max-width: 1439px) {
+        #section-more-details .more-details-cell {
+            margin:6px;
+            max-width: 100%
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        #section-more-details .more-details-cell {
+            margin:6px;
+            max-width: 100%
+        }
+    }
+
+    @media only screen and (max-width: 599px) {
+        #section-more-details .more-details-cell {
+            max-width:100%
+        }
+    }
+}
+
+
+.link-container {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: -6px
+}
+
+@media only screen and (max-width: 1919px) {
+    .link-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    .link-container {
+        align-items:flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .link-container {
+        align-items:space-evenly;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: -6px
+    }
+}
+
+.title-link {
+    margin: .5vw;
+    max-width: 20%
+}
+
+@media only screen and (max-width: 1919px) {
+    .title-link {
+        margin:.5vw;
+        max-width: 25%
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    .title-link {
+        margin:.5vw;
+        max-width: 33.333%
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .title-link {
+        margin:.5vw;
+        max-width: 50%
+    }
+}
+
+.title-link .title-link-img {
+    width: 100%
+}
+
+@supports (display: grid) {
+    .link-container {
+        display:grid;
+        grid-template-columns: 20% 20% 20% 20% 20%
+    }
+
+    @media only screen and (max-width: 1919px) {
+        .link-container {
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%
+        }
+    }
+
+    @media only screen and (max-width: 1439px) {
+        .link-container {
+            display:grid;
+            grid-template-columns: 33.333% 33.333% 33.333%
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .link-container {
+            display:grid;
+            grid-template-columns: 50% 50%
+        }
+    }
+
+    .title-link {
+        margin: 6px;
+        max-width: 100%
+    }
+
+    @media only screen and (max-width: 1919px) {
+        .title-link {
+            margin:6px;
+            max-width: 100%
+        }
+    }
+
+    @media only screen and (max-width: 1439px) {
+        .title-link {
+            margin:6px;
+            max-width: 100%
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .title-link {
+            margin:6px;
+            max-width: 100%
+        }
+    }
+}
+
+.section-additional-videos .additional-video {
+    -webkit-tap-highlight-color: transparent;
+    background: none;
+    border: none;
+    margin: 2px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: left
+}
+
+.section-additional-videos .additional-video-image-wrapper {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 350px;
+    position: relative;
+    width: 620px
+}
+
+@media only screen and (max-width: 1439px) {
+    .section-additional-videos .additional-video-image-wrapper {
+        height:240px;
+        width: 420px
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .section-additional-videos .additional-video-image-wrapper {
+        height:280px;
+        width: 280px
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .section-additional-videos .additional-video-image-wrapper {
+        height:150px;
+        width: 270px
+    }
+}
+
+.section-additional-videos .additional-video-image-preloader {
+    height: 1px;
+    left: -1px;
+    position: absolute;
+    top: 0;
+    width: 1px
+}
+
+.section-additional-videos .additional-video-play-icon {
+    bottom: 0;
+    height: 50px;
+    left: 25px;
+    top: 170px;
+    padding: 0px;
+    position:sticky
+}
+
+.section-additional-videos .nm-content-horizontal-row-item {
+    flex-grow: 0
+}
+
+.section-additional-videos .additional-video-title {
+    display: block;
+    padding-top: 1em
+}
+
+
+#section-content-warning .content-warning-text {
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px
+}
+
+#section-content-warning .content-warning-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-decoration: underline
+}
+
+.section-locally-unavailable {
+    background-color: #000;
+    padding: 2em 5vw .25em;
+    position: relative;
+    z-index: 3
+}
+
+.section-locally-unavailable:after {
+    background-color: transparent;
+    background-image: linear-gradient(180deg,#000 0,rgba(0,0,0,.978) 9.5%,rgba(0,0,0,.925) 17.7%,rgba(0,0,0,.857) 24.7%,rgba(0,0,0,.781) 31%,rgba(0,0,0,.701) 36.8%,rgba(0,0,0,.62) 42.3%,rgba(0,0,0,.538) 47.6%,rgba(0,0,0,.455) 52.9%,rgba(0,0,0,.373) 58.2%,rgba(0,0,0,.291) 63.7%,rgba(0,0,0,.212) 69.5%,rgba(0,0,0,.138) 75.8%,rgba(0,0,0,.07) 82.9%,rgba(0,0,0,.019) 91.2%,transparent);
+    content: "";
+    height: 15vw;
+    left: 0;
+    max-height: 260px;
+    position: absolute;
+    top: 100%;
+    width: 100%
+}
+
+.section-locally-unavailable .unavailable-banner {
+    align-items: center;
+    background: #ffa00a;
+    border-radius: 5px;
+    color: #000;
+    display: flex;
+    font-weight: 500;
+    margin: auto;
+    max-width: 1600px;
+    position: relative;
+    width: 100%;
+    z-index: 3
+}
+
+.section-locally-unavailable .unavailable-icon {
+    height: 2em;
+    min-height: 30px;
+    min-width: 30px;
+    padding: .5rem 0 .5rem 1rem;
+    width: 2em
+}
+
+.section-locally-unavailable .unavailable-text {
+    padding: .8rem .8rem .8rem .5rem
+}
+
+.nmtitle-section {
+    background: #181818;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 25px 5vw;
+    position: relative
+}
+
+.ab-44142-2 .nmtitle-section,.ab-44142-3 .nmtitle-section {
+    background: none
+}
+
+@media only screen and (max-width: 599px) {
+    .nmtitle-section {
+        padding:5px 5vw 20px
+    }
+}
+
+
+ 
+
+  
+</style>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP MOVIES</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/firstback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.877)">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+            background-attachment: fixed;
+        }
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="icons/Screenshot__16_-removebg-preview.png" width="150px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<style>
+  
+
+    body{
+        background-color: white;
+    }
+
+    .gallery_2{
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .gallery_2 div{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: px;
+        flex: none;
+        gap: 5px;
+    }
+
+    .gallery_2 div img{
+        width: 98%;
+    }
+
+    .gallery_2::-webkit-scrollbar{
+        display: none;
+    }
+
+    .gallery-wrap_2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #backBtn_2, #nextBtn_2{
+        width: 0px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .gallery_2 div img:hover{
+        filter: grayscale(0);
+        cursor: pointer;
+    }
+
+
+    .all_2{   
+        color: white;
+        padding-left: 25px;
+        }
+
+    .gallery_2 span img{
+        border-radius: 1rem;
+    }   
+    
+    .gallery_2 span img:hover{
+        transform: scale(1.1);
+       }
+</style>
+  
+
+<div>
+    <h1 class="all_2">MY SERVICES</h1>
+</div>
+
+<br>
+<div class="gallery-wrap_2">
+    <img src="icons/10117847.png" alt="" id="backBtn_2">
+    <div class="gallery_2">
+    <div>
+        <span><img src="icons/icon (22).webp" alt=""></span>
+
+        <span><img src="icons/icon (21).webp" alt=""></span>
+
+        <span><img src="icons/icon (4).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="icons/icon (5).webp" alt=""></span>
+
+        <span><img src="icons/icon (6).webp" alt=""></span>
+
+        <span><img src="icons/icon (1).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="icons/icon (2).webp" alt=""></span>
+
+        <span><img src="icons/icon (8).webp" alt=""></span>
+
+        <span><img src="icons/icon (9).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="icons/icon (10).webp" alt=""></span>
+
+        <span><img src="icons/icon (11).webp" alt=""></span>
+
+        <span><img src="icons/icon (3).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="icons/icon (12).webp" alt=""></span>
+
+        <span><img src="icons/icon (13).webp" alt=""></span>
+
+        <span><img src="icons/icon (14).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="icons/icon (15).webp" alt=""></span>
+
+        <span><img src="icons/icon (16).webp" alt=""></span>
+
+        <span><img src="icons/icon (17).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="icons/icon (18).webp" alt=""></span>
+
+        <span><img src="icons/icon (19).webp" alt=""></span>
+
+        <span><img src="" alt=""></span>
+    </div>
+
+</div>
+    <img src="icons/10117763.png" alt="" id="nextBtn_2">
+</div>
+   <br>
+   <br>
+   <br>
+
+
+ 
+   
+<section class="nmtitle-section" id="section-more-titles">
+    <div class="link-container">
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="action/AAAABZsrfXQHTHuqdt1Zd2QvP-JoE-C0EoTeHEZrSrhr3yXGGyBO7j1P9w8xPL8rZZjf4VSVbhzMxLBMTY1_IjIK3GSxzAwnhQ7cNp8.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="action/AAAABZdHPS2MiOv6DkV0woo7neDwDhwaNlWOl-NzX4WKkYXF717f8SEtCeWATP7aiAQVDEs9wWYiIw_LromhHxKysIquZtd-nr8TRENAp8KHKVI6ur4nsro5Ttyqwa8w-pftZt_v.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="action/AAAABb9d19BKVbMmNdR8VidjMZsfOLrjnx-YCkkcXpi4KdmhBaZNY3YKT5SLCYfK_TnQni_chvVJmIzkKFcl-ChraRrii7wFhcYgQ6A.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="action/AAAABZAWwZmFaEbO8hlHzj_97ozzDjt-iPIcobz3Ga7HzqRaAfhlKftGrv6p-fuOxZu8xnyyfpZnVjG_p5Q8rsmL7XOwSbxpcKk6kh0.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABdPjruIDLY3zay90gpFXrX-t_ZY1MZ1mOFJmQH7gLoTo1JAA26L7yrhjSObfoRI5hpv-berZwwQrtcS-nqY8VNqVESjr8FNPhx8.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABQAYcjycZSCfpnbRGCKEsbTLh7qz8OtiZKaypCYEujOuO6Yn3o6rXBriAr1PGVWkghezQK_ZGOQ4977DXN-94ckxGTX7tSCYZeJ2O9PwOXJUOz9jceZ_VX7aj84IM1BCItmC.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABaNKG7jm7_enkuR70ushfXFeCrrJG05KkUICZBP2gqV7-rgPmbEfivmj89AzrmRKeAKXztfm6IqirIiVJ1kSWjgyUesQ1PBsMV84dVjH25i3itbCBDSrLA7ZQejlFvIv9_UR.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="crime/AAAABc3Aq0BZQx-n1I7YORO_ikRuu0cpqO9lZsvJo8jwgrGvUENCzlJ0bXfSbY_zvolA2BZT6FFOPFG_rcTEYbsPHqDQ_m0DEPtJGsOCP7NwD6rcmBs8dNJsULg7fA3ZXT6lhqwo.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81251628" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABSydUg1kD7TG6PyfUY0xlV35U7PggZo3hU5eRD0eG1TBGQC5Ywy9tRVRtYAlvJ_wJrFHkZx5dqLlIosEcG1qLCzXwAeUQgpwSEM.jpg" alt="The Man from Toronto" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="drama/AAAABZcyMJPfDka6mPsmifGMgDDLRLFwU8lqj2EmbQoLaFyXJIrhE7bzY2_6l-UuBZkjVNrPO9c-Ee9ljrqvgZuQlErM0-s2N5lcuHE.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/80094318" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABb-mjcQr4c3Uiy2YhQz4XnmqgHNWrUdg1NhSDR60dzEQDY6m4CF5Y2pZUC3Zm_ASJ7gq1nDuJMTodJuPwgRiyxlYs3stts7JE6E.jpg" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/80094318" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABUVNlK1gGovkKUulg5mYLdjESuyXCF5IDOlG9o0sfpMjVbfhpg_ruf3o_UzG6vW_DHQ5h1W_fK3vuGPsmJOuoOHJinNukvQmp1c.jpg" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="horror/AAAABfdaVzNUqoGRIQSdQxXg3AAOsZY7GXzfK1QHE8ohRVtcTiNLuI-nQeWFYWOBxuctRjSbJ1ErF2iJgrzgnUzMKG2d2xPxXXEtWZI.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81161828" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" alt="Me Time" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81486233" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABc-oQ52bnQ4tp1HPchNJeqKgr5zDeruvNQfBeCTBW-05XCmaylG80S-iszQBh3MOurxAP3opFLB4y43wq5cNUjAtb9n19BGnAOg.jpg" alt="Sixty Minutes" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="horror/AAAABS6H5LwieMBxg4u5AuZedxh36nRS_QcjkdWcUa0YWpIAjrMIdO_nPOKVckCLUWRzoW5ym9wbQwT49PU3zAFch6XKPwgC03wYxfO01UQCZkXmpf0oalwpsK6gtniEYejtm8zu.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81282091" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABVMuOeffao2SMnMITMjPrN4F9o6Iv6kCoqTidYDk7AiZQ7jOxvOh1GRA19I-BzpeWRhHoy3DpRQFYN45D5AQi4AFsERksS9fhQo.jpg" alt="Wingwomen" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81282091" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABf84V-GLeIvJCXXQ0uKdMmcHEaaRqwgSqKfMDKzQRw93Q3J-UWxLvd564aPfsJSGudLdowo12EQLOrWuPNf7Tk7PU2fTd-2mLlfN_SRq5_ElIXU_oTSmPYkmWDTIQsBl41nl.jpg" alt="Wingwomen" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/80067830" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABTpaCW3SgNIJBrjdEhArCClO4gnJ2wYHKHyZiufzv5gsuI1W-gPCbuUivjeEUqZ_sIIVpYza066oZdWHlgTMUVNgOtJXHUFAIZvJMg4LqRj80WsJmq8dIcRNFAPKQQaL1-ks.jpg" alt="Ride Along 2" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81076856" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABelrz4ziWUTYGe5P181arHm4DbFApiTnGdWewPkYdNb6a4Yc2b5a5tcEYkG42NNwM5_RwFK0r_qCslyXExTePb6on51QbN3OFYI.jpg" alt="Beverly Hills Cop: Axel F" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81674658" data-uia="title-link">
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABevU_O1vck8wGtaxtK6eG7BJMDbQub9jTt0iOmq6RL-1wH8nsu-VAOplDz2JKeL9mWrG27Cj3u2oPjGQoZfhKG41L7uq9X8tssNAZdg4XIP-90oYCeMlXOM7IOt9UlpMPbSN.jpg" alt="The Equalizer 3" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="horror/AAAABab2eeEWZKF37Tw3YfdpCIelcA8CSFXGNj31DpvM6EqcO8QLIUYEip2ermcDBHL3KeKyhCPrVYZwxC8zIJCqKyyYWHQ7xfEWKrc.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81760229" >
+            <img class="title-link-img" data-uia="title-link-img" src="africa/AAAABVcmYPvysWqkvhKqNfk0yhubbCBWEF3zVC7kaNX13GZJUExhg10DVySZc5TzO_jo7-gJYJ7BJ7Df7UPi9nb5BqfhOXLtsM9LGRE.jpg" alt="Anyone But You" loading="lazy">
+        </a>
+        <a class="title-link" href="/gh/title/81185548">
+            <img class="title-link-img" data-uia="title-link-img" src="kid&family/AAAABbdKn1VR-4LfFfnhSwlMaxCWYFZJi8twOp8ohXi9XirQW2q16utyGLiqsRPGF-gPSa4HeWtNtqR4hZTiGbZch1nF7iiz35242qM.jpg" alt="Army of Thieves" loading="lazy">
+        </a>
+    </div>
+</section>
+<br>
+
+
+
+
+
+
+<br>
+
+  <style>
+    .vod{
+        padding: 10px;
+        margin: 5px;
+        border: 2px;
+        background-color: rgb(32, 32, 100);
+        color: whitesmoke;
+    }
+  </style> 
+   <nav style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="color: aliceblue; font-size: 30px;">
+        <h1><b>Supported devices</b></h1>
+    </div>
+   </nav>
+<nav style="display: flex; flex-wrap: wrap; justify-content: center;">
+   
+    <div class="vod">
+        <img src="icon5_files/icon-ios-android-01-1.webp" alt="">
+       <center>
+        <p>ios,Android & <br>Huawei</p>
+       </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-windows-mac-01-2.webp" alt="">
+        <center>
+            <p>Windows &<br>Mac</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-dstvstreama-01-9.webp" alt="">
+        <center>
+            <p>Selected<br>devices</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-chromecast-01-11.webp" alt="">
+        <center>
+            <p>Selected<br>devices</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-dstv-explora-01-10.webp" alt="">
+        <center>
+            <p>Selected TV<br>models</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-hisensetv-01-5.webp" alt="">
+        <center>
+            <p>Selected<br>models</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-lg-01-6.webp" alt="">
+        <center>
+            <p>Selected<br>models</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-samsung-01-7.webp" alt="">
+        <center>
+            <p>Selected TV<br>models</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-xbox-01-8.webp" alt="">
+        <center>
+            <p>Selected<br>devices</p>
+           </center>
+    </div>
+    <div class="vod">
+        <img src="icon5_files/icon-playstation-01-12.webp" alt="">
+        <center>
+            <p>Selected<br>devices</p>
+           </center>
+    </div>
+</nav>
+
+<footer>
+    <div class="footer-col">
+        <h4>Top 5 movies</h4>
+        <ul>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-1.html">Anikulapo</a></li>
+            <li><a href="backeand1-3.html">Lift</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backend1-6.html">Trigger Warning</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Top 5 TV Shows</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/tv-show/fallout-2023">fallout</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/dark-matter-2024">Shogun</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Evil</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Eric</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/shogun-2024">Shōgun</a></li>
+           
+        </ul>
+    </div>
+   
+    <div class="footer-col">
+        <h4>Top 5 new on provider</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/provider/netflix/new">What's new on netflix</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/amazon-prime-video/new">What's new on Amazon Prime <br>video</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/disney-plus/new">What's new on Disney plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv-plus/new">What's new on Apple TV plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv/new">What's new on Apple TV</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Next upcoming movies</h4>
+        <ul>
+            <li><a href="backend1-1.html">Anikulapo</a></li>
+            <li><a href="backend1-2.html">The GentelMan</a></li>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backeand1-3.html">Lift</a></li>
+        </ul>
+    </div>
+  </footer>
+  
+  <hr>
+  <style>
+    .support_footer{
+        width: 100%;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: white;
+        background-color: #0a0a0c;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    
+    .pop a{
+        color: rgba(78, 212, 221, 0.582);
+    }
+    
+  </style>
+  <nav class="support_footer">
+    
+    <div class="pop">
+        <br>
+        <p>© 2024 MOVIEgaiN -All external content remains the property or the rightful owner. <br>Imprint - <a href="pages_fils/policy.html"> Privacy Policy </a>- <a href="pages_fils/talent.html">Talent</a></p>
+        <br>
+      </div> 
+  </nav>
+
+
+</body>
+</html>

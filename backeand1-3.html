@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/backend.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="icons/Screenshot__16_-removebg-preview.png" width="150px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+
+
+            <div id="appMountPoint">
+                <div class="basicLayout nonmemberTitle dark" lang="en-GH" dir="ltr">
+                    <div class="css-16k8cq6 e1yb99j90"></div>
+                    <div class="nmtitle-wrapper with-fixed-header">
+                       <section class="nmtitle-section section-hero" id="section-hero" data-uia="section-hero">
+                        <div class="hero-container" data-uia="hero-container">
+                            <div class="info-container css-0">
+                            <div class="details-container">
+                                <div class="title-info" data-uia="title-info">
+                    <h1 class="title-title" data-uia="title-info-title">LIFT</h1>
+                    <div class="title-info-metadata-wrapper" data-uia="title-info-metadata-wrapper"><span class="title-info-metadata-item item-year" data-uia="item-year">2024</span><span role="presentation" class="info-spacer"> | </span><span class="title-info-metadata-item item-maturity" data-uia="item-maturity"><span class="maturity-rating"><span class="screen-reader-text">Maturity Rating:</span><span class="maturity-number">16+ </span></span></span><span role="presentation" class="info-spacer"> | </span><span class="title-info-metadata-item item-runtime" data-uia="item-runtime"><span class="duration">1h 46m</span></span><span role="presentation" class="info-spacer"> | </span><a class="title-info-metadata-item item-genre" href="https://www.netflix.com/gh/browse/genre/81746408" data-uia="item-genre">Action</a></div><div class="title-info-synopsis-talent" data-uia="title-info-synopsis-talent"><div class="title-info-synopsis" data-uia="title-info-synopsis">A professional thief and his expert crew attempt the ultimate heist: stealing $500 million in gold from a vault on a plane — 40,000 feet in the air.</div><div class="title-info-talent"><div class="title-data-info-item item-starring"><span class="title-data-info-item-label">Starring:</span>
+                        <span class="title-data-info-item-list" data-uia="info-starring">Kevin Hart, Gugu Mbatha-Raw, Vincent D'Onofrio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hero-image-container css-0">
+    <div class="hero-image hero-image-desktop" style="display:none;background-image:url(&quot;https://occ-0-6326-2706.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYZQI8qQLkQ0gEBUyn-wfSRiia4EN6WRvUG9Ek-J50y3uzHbnSHdWXPC6__5C04AjIpeOGXSYUqI4xR8GHd3coJxhu5XaAVheZGN.jpg?r=bd7&quot;)"></div>
+    <div class="hero-image hero-image-mobile" style="display:none;background-image:url(&quot;https://occ-0-6326-2706.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABdLWliMY48KAfWW0gUxLjjwYSVcPBXne-vJPmqXOn0LspN9XMxyxx2ki23u4CIPsiaxERck3TQDYE4MIKJAePmGe4U5S6yqbfnDU.jpg?r=758&quot;)"></div>
+   
+</div>
+</div>
+        </section>
+
+        <section class="nmtitle-section" id="section-hook" data-uia="section-hook"><div class="hook-hr"></div><h2 class="hook-header" data-uia="hook-header"></h2><div class="hook-text" data-uia="hook-text">Kevin Hart stars in this action-fueled, high-flying movie from director F. Gary Gray ("The Fate of the Furious").</div><div class="hook-hr"></div></section><section class="nmtitle-section section-additional-videos" id="section-additional-videos" data-uia="section-additional-videos"><div class="section-header" data-uia="section-header"><h2 class="section-header-text section-item" data-uia="section-header-text">Videos</h2><h2 class="section-subheader-text section-item" data-uia="section-subheader-text">Lift</h2></div><div class="nm-content-horizontal-row" aria-hidden="false"><ul class="nm-content-horizontal-row-item-container"><li class="nm-content-horizontal-row-item" data-uia="collections-row-item"><div class="additional-video-wrapper" data-uia="additional-video-wrapper"><button class="additional-video"><span class="additional-video-image-wrapper" style="background-image:url(https://occ-0-6326-2706.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZgXV6qUpAF7vmoahhFNvUTFLPN95EsiMN8chNV5K29IYtsGxSJqzx18hx1KAvJASlQNBuzsTLUFw2r0DGwsKp_41EEQR75V-if5mXDLy4lUFi8GcVMd6knpfQ.jpg?r=866)"><img src="https://occ-0-6326-2706.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZgXV6qUpAF7vmoahhFNvUTFLPN95EsiMN8chNV5K29IYtsGxSJqzx18hx1KAvJASlQNBuzsTLUFw2r0DGwsKp_41EEQR75V-if5mXDLy4lUFi8GcVMd6knpfQ.jpg?r=866" alt="" role="presentation" class="additional-video-image-preloader" loading="lazy"><svg viewBox="0 0 50 50" class="additional-video-play-icon" data-uia="additional-video-play-icon"><g fill="none" fill-rule="nonzero"><path fill="#fff" d="M25 50C11.2 50 0 38.8 0 25S11.2 0 25 0s25 11.2 25 25-11.2 25-25 25z" class="base"></path><path fill="#000" d="M35.3 25l-15.6-8.6v17.2z" class="triangle"></path></g></svg></span><span class="additional-video-title" data-uia="additional-video-title">Teaser: Lift</span></button></div></li><li class="nm-content-horizontal-row-item" data-uia="collections-row-item"><div class="additional-video-wrapper" data-uia="additional-video-wrapper"><button class="additional-video"><span class="additional-video-image-wrapper" style="background-image:url(https://occ-0-6326-2706.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfG9d7Jb-JBMpTyiyS1DasYgMCQQbl9e7Rp7RPPYGQHzN4tCXcp7YCg0d00sy_HjVchyvMGr1p9PP5BCz7TsY_sgLUNo3eRw3XaJ74kr2r8nr0ispcBh0LuOvA.jpg?r=592)"><img src="https://occ-0-6326-2706.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfG9d7Jb-JBMpTyiyS1DasYgMCQQbl9e7Rp7RPPYGQHzN4tCXcp7YCg0d00sy_HjVchyvMGr1p9PP5BCz7TsY_sgLUNo3eRw3XaJ74kr2r8nr0ispcBh0LuOvA.jpg?r=592" alt="" role="presentation" class="additional-video-image-preloader" loading="lazy"><svg viewBox="0 0 50 50" class="additional-video-play-icon" data-uia="additional-video-play-icon"><g fill="none" fill-rule="nonzero"><path fill="#fff" d="M25 50C11.2 50 0 38.8 0 25S11.2 0 25 0s25 11.2 25 25-11.2 25-25 25z" class="base"></path><path fill="#000" d="M35.3 25l-15.6-8.6v17.2z" class="triangle"></path></g></svg></span><span class="additional-video-title" data-uia="additional-video-title">Trailer: Lift</span></button></div></li></ul></div></section><section class="nmtitle-section" id="section-more-details" data-uia="section-more-details"><div class="section-header" data-uia="section-header"><h2 class="section-header-text section-item" data-uia="section-header-text">More Details</h2></div><div class="more-details-container"><div class="more-details-cell cell-download" data-uia="more-details-cell-download"><div class="more-details-label">Watch offline</div><div class="more-details-item-container"><span class="more-details-item item-download" data-uia="more-details-item-download">Download and watch everywhere you go.</span></div></div><div class="more-details-cell cell-genres" data-uia="more-details-cell-genres"><div class="more-details-label">Genres</div><div class="more-details-item-container"><span class="more-details-item item-genres" data-uia="more-details-item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/5824">Crime Movies</a>, </span><span class="more-details-item item-genres" data-uia="more-details-item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/6548">Comedy Movies</a>, </span><span class="more-details-item item-genres" data-uia="more-details-item-genres"><a class="more-details-item item-genres" href="https://www.netflix.com/gh/browse/genre/1365">Action &amp; Adventure Movies</a></span></div></div><div class="more-details-cell cell-mood-tag" data-uia="more-details-cell-mood-tag"><div class="more-details-label">This movie is...</div><div class="more-details-item-container"><span class="more-details-item item-mood-tag" data-uia="more-details-item-mood-tag">Irreverent<!-- -->, </span><span class="more-details-item item-mood-tag" data-uia="more-details-item-mood-tag">Suspenseful<!-- -->, </span><span class="more-details-item item-mood-tag" data-uia="more-details-item-mood-tag">Exciting</span></div></div><div class="more-details-cell cell-audio" data-uia="more-details-cell-audio"><div class="more-details-label">Audio</div><div class="more-details-item-container"><span class="more-details-item item-audio" data-uia="more-details-item-audio">English - Audio Description<!-- -->, </span><span class="more-details-item item-audio" data-uia="more-details-item-audio">English [Original]</span></div></div><div class="more-details-cell cell-subtitle" data-uia="more-details-cell-subtitle"><div class="more-details-label">Subtitles</div><div class="more-details-item-container"><span class="more-details-item item-subtitle" data-uia="more-details-item-subtitle">English</span></div></div><div class="more-details-cell cell-tudum" data-uia="more-details-cell-tudum"><div class="more-details-label">About Lift</div><span class="more-details-item item-tudum" data-uia="more-details-item-tudum">Go behind the scenes and learn more on <a href="/tudum/lift">Tudum.com</a></span></div></div><div class="more-details-container-cast"><div class="more-details-cell cell-cast" data-uia="more-details-cell-cast"><div class="more-details-label">Cast</div><div class="more-details-item-container"><span class="more-details-item item-cast" data-uia="more-details-item-cast">Kevin Hart</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Gugu Mbatha-Raw</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Vincent D'Onofrio</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Úrsula Corberó</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Billy Magnussen</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Jacob Batalon</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Jean Reno</span><span class="more-details-item item-cast" data-uia="more-details-item-cast">Sam Worthington</span>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="nmtitle-section" id="section-more-titles" data-uia="section-more-titles" data-nosnippet="true">
+    <div class="section-header" data-uia="section-header">
+        <h2 class="section-header-text section-item" data-uia="section-header-text">More Like This</h2>
+    </div>
+    <div class="link-container">
+        <a class="title-link" href="/gh/title/81185548" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABb9d19BKVbMmNdR8VidjMZsfOLrjnx-YCkkcXpi4KdmhBaZNY3YKT5SLCYfK_TnQni_chvVJmIzkKFcl-ChraRrii7wFhcYgQ6A.jpg" alt="Army of Thieves" loading="lazy"></a><a class="title-link" href="/gh/title/80067830" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABbFeiA29rMvHtuksOJdpzkAurUZC4Vg4OzULq6SR2UfzMgWBEArLg_T0EL0ch8Gn-y5H6c_CJyrV3uEWFe5mj7eYPQHiX8Gkcq3lwLsIcHqMQH8RWu_JhM8E5oBf7zHTeG3p.jpg" alt="Ride Along 2" loading="lazy"></a><a class="title-link" href="/gh/title/81251628" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABbo3ixlGkmwSNqQu8LY6MBF8HvsdEce1XBzCzjkunMvsJohzP6dHOzFDxmqTDhZCeyeXiHu_pY4om4GMRZ-U13OpB2x0F2O2jh0.jpg" alt="The Man from Toronto" loading="lazy"></a><a class="title-link" href="/gh/title/80094318" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABcnL3dcj0cEBbobliZMc6f72gaWXJUw5rrJQTRzrVWnH7wzFiPyUR4xkRG_VOWr0AvVwCROKfH6jxKGdJIl4XZC3FtHiH2AkuSQ.jpg" alt="Central Intelligence" loading="lazy"></a><a class="title-link" href="/gh/title/81486233" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABcskyU2B5gVJ3q4hH31Op8gkeLFyN3Xf6AqEPiJp7_xh6SSvj9Knty4caanr7M_4EqqO-H04Lr_NdaAy4p6_JpX2iM3MBsUmICM.jpg" alt="Sixty Minutes" loading="lazy"></a><a class="title-link" href="/gh/title/81161626" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABdu1-UYxGUcKaJQvBIK-UbhVMfWVgtn8cr-DwVqmFGYeFMB2NmaGKdg_QJsUPkl_LMv0rRz9zeBTdMqQORGivSxA8L7RrVFqIlXrLsq_AIy-nQmyHLwoApozP___vEh2xzzJ.jpg" alt="Red Notice" loading="lazy"></a><a class="title-link" href="/gh/title/81282091" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABeCTs3a1n8v252gJNN4Nzf5VkFfkKyo6y3d2Aivhvjxr6UX5luH8U7aYawEeLpqT1vdawxQNmrL59XhdJ8uIXy-8U6kMuaSWdrQ.jpg" alt="Wingwomen" loading="lazy"></a><a class="title-link" href="/gh/title/81680788" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABecxf540cmht_plTBjbGTdgTW53czJjWLNsvTMLqcqXv9E7vIk18_QrIK-UPtJWfKuulxE7KpijYouOsqOm7XV_5l5mv4Eew13g.jpg" alt="Sisu" loading="lazy"></a><a class="title-link" href="/gh/title/81161828" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABee4zh2YvJHlS6GJ-1CKbQ4_VFQiZPukUIP5z3QNQuEkPqwVPNO3WQuyxqtVUHzSVETI8TIPibZoTPLJssmTFN5A_hREBXRnjas7UpP6kfUhtz2gGYIYCxFXnF2ocOoNrMeI.jpg" alt="Me Time" loading="lazy"></a><a class="title-link" href="/gh/title/81721676" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABf4JhxKYZ2BzNVORiLy1h6s8Mrj_s5B8PBp4yxMqwDZp54-Rk5Uria-eO2LptkF_DotKqNkw4Zy79MsdwBS7vf9jCCAHJke7ckk.jpg" alt="Badland Hunters" loading="lazy"></a><a class="title-link" href="/gh/title/81674658" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABQ3Hbw12cLCoAgjwY9peCCUzpnQ3nxYVz1iyuCR1CySRrdnrKczO-HlQvATUeuj8XVE6pF5AVy0cRU_nqLK1w6rRmJJmVbcRKQg.jpg" alt="The Equalizer 3" loading="lazy"></a><a class="title-link" href="/gh/title/81076856" data-uia="title-link"><img class="title-link-img" data-uia="title-link-img" src="action/AAAABQesYif4jGvkm0mKn_pzP2SsSAkvtu2r2R2qIMSXBquUEROgCVn7gejnN5aiC7uOVK2bkFUYbR7yaUj0NZBhT-1VPC8Er0eIz4w.jpg" alt="Beverly Hills Cop: Axel F" loading="lazy">
+        </a>
+    </div>
+</section>
+</div>
+
+<div class="site-footer-wrapper centered"><div class="footer-divider"></div><div class="site-footer"><p class="footer-top"><a class="footer-top-a" href="https://help.netflix.com/contactus">Questions? Contact us.</a></p><ul class="footer-links structural"><li class="footer-link-item" placeholder="footer_responsive_link_faq_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/support/412" target="_self" placeholder="footer_responsive_link_faq"><span id="" data-uia="data-uia-footer-label">FAQ</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_help_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com" target="_self" placeholder="footer_responsive_link_help"><span id="" data-uia="data-uia-footer-label">Help Center</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_account_item"><a class="footer-link" data-uia="footer-link" href="/youraccount" target="_self" placeholder="footer_responsive_link_account"><span id="" data-uia="data-uia-footer-label">Account</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_media_center_item"><a class="footer-link" data-uia="footer-link" href="https://media.netflix.com/" target="_self" placeholder="footer_responsive_link_media_center"><span id="" data-uia="data-uia-footer-label">Media Center</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_relations_item"><a class="footer-link" data-uia="footer-link" href="http://ir.netflix.com/" target="_self" placeholder="footer_responsive_link_relations"><span id="" data-uia="data-uia-footer-label">Investor Relations</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_jobs_item"><a class="footer-link" data-uia="footer-link" href="https://jobs.netflix.com/jobs" target="_self" placeholder="footer_responsive_link_jobs"><span id="" data-uia="data-uia-footer-label">Jobs</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_waysToWatch_item"><a class="footer-link" data-uia="footer-link" href="/watch" target="_self" placeholder="footer_responsive_link_waysToWatch"><span id="" data-uia="data-uia-footer-label">Ways to Watch</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_terms_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/termsofuse" target="_self" placeholder="footer_responsive_link_terms"><span id="" data-uia="data-uia-footer-label">Terms of Use</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_privacy_separate_link_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/privacy" target="_self" placeholder="footer_responsive_link_privacy_separate_link"><span id="" data-uia="data-uia-footer-label">Privacy</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_cookies_separate_link_item"><a class="footer-link" data-uia="footer-link" href="#" target="_self" placeholder="footer_responsive_link_cookies_separate_link"><span id="" data-uia="data-uia-footer-label">Cookie Preferences</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_corporate_information_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/corpinfo" target="_self" placeholder="footer_responsive_link_corporate_information"><span id="" data-uia="data-uia-footer-label">Corporate Information</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_contact_us_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/contactus" target="_self" placeholder="footer_responsive_link_contact_us"><span id="" data-uia="data-uia-footer-label">Contact Us</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_speed_test_item"><a class="footer-link" data-uia="footer-link" href="https://fast.com" target="_self" placeholder="footer_responsive_link_speed_test"><span id="" data-uia="data-uia-footer-label">Speed Test</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_legal_notices_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/notices" target="_self" placeholder="footer_responsive_link_legal_notices"><span id="" data-uia="data-uia-footer-label">Legal Notices</span></a></li><li class="footer-link-item originals-link" placeholder="footer_responsive_link_only_on_netflix_item"><a class="footer-link" data-uia="footer-link" href="https://www.netflix.com/gh/browse/genre/839338" target="_self" placeholder="footer_responsive_link_only_on_netflix"><span id="" data-uia="data-uia-footer-label">Only on MOVIEgaiN</span></a></li></ul><p class="footer-country">MOVIEgaiN Ghana</p></div></div></div></div>
+</body>
+</html>

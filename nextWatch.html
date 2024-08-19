@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nextwatch</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/firstback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.877)">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+            background-attachment: fixed;
+        }
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="icons/Screenshot__16_-removebg-preview.png" width="150px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <style>
+  
+
+        body{
+            background-color: white;
+        }
+    
+        .gallery_2{
+            display: flex;
+            overflow-x: scroll;
+        }
+    
+        .gallery_2 div{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: px;
+            flex: none;
+            gap: 5px;
+        }
+    
+        .gallery_2 div img{
+            width: 98%;
+        }
+    
+        .gallery_2::-webkit-scrollbar{
+            display: none;
+        }
+    
+        .gallery-wrap_2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        #backBtn_2, #nextBtn_2{
+            width: 0px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    
+        .gallery_2 div img:hover{
+            filter: grayscale(0);
+            cursor: pointer;
+        }
+    
+    
+        .all_2{   
+            color: white;
+            padding-left: 25px;
+            }
+    
+        .gallery_2 span img{
+            border-radius: 1rem;
+        }   
+        
+        .gallery_2 span img:hover{
+            transform: scale(1.1);
+           }
+    </style>
+      
+    
+    
+    <div>
+        <h1 class="all_2">MY SERVICES</h1>
+    </div>
+    <br>
+    <div class="gallery-wrap_2">
+        <img src="icons/10117847.png" alt="" id="backBtn_2">
+        <div class="gallery_2">
+        <div>
+            <span><img src="icons/icon (22).webp" alt=""></span>
+    
+            <span><img src="icons/icon (21).webp" alt=""></span>
+    
+            <span><img src="icons/icon (4).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (5).webp" alt=""></span>
+    
+            <span><img src="icons/icon (6).webp" alt=""></span>
+    
+            <span><img src="icons/icon (1).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (2).webp" alt=""></span>
+    
+            <span><img src="icons/icon (8).webp" alt=""></span>
+    
+            <span><img src="icons/icon (9).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (10).webp" alt=""></span>
+    
+            <span><img src="icons/icon (11).webp" alt=""></span>
+    
+            <span><img src="icons/icon (3).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (12).webp" alt=""></span>
+    
+            <span><img src="icons/icon (13).webp" alt=""></span>
+    
+            <span><img src="icons/icon (14).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (15).webp" alt=""></span>
+    
+            <span><img src="icons/icon (16).webp" alt=""></span>
+    
+            <span><img src="icons/icon (17).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (18).webp" alt=""></span>
+    
+            <span><img src="icons/icon (19).webp" alt=""></span>
+    
+            <span><img src="" alt=""></span>
+        </div>
+    
+    </div>
+        <img src="icons/10117763.png" alt="" id="nextBtn_2">
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <section class="nmtitle-section" id="section-more-titles">
+        <div class="link-container">
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABZxy6DXqXokVfQgltliJGhncAIzxKRMUbOoePt9s_MSejbfS24IX4hi6kLKahdsEXh_a3X32ihpZCqA_EQpMkT2aK1d8QaZEfVnBjeDWXps9aYbbMJSOzsY4oknq56jXKtSV.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABZVabNVxZTg52fChkzqgDSWhyWRFWCMbms-ywnzJjdGg1wW-JlZorjszHRQGo73542V7wVO0OymbZxidf0wMeufLq11mc7xH3I_SpoKnq37ztCW9mh2_i8UAa0X5WOq3phco.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABZqyE0jKLPVKEENrZMLE8o1HMhKtbIozHYkaQEkHj_3bQva-tyV6LDcfiUPlR8KQfYbE98GVTPUOS-Mq9RdoZp7R_eQHahiIhAc_s1eSBMoSOaUmaaTSslN0KbMrl6VIfLpy.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABYXkmK0F6MxzDiljYTieQoeT5JUuXqRUYEgHN8pyu1xIitzB-QuCqvHKokFRR63aVX1iZ2dEtZD4.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABYqz3t2hDX3sdHHVt3Rfp-r5PfXmfLgQcuEk5E3Hg30K0fj-dYRIO0oGcH-Vun_oX3Q8gCnO84BwaFrVtOxeuw57IUZGRnE0ANgTlDfaUYL4c57kkGIcTwvwz3KMrUwg9T5L.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABYF4CEAd-fTcTwhQaY09bnfwMp1rtffTkCr44AsHOJCs-BJL0znbJSNC5GI8HzDaN87TwU59nZhIp6tNwZZR73K.jpg " alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABYCUnKbHq_vsVpHszs-2nyUsiK0-cMB95AvBH8nvjhlWgqUgnzs-rlguVoQHLNjj6SbSjmryxhPpGXE_022Ck100-aUCSYXe4yIIyIHWkqGHBFw854nc5X8ya5Ctcq3OsAjn.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABT-1lup8xDLuceBlnBkRryrFZEpAqH3SBjmx54Oy_lGD8mRZg16m3Y1ctFi5uQqURktu24EY_DPhIzKFbLX2HVDIivKlTpZtdBGJbawY8Fmb4EXgfwEj6CHTRGvWpRyJtNgn.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABY0WCODNVVlmNMw1EQPdyf-p58lxqxSf4pb6EuPztOggVxlUN3OYGRaFBQwXPfXZW9cS1qsz1rHsJkoy7sET6Nn4D1cqds4PtaPTuYo25C1HPiE-TVLimZy21wRAWdcOMqkc.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABWCZwBFNEsuAdZXFwtbzGL0ZuW1eS8RCtLvexXP3dTJPRcu2nCISaZb2PSVoZlFDMF8ycU33mXBrBCjg1AZJKSPfz2-8Wym9oVolUzEPt-CGFuI6kvw84xjSug2mzs4jMTwE.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABVR8dLWHsyQ0qmASngqgpmnp5IoKTRQq5uQl-5oXMYfBj2W0oEHjSCJ-Jw6lpocZb15AszPt4y0Z8J6oueULMVVyZxzTzY5ue5IdP-...3s9D9C-c4hcuS1zt37hHx3EfhXRhgBgsYqZmIVbfWUCqjjCuQtEHD9LfdLT9_PIY.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABVi8_TRhfqUzuj0SpY6NWG_sJtG6RcVbhLkzyDVG9NEERESnh8hSNv4WK8nzlTgHzc1zxe-EDyX3babYHncbhDoPqELUSUUxfyb9yPNUGkSbK94UQ1thRiIbGyXSCmPLTAnq.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABUQkrbcpfdpN32eNpWWDrZOjNODkPx4W8j59SI85LBEcUP1ABYXYXd0AKENRTlOzGxP6wwEzd-Iju7G6XpsC-ehhvKGHEZg2zm2KXI1FX4yj5SWJT7boueHYI7BBugDTatKA.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABToODT-QinLX4y9dZgsoQNkTTIOsDOj5cZdEUqz8S5zbN6xXGym3-sOk0f2Q2D94YC0XMHaiJevx8Tl4OsaT8uVFxhjP1kfv_fJ1q0...dHk5wAgKieqxESYdivvT3lXf9hzy-K2b0.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABTMDW2xqPe95c1GwoaDa3QgNlI3r0yZ3oKN4PnH6QJxV-Mc1i25pPKDpQJn2wG3EXw41GZempj-b062QEZk9CgNduCRgP_7NPAD1EVUz3CAV8lCT1lXS-21-cr60pJdy4XA9.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABSPVHumhUf90yYN5G9-mvdZqw0I66Pd1Tm-hhMjQjTYF36c5y1GmU6krPwFcuGka_9PZpwdAYNQWTK4cE73Oa52_mRBs0aHKFWtXRiwIAUya9aeIsXXjLFNXFMxju2GWCSYx.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABSouXCufsyrqXyhqAUilSSDeMRWnQmWmI6uvQilei4gt7q9QUSebJDYPgy4vRZORcGRjd5NsU0Fi8H3wVURKAvGNt0SPw0tXpJgOrp04nYAGelCkuGTsjbR3eedWlreRDRr_.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABSKjgYrlqwKZg48_7mglvDWCKQyoJZubhOpJ7ramngyv0Csjbd-HHLxf1LGR-9cUtQx9tUDOLdr3mhMUXA0yufP3xJJtiLYte9WzRX_IbDsjp1q7TQEygeg0F4HbePycYuEm.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABShipCAD1-43AOf6WF4aq6rHnbjDer976GL6Qw6Noy3pK_GZcbprVg03SFMcaf54BQ5fosh7i5KUrIRlJ64kiAb242xgXkN8q1myDAm_Ky8D-j0Pexj2sQkSDQWHeh2Lmsys.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABS9-8N_CiWokH6_zhGyoPsv8ETfPygd4oFpqNfmG_31POXId-RkK2r0ChepEvxsd0lMljP4y5dJepWQxFqdSfUnwFJHg9K3YdiUkdfovPk1xcWeG4rGy5zQuEoDEq4pqyrln.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABROssEHE04DQCAvxCgWokxjYeY-efe-XQquohO7qAza2OMHXsEJFGyMaQidZHkc-Lqi7HiPGPySIPDubZNHucLL_KVdv_uv9IYQg0v...ZuWXJjo1cqQncQzdyVimdYL91dNEGugOaMty_WM.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABRL011JY-GQukaCQIPIXKp8QVyIkQqQf0CtPaPYfmQG8BWsaJfTH7vB7ayQRD47H0Qz8uk3o4e_LtfvD7BJZ26PEfWUBN0zhDYnmTauUCtgti44u65ZN0LimeUWMp4DVN7y7.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABRBQ4XylYE1FO4nMQxXiWe-FzY6Y3LapajHsbaUoqpHTHRvDtTj_DJmcYjM27w-9hqBJsUd9kz64YjkfiDGmxXFdZHA6qslI1EQV9e...ndziMQFr8QYHkRfvrUg8500mt0ES-KVqFrEt1ZYwMm.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABQiqt02YipkijXccJRNzNFd7MMrA6LQC9UesDVPMKjVECTEZB9ZVcD5L-MvREDetFjCPbQcolEfJzizq7Z5kk2z3ehD9PD9S5UoItQ...JKZ8yPqTKo7_aQlOcGk2Nr0M0x1rpjRh3zbN72HJ-2JpRXMi5ggou2Yi8eN-SDTuWn.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABfF1-hbqWVwKzAoUKyV88KPNabiy8sH5HsdxpdxSmICl3iMii02b7agick-qR6nN9Bi69cizD4pB9-iPqGnXBY_LvTjWcZa7I7GRK4QwBkngSR9vl_TJtJhf8-bLT3XZJcXu.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABf8xI_4Pr2VeKMeGEwomaqYOWxo4kGPjEdP0tUzTMU_avpOMWqh8yw_lX8FA7G2LJggSlsd9mImPTFK1eDwoAPkvlCRH7uVFDO7UTG...6SXeinJ3OYtZmi86J4o1XbWiWuCO6kdUiaJ2PRV3NaV6UA.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABePlg4u3Pzy5eTv4T9i7DXSuuoWuseJemy_V0r9qF0aNjhaUQIUTuiiAnlSJNICmq_Rc_t3hkl6EgIEetv5E-nxKWdgshUUsnGgPJi79o2hmfCjEbfTkq_tnaXdEd-3bUUNd.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABeKclUQB0zbzXFKzzCPy7JIGfSC9cBsUrGy4uSL6Y8xTbA6uQ9RQ3T2hkFAivuVlcs2oe9Co_k6r3nxLdHWwZ2aT5KUNVAu3VqsuurQXLmMn1o2kZB1ihsp3XY1cwov6nJnz.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABe_sjUoMNiuavPOi-DPNDCU9JLct0Lg0tkuH5fAGhm4h991EVhe3SAZVGnRsaQFiDttGo3w2RRbDz6L8XWCeKaTBdKgQUqzzPHjlFARHFvSQ0DwAR_928Ygosc2mZfax88-h.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABdu1-UYxGUcKaJQvBIK-UbhVMfWVgtn8cr-DwVqmFGYeFMB2NmaGKdg_QJsUPkl_LMv0rRz9zeBTdMqQORGivSxA8L7RrVFqIlXrLsq_AIy-nQmyHLwoApozP___vEh2xzzJ.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABcxgq6lIFBReYvSgcHYCV99Z48-M5rzbOdG7eDGJVbKuCigH993UMY_H87iy_z0qGJut-02cX_agRFQWUTI6ni30GDXKTeq-4oDiOg...67gActgSqcqAp13613gY3.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABcSvphiqciUtzjzNHeH4VptejfvDsr_UoOSrLT4KneHlAS6uJD2vnj92jx8dqPz_V14ldW3isuORe40cQzw01CyaCbLkdOhJ2GIxRC...3xMs.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABcNKnCWAtNNy_so6Ni5kPX5nCHhIxTLi-hmdPCtCakFwFAEVTrKra4HDmdAANOz8_PeoZDCuetAUWkRHgyRhur7s6LfivnnVsGyIKowSK7HZMyqI0Es8OV1XxJnao7kvkgMN.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABc3vktAktMtjzifs7NmShb68_LM3GzLqzgUFu8dqlkGPd2-8W114UjklauvZQY0w95E_uYrkiJKq7Sz4s75CTSusoemQtr3Rz35T07Y4S8Tp4_KDaTqYugeFuJ-iTTsphfDX.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABbu7Vgl6lpBZWiNydrFGF8wWi-42WWpQ1Jw7tw88OYKzqeNraSCDM6VXuG-60o1ifwF8y-xmc97M8dYOJotaybUjehZA3VtTvrRh-rYQZAU2NIrXPUm6X3c6Kc2iW1mp1Gi6.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="nextwatch/AAAABaNKG7jm7_enkuR70ushfXFeCrrJG05KkUICZBP2gqV7-rgPmbEfivmj89AzrmRKeAKXztfm6IqirIiVJ1kSWjgyUesQ1PBsMV84dVjH25i3itbCBDSrLA7ZQejlFvIv9_UR.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+        </div>
+    </section>
+<br>
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer-col">
+        <h4>Top 5 movies</h4>
+        <ul>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-1.html">Anikulapo</a></li>
+            <li><a href="backeand1-3.html">Lift</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backend1-6.html">Trigger Warning</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Top 5 TV Shows</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/tv-show/fallout-2023">fallout</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/dark-matter-2024">Shogun</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Evil</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Eric</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/shogun-2024">Shōgun</a></li>
+           
+        </ul>
+    </div>
+   
+    <div class="footer-col">
+        <h4>Top 5 new on provider</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/provider/netflix/new">What's new on netflix</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/amazon-prime-video/new">What's new on Amazon Prime <br>video</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/disney-plus/new">What's new on Disney plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv-plus/new">What's new on Apple TV plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv/new">What's new on Apple TV</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Next upcoming movies</h4>
+        <ul>
+            <li><a href="backend1-1.html">Anikulapo</a></li>
+            <li><a href="backend1-2.html">The GentelMan</a></li>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backeand1-3.html">Lift</a></li>
+        </ul>
+    </div>
+  </footer>
+  
+  <hr>
+  <style>
+    .support_footer{
+        width: 100%;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: white;
+        background-color: #0a0a0c;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    
+    .pop a{
+        color: rgba(78, 212, 221, 0.582);
+    }
+    
+  </style>
+  <nav class="support_footer">
+    
+    <div class="pop">
+        <br>
+        <p>© 2024 MOVIEgaiN -All external content remains the property or the rightful owner. <br>Imprint - <a href="pages_fils/policy.html"> Privacy Policy </a>- <a href="pages_fils/talent.html">Talent</a></p>
+        <br>
+      </div> 
+  </nav>
+</body>
+</html>

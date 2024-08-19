@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/firstback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.877)">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+            background-attachment: fixed;
+        }
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="icons/Screenshot__16_-removebg-preview.png" width="150px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<style>
+    .comery{
+            color: white;   
+            padding-left: 45px;
+            font-size: 30px;
+    }
+
+    .comety{
+        color: rgba(255, 255, 255, 0.479);   
+        padding-left: 45px;
+    }
+</style>
+<div class="comery">
+    <h1>Drama Movies</h1>
+</div>
+<div class="comety">
+    <h1>TV Comedies
+        From offbeat sitcoms to critically-acclaimed series to buddy crime comedies, our collection of the best funny TV shows will keep you laughing.</h1>
+</div>
+<br>
+<br>
+
+
+    
+    <style>
+  
+
+        body{
+            background-color: white;
+        }
+    
+        .gallery_2{
+            display: flex;
+            overflow-x: scroll;
+        }
+    
+        .gallery_2 div{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: px;
+            flex: none;
+            gap: 5px;
+        }
+    
+        .gallery_2 div img{
+            width: 98%;
+        }
+    
+        .gallery_2::-webkit-scrollbar{
+            display: none;
+        }
+    
+        .gallery-wrap_2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        #backBtn_2, #nextBtn_2{
+            width: 0px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    
+        .gallery_2 div img:hover{
+            filter: grayscale(0);
+            cursor: pointer;
+        }
+    
+    
+        .all_2{   
+            color: white;
+            padding-left: 25px;
+            }
+    
+        .gallery_2 span img{
+            border-radius: 1rem;
+        }   
+        
+        .gallery_2 span img:hover{
+            transform: scale(1.1);
+           }
+    </style>
+      
+    
+    
+    <div>
+        <h1 class="all_2">MY SERVICES</h1>
+    </div>
+    <br>
+    <div class="gallery-wrap_2">
+        <img src="icons/10117847.png" alt="" id="backBtn_2">
+        <div class="gallery_2">
+        <div>
+            <span><img src="icons/icon (22).webp" alt=""></span>
+    
+            <span><img src="icons/icon (21).webp" alt=""></span>
+    
+            <span><img src="icons/icon (4).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (5).webp" alt=""></span>
+    
+            <span><img src="icons/icon (6).webp" alt=""></span>
+    
+            <span><img src="icons/icon (1).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (2).webp" alt=""></span>
+    
+            <span><img src="icons/icon (8).webp" alt=""></span>
+    
+            <span><img src="icons/icon (9).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (10).webp" alt=""></span>
+    
+            <span><img src="icons/icon (11).webp" alt=""></span>
+    
+            <span><img src="icons/icon (3).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (12).webp" alt=""></span>
+    
+            <span><img src="icons/icon (13).webp" alt=""></span>
+    
+            <span><img src="icons/icon (14).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (15).webp" alt=""></span>
+    
+            <span><img src="icons/icon (16).webp" alt=""></span>
+    
+            <span><img src="icons/icon (17).webp" alt=""></span>
+        </div>
+    
+        <div>
+            <span><img src="icons/icon (18).webp" alt=""></span>
+    
+            <span><img src="icons/icon (19).webp" alt=""></span>
+    
+            <span><img src="" alt=""></span>
+        </div>
+    
+    </div>
+        <img src="icons/10117763.png" alt="" id="nextBtn_2">
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <section class="nmtitle-section" id="section-more-titles">
+      
+        
+        <div class="link-container">
+            <a class="title-link" href="/gh/title/81185548">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABZCbBDtQwqvHNdkhoItIolmkS6b3daxbBIBVd_FvDe_zsOVsLpJgCOJGIrVttLWEs7OHV6GH4Xw-rlF9a-Q6T8LxpBOk1EwsCqqpI6R47MrT8Fv8E4lbfn00T2qcaqT_MF0u.jpg" alt="Army of Thieves" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81251628" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABYs_G2VXY5ffR5utbHjZXl5MfuxewCuMLDf9TtX1xd1Mi7zwzFbVwOBBVkjrjPTRK2zjklBOm6JF3n4uLjoHkQkHGrdE8aZ8-K0.jpg" alt="The Man from Toronto" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81251628" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABY5jw00--K98xqb15tcTqs9ZefXf7Yx_s2VHgFEs-5VQirGfU3RxPKESm0A-AtJLH9Q70-r8I-3DXcHuNRzevbDWz3j0hITqo4PXvYH7NvpVcFY-mCaqjV7doGokNcSQECxq.jpg" alt="The Man from Toronto" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/80094318" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABY02cQ-89bfZTChyYnZD4J72bpkR6ZBiFxiM3r1YTsKx75U8xRaXtP4o15n0I0T6RFQnppwlBKt8xQ8eUeWDCK-0PFI0-_YI1Ks.jpg" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81161828" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABXqP5w0gfYgEKCRkrP7NeW0qgn5hYQoNZhtE8kV4h10tgrA1_1MS-mnX4jNmeNFHXw0MzEbytHkk_pImBE-b1vtJhm5lC39EyxSSt2TEuGFMc_h0Z_tUlKWir2F55qizXbMb.jpg" alt="Me Time" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81486233" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABWOF5Z3XTLnCWy-9XQtQBY2QvEFCi8BEopwW8h5VksC6mj5wsA1zQzwpgtI99ByoVTSkl4RxRSvYHNeQn8YoeQ5JBTIB9kUXlK4.jpg" alt="Sixty Minutes" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81282091" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABWgY6JxY21IsRpc40k3LJnzhRYOFwvmupyeUvEYn3Ed7MFsZOO_twtuU7YGCHUTmKrca78hJMEKjhsnyuUwid4h1YD5J5vpEHaNk-eLdWBqCPkbS67ArpjxPW6jCxlB13tHi.jpg" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81282091" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" alt="Wingwomen" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/80067830" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABVAOrtTizwL3qgKmC70hzl8zlFaPVstsOIvK9ziw6mnaB7cYj82DDgUmn2hIW4RcgZ_IINsJkSAS773-b1DCiH6m8LcnV95Jc8cm2yJVLUxnOv-HK61bt1A7z2pdaUg0wwew.jpg" alt="Ride Along 2" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81076856" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABV8FqQMazO9TqI3zmVvRbLp9soktG-sTk9DStr5RrcuRmM7M3FqPIn7F_KHYLO42qr1d5TRSbBdm7bPg_YXd71hHWBBVmq2Z01Y.jpg" alt="Beverly Hills Cop: Axel F" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81674658" data-uia="title-link">
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABUEEve9pt74jESDgC9BX23ClD27UJVZhDFgc8BpOeUzid3RV4rzoWdPu9_mdXv0dM4tB0Yxg41Vtc0vyNA2zuQrlZBvAKt38FOs.jpg" alt="The Equalizer 3" loading="lazy">
+            </a>
+            <a class="title-link" href="/gh/title/81760229" >
+                <img class="title-link-img" data-uia="title-link-img" src="comedy/AAAABbhg0pd1lGvYn5lmEPbXol70eT0EeaBomYc8J9-978g1XX3EAAGcvpqh2s3Aj2XtipZr74UQ5QBab6KEv7i02KR-tcIztI-UkM5Z8ZHQjbwls71Xn-Ef0JvR_dUFOq9V60xt.jpg" alt="Anyone But You" loading="lazy">
+            </a>
+        </div>
+    </section>
+<br>
+
+
+<footer>
+    <div class="footer-col">
+        <h4>Top 5 movies</h4>
+        <ul>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backend1-6.html">Trigger Warning</a></li>
+            <li><a href="https://www.justwatch.com/us/movie/civil-war-2024">Civil War</a></li>
+            <li><a href="https://www.justwatch.com/us/movie/dune-part-two-2023">Dune: Part Two</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Top 5 TV Shows</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/tv-show/fallout-2023">fallout</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/dark-matter-2024">Shogun</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Evil</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Eric</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/shogun-2024">Shōgun</a></li>
+           
+        </ul>
+    </div>
+   
+    <div class="footer-col">
+        <h4>Top 5 new on provider</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/provider/netflix/new">What's new on netflix</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/amazon-prime-video/new">What's new on Amazon Prime <br>video</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/disney-plus/new">What's new on Disney plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv-plus/new">What's new on Apple TV plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv/new">What's new on Apple TV</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Next upcoming movies</h4>
+        <ul>
+            <li><a href="backend1-1.html">Anikulapo</a></li>
+            <li><a href="backend1-2.html">The GentelMan</a></li>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backeand1-3.html">Lift</a></li>
+        </ul>
+    </div>
+  </footer>
+  
+  <hr>
+  <style>
+    .support_footer{
+        width: 100%;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: white;
+        background-color: #0a0a0c;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    
+    .pop a{
+        color: rgba(78, 212, 221, 0.582);
+    }
+    
+  </style>
+  <nav class="support_footer">
+    
+    <div class="pop">
+        <p>© 2024 MOVIEgaiN -All external content remains the property or the rightful owner. <br>Imprint - <a href="https://www.justwatch.com/us/privacy-policy"> Privacy Policy </a>- <a href="pages_fils/talent.html">Talent</a> - <a href="justwatch.com/uk/imprint">Consent Management</a></p>
+      </div> 
+  </nav>
+</body>
+</html>

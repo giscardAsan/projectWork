@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: rgba(14, 14, 20, 0.986); color:white">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+            background-attachment: fixed;
+        }
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="../images/Screenshot (18).png" width="100px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="../home.html">HOME</a></li>
+                <li><a href="../about us.html">ABOUT</a></li>
+                <li><a href="../contact.html">CONTACT</a></li>
+                <li><a href="../login.html"><img style="border-radius: 1rem; background-color:white;" src="icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+
+     <style>
+        .talen{
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+
+        .talen p{
+            font-size: 17px;
+        }
+
+        .talen button{
+            width: 170px;
+            height: 60px;
+            font-size: 16px;
+            background-color: rgb(230, 190, 12);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+        }
+      
+     </style>
+    
+    <section style="background: linear-gradient(rgba(0, 0, 0, 0.712) 0%, rgba(0, 0, 0, 0.85) 100%), url(&quot;https://static.justwatch.com/backdrop/427302/s1920/Good-Will-Hunting-Der-gute-Will-Hunting&quot;) center top no-repeat scroll;">
+        <div class="talen">
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        <h2><b>We offer big opportunities to great people</b></h2>
+        <br>
+
+        <p>If you want to become part of a growing team of highly talented people, just apply!</p>
+        <br>
+        <button>
+            <div><b>Open positions</b></div>
+    </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<style>
+    .world{
+        text-align: center;
+    }
+    .world h2{
+        font-size: 32px;
+    }
+    
+    .world p{
+        font-size: 15px;
+        color: #faebeb96;
+    }
+</style>
+<section>
+    <div class="world">
+        <h2><b>The world's leading movie and TV show <br>streaming guide</b></h2>
+        <br>
+        <br>
+        <p><b>MOVIEgaiN is an international movie marketing startup, founded in 2014 in Berlin by an experienced and successful <br>team. Every day, millions of viewers use JustWatch to find movies and TV shows they’ll love!<br><br>Talent is our highest priority! As we’re expanding our team to tackle the challenges and find opportunities, we <br>provide a diverse culture with high degrees of autonomy and personal development.</b></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+       <div>
+        <img src="../icons/company.jpg" width="100%" height="10%" alt="">
+       </div>
+</div>
+</section>
+
+
+<style>
+    .pics{
+        text-align: center;
+        background-color: white;
+        color: #000;
+    }
+
+    .icon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .pics h2{
+        font-size: 40px;
+    }
+
+    .pics p{
+        font-size: 20px;
+    }
+
+    .popu{
+        border: 2px solid white;
+        padding: 10px;
+        margin: 5px;
+        width: 350px;
+        border-radius: 5px;
+        box-shadow: 0 0 70px 5px black;
+    }
+
+    .poopu{
+        border: 2px solid white;
+        padding: 10px;
+        margin: 5px;
+        width: 350px;
+        border-radius: 5px;
+        box-shadow: 0 0 70px 5px black;
+    }
+
+    .pooopu{
+        border: 2px solid white;
+        padding: 10px;
+        margin: 5px;
+        width: 350px;
+        border-radius: 5px;
+        box-shadow: 0 0 70px 5px black;
+    }
+
+</style>
+<section class="pics">
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Our Core Values</h2>
+        <p>Our values “Learn and Deliver Value” are the foundation of MOVIEgaiN and the basis for all major decisions.</p>
+        <br>
+        <br>
+        <br>
+        <div class="icon">
+            <section class="popu">
+                <br>
+                <br>
+                <div>
+                    <img data-v-53e6d79b="" src="../icons/learn.svg" alt="learn">
+                </div>
+                <h2>Learn</h2>
+                <p>We question everything<br>We try to learn by first principles<br>We are always curious<br>We want to make everything better<br>We are transparent and share knowledge<br>Applied learning towards a goals is what matters</p>
+            </section>
+
+
+            <section class="poopu">
+                <br>
+                <br>
+                <div>
+                    <img data-v-53e6d79b="" src="../icons/deliver.svg" alt="deliver">
+                </div>
+                <h2>Deliver</h2>
+                <p>We are result driven <br> We do always what we say <br> We believe in the 80/20 rule <br> Done is better than perfect <br> We proactively communicate our wins</p>
+            </section>
+
+
+            <section class="pooopu">
+                <br>
+                <br>
+                <div>
+                    <img data-v-53e6d79b="" src="../icons/create.svg" alt="create">
+                </div>
+                <h2>Create Value</h2>
+                <p>We only want to do things that make sense <br> We want to give more than we take <br> We don't want to harm anybody <br> Business is always personal</p>
+            </section>
+        </div>
+        <br>
+        <br>
+        <div>
+    <p>We are always looking for entrepreneurial team members who share our values and passion for movies!.</p>
+    <br>
+    <br>
+    
+    </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-col">
+        <h4>Top 5 movies</h4>
+        <ul>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-1.html">Anikulapo</a></li>
+            <li><a href="backeand1-3.html">Lift</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backend1-6.html">Trigger Warning</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Top 5 TV Shows</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/tv-show/fallout-2023">fallout</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/dark-matter-2024">Shogun</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Evil</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/evil">Eric</a></li>
+            <li><a href="https://www.justwatch.com/us/tv-show/shogun-2024">Shōgun</a></li>
+           
+        </ul>
+    </div>
+   
+    <div class="footer-col">
+        <h4>Top 5 new on provider</h4>
+        <ul>
+            <li><a href="https://www.justwatch.com/us/provider/netflix/new">What's new on netflix</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/amazon-prime-video/new">What's new on Amazon Prime <br>video</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/disney-plus/new">What's new on Disney plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv-plus/new">What's new on Apple TV plus</a></li>
+            <li><a href="https://www.justwatch.com/us/provider/apple-tv/new">What's new on Apple TV</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Next upcoming movies</h4>
+        <ul>
+            <li><a href="backend1-1.html">Anikulapo</a></li>
+            <li><a href="backend1-2.html">The GentelMan</a></li>
+            <li><a href="backend1-4.html">Strong Girl</a></li>
+            <li><a href="backend1-5.html">Atlas</a></li>
+            <li><a href="backeand1-3.html">Lift</a></li>
+        </ul>
+    </div>
+  </footer>
+  
+  <hr>
+  <style>
+    .support_footer{
+        width: 100%;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: white;
+        background-color: #0a0a0c;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    
+    .pop a{
+        color: rgba(78, 212, 221, 0.582);
+    }
+    
+  </style>
+  <nav class="support_footer">
+    
+    <div class="pop">
+        <br>
+        <p>© 2024 MOVIEgaiN -All external content remains the property or the rightful owner. <br>Imprint - <a href="pages_fils/policy.html"> Privacy Policy </a>- <a href="pages_fils/talent.html">Talent</a></p>
+        <br>
+      </div> 
+  </nav>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+TV Dramas
+Some stories are so rich they need more than a movie to tell them. Crime sagas, medical dramas, sci-fi and more–these shows will keep you glued to your seat.
+
+
+Dramas
+We all need a little drama in our lives. From gritty crime thrillers to heartfelt romances to riveting real-life stories, these dramatic movies pack a punch.
+
+
+
+
+Nollywood Movies & TV
+Laugh, cry, sigh, scream, shout or whatever you feel like with these comedies, dramas, romances, thrillers and so much more, all hailing from Nigeria.
+
+
+
+
+
+TV Dramas
+Some stories are so rich they need more than a movie to tell them. Crime sagas, medical dramas, sci-fi and more–these shows will keep you glued to your seat.
+
+
+
+
+Romantic Favorites
+There's nothing hopeless about being romantic. From Hollywood romcoms to Bollywood dramas, these shows and movies are sure to tug at your heartstrings.
+
+
+
+Watch With the Family
+Looking for something the whole family can enjoy together? We've got you covered. Pop the popcorn, gather the fam and fire up one (or more) of these movies and shows.
+
+
+Kids and Family TV
+Spark their curiosity and imagination with these kids and family TV shows featuring heartwarming adventures, positive problem-solving and fun for all ages.
+
+
+
+Crime TV Shows
+From real-life documentaries to the comedy side of crime, this roundup features TV shows about corruption, conspiracies and crackdowns. Catch them if you can.
+</body>
+</html>
