@@ -2013,11 +2013,7 @@ html {
         padding: 0
     }
     
-    ul>li {
-        list-style-type: disc;
-        margin-bottom: 5px;
-        margin-left: 1.1em
-    }
+    
     
     ul.structural {
         margin: 0;
