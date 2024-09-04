@@ -133,22 +133,3 @@ footer{
     }
 }
 
-
-                             /* The Bahubali */
-.dis{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    background-color: black;
-}
-.dis a:hover{
-    color: red;
-}
-
-
-                                    /* The Lord of the ring */
-.mad{
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.507);
-    display: flex;
-}

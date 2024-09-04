@@ -159,6 +159,7 @@
                 </form>
             </div>
             <ul>
+
                 <li><a href="../home.html">HOME</a></li>
                 <li><a href="../about us.html">ABOUT</a></li>
                 <li><a href="../contact.html">CONTACT</a></li>
@@ -168,6 +169,38 @@
                         <a href=""><i class="fab fa-facebook"></i></a>
                         <a href=""><i class="fab fa-twitter"></i></a>
                         <a href=""><i class="fab fa-instagram"></i></a>
+
+
+
+
+
+
+
+                        <i class="fa-solid fa-lock" id="cart-icon"></i>
+                        
+                        <nav class="main_cart">
+                            <div class="cart">
+                                <h2 class="cart-title">your cart</h2>
+                                <div class="cart-content">
+                                    <div class="cart-box">
+                                        <img src="../crime/AAAABcI-a9xD0ctNxf3HjqW7VGaBPegutqtgQpPTzhrufJkTdNIuVStFxvsC0i1s-_CYnrz1_yM2z1-VI4acH1-JRcJbuuLrMH6uI6Q.jpg"  alt="" class="cart-img">
+                                        <div class="detail-box">
+                                            <div class="cart-product-title">movies</div>
+                                            <div class="cart-price">$25.04</div>
+                                            <input type="number" value="4" class="cart-quantity">
+                                        </div>
+                                        <i style="color: red; font-size:20px" class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <div class="total-title">Total</div>
+                                    <div class="total-price">$0</div>
+                                </div>
+                                <button type="button" class="btn-buy">Buy New</button>
+    
+                                <i style="color: black;" class="fa-solid fa-x" id="cart-close"></i>
+                            </div>
+                        </nav>
                     </li>
             </ul>
             <div class="memu">
@@ -175,6 +208,7 @@
                    <i class="fa fa-bars"></i>
                 </label>
             </div>
+            
         </header>
     <br>
     <br>
@@ -183,6 +217,134 @@
     <br>
     <br>
     <br>
+    <br>
+
+    
+    <style>
+        .cart{
+            position: fixed;
+            top: 0;
+            right: -300%;
+            width: 360px;
+            height: 100vh;
+            padding: 15px;
+            background-color: var(--bg-color);
+            box-shadow: -2px solid 4px hsl(0, 4%, 15% / 10%);
+            border: 1px solid var(--main-color);
+            transition: 1s;
+            background-color: wheat;
+        }
+
+        #cart-close{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        .cart-title{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+
+        .cart-box{
+            display: grid;
+            grid-template-columns: 32% 50% 18%;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cart img{
+            width: 120px;
+            height: 100px;
+            object-fit: contain;
+            padding: 3px;
+        }
+
+        .detail-box{
+            display: grid;
+            row-gap: .5rem;
+        }
+
+        .cart-product-title{
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .cart-price{
+            font-weight: 500;
+        }
+
+        .cart-quantity{
+            border: 1rem solid var(--text-color);
+            outline-color: var(--main-color);
+            width: 2.4rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .total{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+            border-top: 2px solid black;
+        }
+
+        .total-title{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .total-price{
+            margin-left: .5rem;
+        }
+
+        .btn-buy{
+            display: flex;
+            margin: 1.5rem auto 0 auto;
+            padding: 12px 20px;
+            border: none;
+            background-color: blue;
+            color: wheat;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .btn-buy:hover{
+            background-color: #000;
+        }
+
+    </style>
+
+    <script>
+        document.getElementById("cart-icon").addEventListener("click", function(){
+            document.querySelector(".cart").style.right = "0%";
+        })
+        
+        document.querySelector("#cart-close").addEventListener("click", function(){
+            document.querySelector(".cart").style.right = "-300%";
+        })
+    </script>
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+     
 
 <style>
   
@@ -269,6 +431,7 @@
 }
 
 .first{
+    color: white;
     border-bottom: 4px solid rgb(187, 154, 7);
 }
 </style>
@@ -278,14 +441,14 @@
 </div>
 <br>
 <div class="comety">
-    <h1>Love is patient; love is kind. It’s also awkward, messy and really funny. These romantic movie rank as our top movies to help you feel the love.</h1>
+    <h1></h1>
 </div>
 <br>
 <br>
 <div class="releas">
    <a href="../new.html"><h1>New releases</h1></a>
    <a href="upcoming.html"><h1>Upcoming</h1></a>
-   <a href="#"><h1 class="first">On sale</h1></a>
+   <a href="#"><h1 class="first">sale</h1></a>
 </div>
 <br>
 <br>
@@ -363,87 +526,732 @@
 
 
  
-   
-<section class="nmtitle-section" id="section-more-titles">
-    <div class="link-container">
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABc-oQ52bnQ4tp1HPchNJeqKgr5zDeruvNQfBeCTBW-05XCmaylG80S-iszQBh3MOurxAP3opFLB4y43wq5cNUjAtb9n19BGnAOg.jpg" alt="Sixty Minutes" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../action/AAAABZsrfXQHTHuqdt1Zd2QvP-JoE-C0EoTeHEZrSrhr3yXGGyBO7j1P9w8xPL8rZZjf4VSVbhzMxLBMTY1_IjIK3GSxzAwnhQ7cNp8.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../comedy/AAAABdPjruIDLY3zay90gpFXrX-t_ZY1MZ1mOFJmQH7gLoTo1JAA26L7yrhjSObfoRI5hpv-berZwwQrtcS-nqY8VNqVESjr8FNPhx8.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABVMuOeffao2SMnMITMjPrN4F9o6Iv6kCoqTidYDk7AiZQ7jOxvOh1GRA19I-BzpeWRhHoy3DpRQFYN45D5AQi4AFsERksS9fhQo.jpg" alt="Wingwomen" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../action/AAAABZdHPS2MiOv6DkV0woo7neDwDhwaNlWOl-NzX4WKkYXF717f8SEtCeWATP7aiAQVDEs9wWYiIw_LromhHxKysIquZtd-nr8TRENAp8KHKVI6ur4nsro5Ttyqwa8w-pftZt_v.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../action/AAAABb9d19BKVbMmNdR8VidjMZsfOLrjnx-YCkkcXpi4KdmhBaZNY3YKT5SLCYfK_TnQni_chvVJmIzkKFcl-ChraRrii7wFhcYgQ6A.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../action/AAAABZAWwZmFaEbO8hlHzj_97ozzDjt-iPIcobz3Ga7HzqRaAfhlKftGrv6p-fuOxZu8xnyyfpZnVjG_p5Q8rsmL7XOwSbxpcKk6kh0.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../comedy/AAAABQAYcjycZSCfpnbRGCKEsbTLh7qz8OtiZKaypCYEujOuO6Yn3o6rXBriAr1PGVWkghezQK_ZGOQ4977DXN-94ckxGTX7tSCYZeJ2O9PwOXJUOz9jceZ_VX7aj84IM1BCItmC.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../nextwatch/AAAABaNKG7jm7_enkuR70ushfXFeCrrJG05KkUICZBP2gqV7-rgPmbEfivmj89AzrmRKeAKXztfm6IqirIiVJ1kSWjgyUesQ1PBsMV84dVjH25i3itbCBDSrLA7ZQejlFvIv9_UR.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../horror/AAAABS6H5LwieMBxg4u5AuZedxh36nRS_QcjkdWcUa0YWpIAjrMIdO_nPOKVckCLUWRzoW5ym9wbQwT49PU3zAFch6XKPwgC03wYxfO01UQCZkXmpf0oalwpsK6gtniEYejtm8zu.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABTpaCW3SgNIJBrjdEhArCClO4gnJ2wYHKHyZiufzv5gsuI1W-gPCbuUivjeEUqZ_sIIVpYza066oZdWHlgTMUVNgOtJXHUFAIZvJMg4LqRj80WsJmq8dIcRNFAPKQQaL1-ks.jpg" alt="Ride Along 2" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABelrz4ziWUTYGe5P181arHm4DbFApiTnGdWewPkYdNb6a4Yc2b5a5tcEYkG42NNwM5_RwFK0r_qCslyXExTePb6on51QbN3OFYI.jpg" alt="Beverly Hills Cop: Axel F" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABevU_O1vck8wGtaxtK6eG7BJMDbQub9jTt0iOmq6RL-1wH8nsu-VAOplDz2JKeL9mWrG27Cj3u2oPjGQoZfhKG41L7uq9X8tssNAZdg4XIP-90oYCeMlXOM7IOt9UlpMPbSN.jpg" alt="The Equalizer 3" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../horror/AAAABab2eeEWZKF37Tw3YfdpCIelcA8CSFXGNj31DpvM6EqcO8QLIUYEip2ermcDBHL3KeKyhCPrVYZwxC8zIJCqKyyYWHQ7xfEWKrc.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" >
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABVcmYPvysWqkvhKqNfk0yhubbCBWEF3zVC7kaNX13GZJUExhg10DVySZc5TzO_jo7-gJYJ7BJ7Df7UPi9nb5BqfhOXLtsM9LGRE.jpg" alt="Anyone But You" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../kid&family/AAAABbdKn1VR-4LfFfnhSwlMaxCWYFZJi8twOp8ohXi9XirQW2q16utyGLiqsRPGF-gPSa4HeWtNtqR4hZTiGbZch1nF7iiz35242qM.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../drama/AAAABZcyMJPfDka6mPsmifGMgDDLRLFwU8lqj2EmbQoLaFyXJIrhE7bzY2_6l-UuBZkjVNrPO9c-Ee9ljrqvgZuQlErM0-s2N5lcuHE.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABb-mjcQr4c3Uiy2YhQz4XnmqgHNWrUdg1NhSDR60dzEQDY6m4CF5Y2pZUC3Zm_ASJ7gq1nDuJMTodJuPwgRiyxlYs3stts7JE6E.jpg" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABUVNlK1gGovkKUulg5mYLdjESuyXCF5IDOlG9o0sfpMjVbfhpg_ruf3o_UzG6vW_DHQ5h1W_fK3vuGPsmJOuoOHJinNukvQmp1c.jpg" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../horror/AAAABfdaVzNUqoGRIQSdQxXg3AAOsZY7GXzfK1QHE8ohRVtcTiNLuI-nQeWFYWOBxuctRjSbJ1ErF2iJgrzgnUzMKG2d2xPxXXEtWZI.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" alt="Me Time" loading="lazy">
-        </a>
+   <style>
+    *{
        
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABf84V-GLeIvJCXXQ0uKdMmcHEaaRqwgSqKfMDKzQRw93Q3J-UWxLvd564aPfsJSGudLdowo12EQLOrWuPNf7Tk7PU2fTd-2mLlfN_SRq5_ElIXU_oTSmPYkmWDTIQsBl41nl.jpg" alt="Wingwomen" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html">
-            <img class="title-link-img" data-uia="title-link-img" src="../crime/AAAABc3Aq0BZQx-n1I7YORO_ikRuu0cpqO9lZsvJo8jwgrGvUENCzlJ0bXfSbY_zvolA2BZT6FFOPFG_rcTEYbsPHqDQ_m0DEPtJGsOCP7NwD6rcmBs8dNJsULg7fA3ZXT6lhqwo.jpg" alt="Army of Thieves" loading="lazy">
-        </a>
-        <a class="title-link" href="../backend1-1.html" data-uia="title-link">
-            <img class="title-link-img" data-uia="title-link-img" src="../africa/AAAABSydUg1kD7TG6PyfUY0xlV35U7PggZo3hU5eRD0eG1TBGQC5Ywy9tRVRtYAlvJ_wJrFHkZx5dqLlIosEcG1qLCzXwAeUQgpwSEM.jpg" alt="The Man from Toronto" loading="lazy">
-        </a>
+    }
+
+
+    main{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main .card{
+        height: 360px;
+        text-align: center;
+        border: 1px solid lightgray;
+        margin: 4px;
+        background-color: #f5ebeb;
+
+    }
+
+    main .card:hover{
+        border: 2px solid var(--text-color);
+        transition: .4s;
+    }
+
+    main .card image{
+        height: 50%;
+        margin-bottom: 20px;
+    }
+
+    main .card .image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    main .card .caption{
+        padding-left: 1rem;
+        text-align: left;
+        line-height: 2rem;
+        height: 27%;
+    }
+
+    main .card .caption p{
+        font-size: 1.5rem;
+    }
+
+    del{
+        text-decoration: line-through;
+    }
+
+    main .card .caption .rate{
+        display: flex;
+    }
+
+    main .card .caption .rate i{
+        color: gold;
+        margin-left: 2px;
+    }
+
+    main .card a{
+        width: 50%;
+    }
+
+    main .card button{
+        border: 2px solid black;
+        padding: 1rem;
+        width: 80%;
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+    }
+
+    main .card button:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: black;
+        transition: all .5s;
+        margin: 0;
+    }
+
+    main .card button:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        background-color: black;
+        transition: all 1s;
+    }
+
+    main .card button:hover:before{
+        width: 30%;
+    }
+
+    main .card button:hover:after{
+        width: 30%;
+    }
+
+    .flex{
+        display: flex;
+        gap: 10px;
+    }
+</style>
+
+<main>
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
     </div>
-</section>
-<br>
-<br>
-<br>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div><div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div><div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">product name</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+    
+    
+    
+</main>
 
 
 
