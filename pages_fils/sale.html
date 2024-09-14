@@ -176,7 +176,7 @@
 
 
 
-                        <i class="fa-solid fa-lock" id="cart-icon"></i>
+                        <i id="cart-icon"><img src="../images/cart-icon.png" width="10%" alt=""></i>
                         
                         <nav class="main_cart">
                             <div class="cart">
@@ -189,12 +189,12 @@
                                             <div class="cart-price">$25.04</div>
                                             <input type="number" value="4" class="cart-quantity">
                                         </div>
-                                        <i style="color: red; font-size:20px" class="fa-solid fa-trash"></i>
+                                        <i style="color: red; font-size:20px" class="fa-solid fa-trash cart-remove"></i>
                                     </div>
                                 </div>
                                 <div class="total">
                                     <div class="total-title">Total</div>
-                                    <div class="total-price">$0</div>
+                                    <div class="total-price">$10</div>
                                 </div>
                                 <button type="button" class="btn-buy">Buy New</button>
     
@@ -224,7 +224,7 @@
         .cart{
             position: fixed;
             top: 0;
-            right: -300%;
+            right: 0%;
             width: 360px;
             height: 100vh;
             padding: 15px;
@@ -328,6 +328,63 @@
         document.querySelector("#cart-close").addEventListener("click", function(){
             document.querySelector(".cart").style.right = "-300%";
         })
+
+
+
+
+        if (document.readyState == "loading"){
+            document.addEventListener('DOMContentLoaded', start);
+
+        }else{
+            start();
+        }  
+
+
+        function start(){
+            addEvents();
+           
+        }
+
+        function update(){
+            addEvents();
+            updateTotal();
+        }
+
+        function addEvents(){
+            let cartRemove_btns = document.querySelectorAll(".cart-remove");
+            console.log(cartRemove_btns);
+            cartRemove_btns.forEach((btn) => {
+            btn.addEventListener("click", handle_removeCartItem);
+
+            });
+
+            let cartQuantity_inputs = document.querySelectorAll('.cart-quantity');
+            cartQuantity_inputs.forEach(input => {
+                input.addEventListener("change", handle_removeCartItem)
+            })
+        }
+
+        function handle_removeCartItem(){
+          this.parentElement.remove();
+
+          update();
+        }
+
+        
+
+        function updateTotal(){
+            let cartBox = document.querySelectorAll('.cart-box');
+            const totalElement = cart.querySelector('.total-price');
+            let total = 0;
+            cartBoxes.forEach(cartBox =>{
+                let priceElement = cartBox.querySelector('.cart-price');
+                let price = parseFloat(priceElement.innerHTML.replace("$", ""));
+                let quantity = cartBox.querySelector(".cart-quantity").value;
+                total += price * quantity;
+            });
+
+            totalElement.innerHTML = "$" + total;
+        }
     </script>
     
 
@@ -652,7 +709,7 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             </p>
-            <p class="product_name">product name</$ 450</p>
+            <p class="product_name">A Simple Lie</$ 450</p>
             <div class="flex">
             <p class="discount"><b><del>$ 450</del></b></p>
             <p class="price">$ 300</p>
@@ -663,7 +720,51 @@
 
     <div class="card">
         <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+           <a href="../backend1-1.html"><img src="../crime/AAAABXCEDSvAd-kzi1W4RLVepNAWOGLJ19tOz7VeAD-VpBRphdv5wbTMnAYfIxS034cFWIyOS4FjBG_8w5YvPDozWR5STYloY-GXcFE.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">Disturbia</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../crime/AAAABfssaSzgdNgToMYeQa3IWq1mG_pDEnJj2upvHJE_mMM5wb2hxO4QRuexjp6Y3FTUJyeyBSxjtDen7R6bo5cNbPnH3rGmd43hPY6aYhY-so5GrVfqm953DYxa7bmB9p20aOpp.jpg" width="100%" alt=""></a>
+        </div>
+        <br>
+        <div class="caption">
+            <p class="rate">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="product_name">A Fall From Grace</$ 450</p>
+            <div class="flex">
+            <p class="discount"><b><del>$ 450</del></b></p>
+            <p class="price">$ 300</p>
+            </div>
+        </div>
+        <button class="add">Add to cart</button>
+    </div>
+
+    <div class="card">
+        <div class="images">
+           <a href="../backend1-1.html"><img src="../comedy/AAAABS6cyVwWxuAa0K2ih_VgxN3fsq0TJPZhqMR9SM5E3y1ow_6_Qg3e7LiFreLr-PAWDMp3m_gkfvZn3INymE_RtJO5NOzbhYPJQN5pyb...bU-LS8-R7vL.jpg" width="100%" alt=""></a>
         </div>
         <br>
         <div class="caption">
@@ -685,7 +786,7 @@
 
     <div class="card">
         <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+           <a href="../backend1-1.html"><img src="../comedy/AAAABb9RuHq1vAI0WPaR1URtssiFFnQEiMnQ9YUtOScEBaAy66ZxxJIAS32Iau5T-KFBFmUqs_nlsa0gQSJnFssARqOzhTEY4TJswcZ-rc5QkVvaHgWo33ZdElp7qR7J0QWrjzU6.jpg" width="100%" alt=""></a>
         </div>
         <br>
         <div class="caption">
@@ -707,7 +808,7 @@
 
     <div class="card">
         <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+           <a href="../backend1-1.html"><img src="../action/AAAABSouXCufsyrqXyhqAUilSSDeMRWnQmWmI6uvQilei4gt7q9QUSebJDYPgy4vRZORcGRjd5NsU0Fi8H3wVURKAvGNt0SPw0tXpJgOrp04nYAGelCkuGTsjbR3eedWlreRDRr_.jpg" width="100%" alt=""></a>
         </div>
         <br>
         <div class="caption">
@@ -729,51 +830,7 @@
 
     <div class="card">
         <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
-        </div>
-        <br>
-        <div class="caption">
-            <p class="rate">
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            </p>
-            <p class="product_name">product name</$ 450</p>
-            <div class="flex">
-            <p class="discount"><b><del>$ 450</del></b></p>
-            <p class="price">$ 300</p>
-            </div>
-        </div>
-        <button class="add">Add to cart</button>
-    </div>
-
-    <div class="card">
-        <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
-        </div>
-        <br>
-        <div class="caption">
-            <p class="rate">
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            </p>
-            <p class="product_name">product name</$ 450</p>
-            <div class="flex">
-            <p class="discount"><b><del>$ 450</del></b></p>
-            <p class="price">$ 300</p>
-            </div>
-        </div>
-        <button class="add">Add to cart</button>
-    </div>
-
-    <div class="card">
-        <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+           <a href="../backend1-1.html"><img src="../action/AAAABdu1-UYxGUcKaJQvBIK-UbhVMfWVgtn8cr-DwVqmFGYeFMB2NmaGKdg_QJsUPkl_LMv0rRz9zeBTdMqQORGivSxA8L7RrVFqIlXrLsq_AIy-nQmyHLwoApozP___vEh2xzzJ.jpg" width="100%" alt=""></a>
         </div>
         <br>
         <div class="caption">
@@ -794,7 +851,7 @@
     </div>
     <div class="card">
         <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+           <a href="../backend1-1.html"><img src="../action/AAAABToODT-QinLX4y9dZgsoQNkTTIOsDOj5cZdEUqz8S5zbN6xXGym3-sOk0f2Q2D94YC0.jpg" width="100%" alt=""></a>
         </div>
         <br>
         <div class="caption">
@@ -814,7 +871,7 @@
         <button class="add">Add to cart</button>
     </div><div class="card">
         <div class="images">
-           <a href="../backend1-1.html"><img src="../africa/AAAABVjYgz3QlzXJg9ec8JKgiQRElj6cBH6HdER2Dh62AlL-uU-nk-6XUBS5up_FXZpi6KTdi9_OWzFfYqTIuCkH06eRP8YuVwkeYPc.jpg" width="100%" alt=""></a>
+           <a href="../backend1-1.html"><img src="../kid&family/AAAABdGwRq1vQUFnKlhTIDZQp4e7i7aEsoxaBIcgx05u6ZAAdSOszC0z8CGuXL1MpsIKDCYnhg29gqYl9rsNZlzjVIeOssqnROwjlk8.jpg" width="100%" alt=""></a>
         </div>
         <br>
         <div class="caption">
