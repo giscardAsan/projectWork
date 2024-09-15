@@ -29,7 +29,7 @@
     
         header{
             width: 100%;
-            height: 100px;
+            height: 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -188,35 +188,37 @@
     <br>
     <br>
     <br>
+    <br>
 
 
-<nav class="cola">
-    <div class="pick">
-        <center><h1 style="color: white; font-size: 42px;"><b>We would love to hear from you</b></h1></center>
-    </div>
-   
-</nav>
+
 
 
 <style>
     .modular{
         width: 100%;
         text-align: center;
-        font-size: 25px;
+        color: white;
+        font-size: 20px;
     }
 </style>
 <nav>
     <div class="modular">
-        <h1>Drop us a message, let's work together</h1>
+        <h1><b>Drop us a message, let's work together</b></h1>
     </div>
 </nav>
+<br>
+<br>
+<br>
+
 <style>
     
 .home_1{
      display: flex;
      flex-wrap: wrap;
+     gap: 100px;
      justify-content: center;
-     /* font-size: 20px; */
+
 }
 .home_1 form{
     display: flex;
@@ -225,31 +227,31 @@
 
 }
 .form{
-    color: rgb(230, 227, 227);
+    color: rgb(12, 11, 11);
+    padding: 20px;
+    background: #0a090952;
 }
     
 .form input{
     height: 50px;
     border-radius: 10px;
-    background-color: #0e0e11;
+    background-color: #e8e8f3e7;
     width: 100%;
-    color: white;
+    color: rgb(3, 3, 3);
 }
 .form input:hover{
     background-color: rgb(63, 70, 77);
 }
 
-    .sen{
-        height: 50px; 
-        border-radius: 10px; 
-        color: white; 
-        font-size: 19px;
-        background-color: #29a918;
+    .inputBox{
+        border: none;
+        width: 100px;
+        background: #00bcd4;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
     }
-    .sen:hover{
-        background-color: rgba(192, 13, 13, 0.637);
-    }
-    
     .fit{
         display: flex;
         justify-content: center;
@@ -259,65 +261,115 @@
     .option{
         height: 50px;
         border-radius: 10px;
-        background-color: #08080a;
-        color: white;
+        background-color: #eaeaf3;
         font-size: 20px;
+    }
+
+   
+    .contact .box{
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+    }
+
+    .contact .icon{
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        background: #ebe6e6;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px;
+    }
+
+    .contact .text{
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .contact .text h3{
+        font-weight: 500;
+        color: #00bcd4;
     }
 
 </style>
 
 
     <nav class="home_1">
+        <div class="contact">
+                <div class="box">
+                    <div class="icon"><i style="color: #000;" class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <br>
+                        <p>br4671 Suger Camp Road,<br><br>Kumasi,Ghanan</p>
+                    </div>
+                </div>
+            <br>
+                    <div class="box">
+                        <div class="icon"><i style="color: #000;" class="fa-solid fa-phone"></i></i></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <br>
+                            <p>0548222830</p>
+                        </div>
+                    </div>
+            <br>
+            <br>
+                <div class="box">
+                        <div class="icon"><i style="color: #000;" class="fa-solid fa-envelope"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <br>
+                            <p class="email_1">giscard@MOVIEgaiN.com</p>
+                        </div>
+                       
+                 </div>
+        </div>
+
+
+
         <div class="form">
-            <P style="margin-left: 10px; padding: 20px; font-size: 20px;"><b>Use the form below for all other matters</b></P>
+            <P style="margin-left: 10px; font-size: 18px; color:#fff"><b>Use the form below for all other matters</b></P>
+            <br>
             <form action="#" method="post" enctype="multipart/form-data">
                <div class="fit">
-                <input style="font-size: 15px; padding-left:10px;"  type="text" name="username" placeholder="First Name">
-                <input style="font-size: 15px; padding-left:10px;"  type="text" name="username" placeholder="Last Name">
+                <input style="font-size: 15px; padding-left:10px;"  type="text" name="username" placeholder="First Name" required>
+                <input style="font-size: 15px; padding-left:10px;"  type="text" name="username" placeholder="Last Name" required>
                </div>
                 <br>
-                <input style="font-size: 15px; padding-left:10px;" type="email" name="email" placeholder="Email Address">
+                <input style="font-size: 15px; padding-left:10px;" type="email" name="email" placeholder="Email Address" required>
                 <br>
                 <input style="font-size: 15px; padding-left:10px;" type="website" name="website" placeholder="Phone Number (option)">
                 <br>
-                    <select style="padding-left:10px; color:grey" class="option" name="" id="">
+                    <select style="padding-left:10px; color:rgb(3, 3, 3)" class="option" name="" id="">
                         <option value="">Select topic of interest</option>
                         <option value="">Media Buying</option>
                         <option value="">Content Insights</option>
                         <option value="">Creative Production</option>
                     </select>
                 <br>
-                <textarea style="font-size: 20px; border-radius: 6px; background-color: #0a0a0c; color: aliceblue; padding-left:10px;" name="your message" id="" cols="" rows="10" placeholder="How can we help?"></textarea>
+                <textarea style="font-size: 20px; border-radius: 6px; background-color: #f1f1fa; color: rgb(8, 8, 8); padding-left:10px;" name="your message" id="" cols="" rows="4" placeholder="How can we help?"></textarea>
                 <br>
-                <button class="sen">Send massage</button>
+                <button class="inputBox">Send</button>
             </form>
         </div>
     </nav>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     
-    <style>
-         .yolo{
-        text-align: center;
-        color: white;
-        font-size: 25px;
-    }
-    .email_1:hover{
-      color: white;
-    }
-
-    .email_1{
-        color: rgb(201, 199, 199);
-    }
-    </style>
-    <nav class="yolo">
-        <div>
-            <h1><b>prefer email? Let's talk</b></h1>
-            <a href=""><p class="email_1">sales@MOVIEgaiN.com</p></a>
-        </div>
-    </nav>
-<br>
+   
 <footer>
     <div class="footer-col">
         <h4>Top 5 movies</h4>
