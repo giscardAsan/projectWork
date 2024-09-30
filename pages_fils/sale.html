@@ -403,7 +403,7 @@
         }
         function addProductToCart(title, price, productImg) {
             var cartShopBox = document.createElement("div");
-            cartShopBox.classlist.add("cart-add");
+            cartShopBox.classList.add("cart-add");
             var cartItems = document.getElementsByClassName('cart-content')[0];
             var cartItemsNames = cartItems.getElementsByClassName('cart-product-title');
             for (var i = 0; i < cartItemsNames.length; i++) {

@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.918)">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+            background-attachment: fixed;
+        }
+    
+    
+        
+    
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgb(0, 0, 0);
+        }
+    
+        #chki{
+            display: none;
+        }
+    
+        i{
+            color: white;
+            cursor: pointer;
+        }
+    
+        header .logo{
+            flex: 1;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    
+        header .search-box{
+            flex: 1;
+            position: relative;
+        }
+    
+        .search-box input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+    
+        .search-box button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background-color: green;
+        }
+    
+        header ul{
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        header ul li{
+            list-style: none;
+        }
+    
+        header ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+        }
+    
+        header ul li a:hover{
+            border-bottom: 2px solid cadetblue;
+        }
+    
+        header .memu{
+            font-size: 2.5em;
+            display: none;
+        }
+    
+        @media(max-width:1000px){
+            .search-box button{
+                position: absolute;
+            }
+    
+            header ul{
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0,0,0,0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transform: right 0.5s linear;
+            }
+    
+            header .memu{
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+    
+            #chki:checked ~ ul{
+                right: 0;
+            }
+        }
+    
+        @media(max-width:600px){
+            header .logo{
+                font-size: 10px;
+                margin-left: 8px;
+            }
+    
+            header ul{
+                width: 100;
+            }
+        }
+    </style>
+    
+        <header>
+            <input type="checkbox" name="" id="chki">
+            <div class="logo"><h1><img src="../images/Screenshot.png" width="150px" alt=""></h1></div>
+            <div class="search-box">
+                <form action="" method="post">
+                    <input type="text" name="search" id="srch" placeholder="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+
+                <li><a href="../home.html">HOME</a></li>
+                <li><a href="../about us.html">ABOUT</a></li>
+                <li><a href="../contact.html">CONTACT</a></li>
+                <li><a href="../login.html"><img style="border-radius: 1rem; background-color:white;" src="../icons/account.png" width="19px" alt=""></a></li>
+                
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+
+
+
+
+
+
+
+
+                        
+                                      <!-- cart icon -->
+                            <i class="fa-solid fa-lock" id="cart-icon"></i>           
+                            <div class="cart">
+                                <h2 class="cart-title">Your Cart</h2>
+                
+                                <div class="cart-content">
+                
+                                </div>
+                
+                                <div class="total">
+                                    <div class="total-title">Total</div>
+                                    <div class="total-price">$0</div>
+                                </div>
+                                <button type="button" class="btn-buy">Buy Now</button>
+                                <i style="color: black;" class="fa-solid fa-x" id="close-cart"></i>
+                            </div>
+                    </li>
+            </ul>
+            <div class="memu">
+                <label for="chki">
+                   <i class="fa fa-bars"></i>
+                </label>
+            </div>
+            
+        </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+     
+    
+
+
+
+    
+<style>
+  
+
+    body{
+        background-color: white;
+    }
+
+    .gallery_2{
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .gallery_2 div{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: px;
+        flex: none;
+        gap: 5px;
+    }
+
+    .gallery_2 div img{
+        width: 98%;
+    }
+
+    .gallery_2::-webkit-scrollbar{
+        display: none;
+    }
+
+    .gallery-wrap_2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #backBtn_2, #nextBtn_2{
+        width: 0px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .gallery_2 div img:hover{
+        filter: grayscale(0);
+        cursor: pointer;
+    }
+
+
+    .all_2{   
+        color: white;
+        padding-left: 25px;
+        }
+
+    .gallery_2 span img{
+        border-radius: 1rem;
+    }   
+    
+    .gallery_2 span img:hover{
+        transform: scale(1.1);
+       }
+       .comery{
+        color: white; 
+        text-align: center;  
+}
+
+.comety{
+    color: rgba(255, 255, 255, 0.479);   
+    padding-left: 35px;
+}
+
+.releas {
+    color: rgba(255, 255, 255, 0.774);
+    justify-content: center;
+    display: flex;
+    font-size: 13px;
+    gap: 20px;
+}
+.releas a{
+    color: rgba(255, 255, 255, 0.61);
+}
+
+.releas  a:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.first{
+    color: white;
+    border-bottom: 4px solid rgb(187, 154, 7);
+}
+</style>
+
+<div>
+   <h1 class="comery">MOVIES SALE</h1>
+</div>
+<br>
+<div class="comety">
+    <h1></h1>
+</div>
+<br>
+<br>
+<div class="releas">
+   <a href="../new.html"><h1>New releases</h1></a>
+   <a href="upcoming.html"><h1>Upcoming</h1></a>
+   <a href="#"><h1 class="first">sale</h1></a>
+</div>
+<br>
+<br>
+
+<div>
+    <h1 class="all_2">MY SERVICES</h1>
+</div>
+
+<br>
+<div class="gallery-wrap_2">
+    <img src="icons/10117847.png" alt="" id="backBtn_2">
+    <div class="gallery_2">
+    <div>
+       <a href="#"> <span><img src="../icons/icon (22).webp" alt=""></span></a>
+
+        <span><img src="../icons/icon (21).webp" alt=""></span>
+
+        <span><img src="../icons/icon (4).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="../icons/icon (5).webp" alt=""></span>
+
+        <span><img src="../icons/icon (6).webp" alt=""></span>
+
+        <span><img src="../icons/icon (1).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="../icons/icon (2).webp" alt=""></span>
+
+        <span><img src="../icons/icon (8).webp" alt=""></span>
+
+        <span><img src="../icons/icon (9).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="../icons/icon (10).webp" alt=""></span>
+
+        <span><img src="../icons/icon (11).webp" alt=""></span>
+
+        <span><img src="../icons/icon (3).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="../icons/icon (12).webp" alt=""></span>
+
+        <span><img src="../icons/icon (13).webp" alt=""></span>
+
+        <span><img src="../icons/icon (14).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="../icons/icon (15).webp" alt=""></span>
+
+        <span><img src="../icons/icon (16).webp" alt=""></span>
+
+        <span><img src="../icons/icon (17).webp" alt=""></span>
+    </div>
+
+    <div>
+        <span><img src="../icons/icon (18).webp" alt=""></span>
+
+        <span><img src="../icons/icon (19).webp" alt=""></span>
+
+        <span><img src="" alt=""></span>
+    </div>
+
+</div>
+    <img src="icons/10117763.png" alt="" id="nextBtn_2">
+</div>
+<br>
+<br>
+<br>
+
+
+
+    
+
+    <section class="shop container">
+        <h2 class="section-title">Shop Now</h2>
+
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="../hollywood/AAAABcYdRKOOjbHOTbl44TIlinuN7Cc__257iUiy3ZHb-yrLKPyTCCIEKoMM85LB1c-GRGinQ1U8KszWTiTBJEWKInd5zg16c7BS-tE.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Hocasfgmme</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$946</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+
+            <div class="product-box">
+                <img src="../hollywood/AAAABdOrb7DV4W8tOBHYIlEynYfBSUVJ-nbTDR0RLZULZABmWTqNntauOCLmmRAmPcW19nnAkYu02KLH9AWJXuiCAJPbWJAFRo-E5oQ.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Hoadfsejyrme</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$8946</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+
+            <div class="product-box">
+                <img src="../hollywood/AAAABecxf540cmht_plTBjbGTdgTW53czJjWLNsvTMLqcqXv9E7vIk18_QrIK-UPtJWfKuulxE7KpijYouOsqOm7XV_5l5mv4Eew13g.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Hoxaetjme</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$464</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+
+            <div class="product-box">
+                <img src="../hollywood/AAAABS9KnvG30OuZXNBsgXXS-ntwuqnphnBI4lIOe24FaQvKXiETDk68z2_j__FSG0hOd-NizI733u01RuUeMDvtB5dcmNeSypVAjxPOwEKr8gWs0u0ST53bqhbGjCqrI5YFiKKH.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Homeetheh</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$346</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+
+            <div class="product-box">
+                <img src="../hollywood/AAAABV4ClGyzOk9iluFmW0yc-Aj03KCzwenQ2fFcwVrYm3XcwoK5r79qlq9v9-8GLfinZ5qVi8ckuINSbCRCtZbr9ox96zvG4PbZXM0kAW3d2lBJSggXtNK3h5RJ1YgKSyRo1h1A.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Homeadege</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$464</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+
+            <div class="product-box">
+                <img src="../hollywood/AAAABWwI2JZDvbe_ix--7CJhUquWDym0eCufPkNPB6uHuIVN5ATjANzqT-BAuXa09eUfStvjQFGFM8QqpDs9rg1wskdXoPzjYxSyA6-10YwLgGEEhOosklKB42_K4IoJOYYFjXFk.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Homezadq</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$465</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+
+            <div class="product-box">
+                <img src="../hollywood/AAAABX9t-2Z6aezcJVeh42uBw6YxER24m2awAi4OHCHOHSjJW2Zwp6xDdAo2n1MrQyDM9bRcO5ZgSLx2j1DTpYgKUiVk6wMzewHvcrkwgo...irlM0Q_-sg.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Homedddf</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$486</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+
+            <div class="product-box">
+                <img src="../hollywood/AAAABYCUnKbHq_vsVpHszs-2nyUsiK0-cMB95AvBH8nvjhlWgqUgnzs-rlguVoQHLNjj6SbSjmryxhPpGXE_022Ck100-aUCSYXe4yIIyIHWkqGHBFw854nc5X8ya5Ctcq3OsAjn.jpg" width="100%" alt="" class="product-img">
+                <h2 class="product-title">Homedddf</h2>
+                <p class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </p>
+                <span class="price">$486</span>
+                <button type="button" class="add-cart">Add to cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+     .rate{
+            display: flex;
+        }
+    
+     .rate i{
+            color: gold;
+            margin-left: 2px;
+        }
+       
+
+        
+        body{
+            color: var(--text-color);
+        }
+
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            width: 100%;
+        }
+
+        section{
+        }
+        
+        #cart-icon{
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .cart{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 360px;
+            min-height: 100vh;
+            padding: 20px;
+            background: var(--bg-color);
+            box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+            transition: 0.3s;
+            background-color: wheat;
+        }
+
+        .cart.active{
+            right: 0;
+        }
+
+        .cart-title{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+
+        .cart-box{
+            display: grid;
+            grid-template-columns: 32% 50% 18%;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cart-img{
+            width: 110px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .detail-box{
+            display: grid;
+            row-gap: 0.5rem;
+        }
+
+        .cart-product-title{
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .cart-price{
+            font-weight: 500;
+        }
+
+        .cart-quantity{
+            border: 1px solid var(--text-color);
+            outline-color: var(--main-color);
+            width: 2.4rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .cart-remove{
+            font-size: 24px;
+            color: var(--main-color);
+            cursor: pointer;
+        }
+
+        .total{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--text-color);
+        }
+
+        .total-title{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .total-price{
+            margin-left: 0.5rem;
+        }
+
+        .btn-buy{
+            display: flex;
+            margin: 1.5rem auto 0 auto;
+            padding: 12px 20px;
+            border: none;
+            background: var(--main-color);
+            color: var(--bg-color);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .btn-buy:hover{
+            background: var(--text-color);
+        }
+
+        #close-cart{
+            position: absolute;
+            top: 1rem;
+            right: 0.8rem;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        .section-title{
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+
+
+        .shop{
+            margin-top: 2rem;
+        }
+
+        .shop-content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+            gap: 1.5rem;
+        }
+
+        .product-box{
+            position: relative;
+            background-color: white;
+        }
+
+        .product-box:hover{
+            padding: 10px;
+            border: 1px solid white;
+            transition: 0.4s;
+        }
+
+        .product-img{
+            width: 100%;
+            height: 200px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-title{
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .price{
+            font-weight: 500;
+        }
+
+        .add-cart{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: var(--text-color);
+            color: var(--bg-color);
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .add-cart:hover{
+            background: hsl(249, 32%, 17%);
+        }
+
+        @media (max-width: 1080px) {
+            .nav {
+                padding: 15px;
+            }
+            section{
+                padding: 3rem 0 2rem;
+            }
+            .container{
+                margin: 0 auto;
+                width: 90%;
+            }
+            .shop{
+                margin-top: 2rem !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .nav {
+                padding: 11px;
+            }
+            .logo{
+                font-size: 1rem;
+            }
+            .cart{
+                width: 320px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .shop{
+                margin-top: 1rem !important;
+            }
+            .cart{
+                width: 90%;
+            }
+        }
+
+
+
+    </style>
+
+    <script src="main.js"></script>
+
+
+
+
+
+
+
+
+    <style>
+        .vod{
+            padding: 10px;
+            margin: 5px;
+            border: 2px;
+            background-color: rgb(32, 32, 100);
+            color: whitesmoke;
+        }
+      </style> 
+       <nav style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div style="color: aliceblue; font-size: 30px;">
+            <h1><b>Supported devices</b></h1>
+        </div>
+       </nav>
+    <nav style="display: flex; flex-wrap: wrap; justify-content: center;">
+       
+        <div class="vod">
+           <center>
+            <p>ios,Android & <br>Huawei</p>
+           </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Windows &<br>Mac</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected<br>devices</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected<br>devices</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected TV<br>models</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected<br>models</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected<br>models</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected TV<br>models</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected<br>devices</p>
+               </center>
+        </div>
+        <div class="vod">
+            <center>
+                <p>Selected<br>devices</p>
+               </center>
+        </div>
+    </nav>
+    <br>
+    <br>
+    
+    <footer>
+        <div class="footer-col">
+            <h4>Top 5 movies</h4>
+            <ul>
+                <li><a href="../backend1-4.html">Strong Girl</a></li>
+                <li><a href="../backend1-1.html">Anikulapo</a></li>
+                <li><a href="../backeand1-3.html">Lift</a></li>
+                <li><a href="../backend1-5.html">Atlas</a></li>
+                <li><a href="../backend1-6.html">Trigger Warning</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Top 5 TV Shows</h4>
+            <ul>
+                <li><a href="../backend1-1.html">fallout</a></li>
+                <li><a href="../backend1-1.html">Shogun</a></li>
+                <li><a href="../backend1-1.html">Evil</a></li>
+                <li><a href="../backend1-1.html">Eric</a></li>
+                <li><a href="../backend1-1.html">Shōgun</a></li>
+               
+            </ul>
+        </div>
+       
+        <div class="footer-col">
+            <h4>Top 5 new on provider</h4>
+            <ul>
+                <li><a href="">What's new on netflix</a></li>
+                <li><a href="">What's new on Amazon Prime <br>video</a></li>
+                <li><a href="">What's new on Disney plus</a></li>
+                <li><a href="">What's new on Apple TV plus</a></li>
+                <li><a href="">What's new on Apple TV</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Next upcoming movies</h4>
+            <ul>
+                <li><a href="../backend1-1.html">Anikulapo</a></li>
+                <li><a href="../backend1-2.html">The GentelMan</a></li>
+                <li><a href="../backend1-4.html">Strong Girl</a></li>
+                <li><a href="../backend1-5.html">Atlas</a></li>
+                <li><a href="../backeand1-3.html">Lift</a></li>
+            </ul>
+        </div>
+      </footer>
+      
+      <hr>
+      <style>
+        .support_footer{
+            width: 100%;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: white;
+            background-color: #0a0a0c;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        
+        .pop a{
+            color: rgba(78, 212, 221, 0.582);
+        }
+        
+      </style>
+      <nav class="support_footer">
+        
+        <div class="pop">
+            <br>
+            <p>© 2024 MOVIEgaiN -All external content remains the property or the rightful owner.  <br><a href="policy.html"> Privacy Policy </a>- <a href="talent.html">Talent</a></p>
+            <br>
+          </div> 
+      </nav>
+</body>
+</html>
