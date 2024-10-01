@@ -117,7 +117,7 @@
                 position: fixed;
                 top: 100px;
                 right: -100%;
-                background: rgba(0,0,0,0.5);
+                background: black;
                 height: calc(100vh - 100px);
                 width: 50%;
                 flex-direction: column;
@@ -304,6 +304,16 @@
     color: white;
     border-bottom: 4px solid rgb(187, 154, 7);
 }
+
+.flex{
+    display: flex;
+    gap: 10px;
+}
+
+del{
+    text-decoration: line-through;
+    font-size: 17px;
+}
 </style>
 
 <div>
@@ -410,8 +420,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$946</span>
+                </p>
+
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
                 <button type="button" class="add-cart">Add to cart</button>
             </div>
 
@@ -424,8 +439,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$8946</span>
+                </p>
+
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
                 <button type="button" class="add-cart">Add to cart</button>
             </div>
 
@@ -438,8 +458,12 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$464</span>
+                </p>
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
                 <button type="button" class="add-cart">Add to cart</button>
             </div>
 
@@ -452,8 +476,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$346</span>
+                </p>
+
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
                 <button type="button" class="add-cart">Add to cart</button>
             </div>
 
@@ -466,8 +495,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$464</span>
+                </p>
+
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
                 <button type="button" class="add-cart">Add to cart</button>
             </div>
 
@@ -480,8 +514,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$465</span>
+                </p>
+
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
                 <button type="button" class="add-cart">Add to cart</button>
             </div>
 
@@ -494,9 +533,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$486</span>
-                <button type="button" class="add-cart">Add to cart</button>
+                </p>
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
+                 <button type="button" class="add-cart">Add to cart</button>
             </div>
 
             <div class="product-box">
@@ -508,8 +551,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    </p>
-                <span class="price">$486</span>
+                </p>
+
+                <br>
+                <div class="flex">
+                    <p class="discount"><b><del>$450</del></b></p>
+                    <span class="price">$ 486</span>
+                </div>
                 <button type="button" class="add-cart">Add to cart</button>
             </div>
         </div>
@@ -517,6 +565,12 @@
 
 
     <style>
+        :root{
+            --main-color: #fd4646;
+            --text-color: #171427;
+            --bg-color: #fff
+        }
+
      .rate{
             display: flex;
         }
@@ -538,8 +592,6 @@
             width: 100%;
         }
 
-        section{
-        }
         
         #cart-icon{
             font-size: 1rem;
@@ -678,7 +730,7 @@
             background-color: white;
         }
 
-        .product-box:hover{
+        .product-box{
             padding: 10px;
             border: 1px solid white;
             transition: 0.4s;
